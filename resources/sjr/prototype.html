@@ -1,0 +1,1039 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="csrf-token" content="__SJR_CSRF_TOKEN__"><title>SJR | Enterprise BPM — UI Prototype</title><style>
+:root{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#17243a;background:#f3f6fb}*{box-sizing:border-box}body{margin:0}button,input,textarea,select{font:inherit}button{cursor:pointer} .shell{display:grid;grid-template-columns:245px 1fr;min-height:100vh}.side{background:#101f3b;color:#eaf1ff;padding:27px 18px;display:flex;flex-direction:column;gap:27px}.brand{display:flex;gap:12px;align-items:center;padding:0 10px}.brandicon{width:41px;height:41px;background:#397af0;border-radius:12px;display:grid;place-items:center;font-weight:900}.brand strong{font-size:15px}.brand small{display:block;color:#9fb2d0;margin-top:4px;font-size:11px}.sidetitle{font-size:10px;color:#7893bb;letter-spacing:2px;margin:0 12px 9px}.navbtn{display:flex;align-items:center;gap:12px;width:100%;padding:12px 14px;margin:4px 0;border:0;border-radius:10px;background:transparent;color:#c6d4eb;text-align:left;font-weight:600;font-size:13px}.navbtn.active,.navbtn:hover{background:#243c65;color:white}.navbtn .symbol{font-size:17px;width:20px}.sidebottom{margin-top:auto;border-top:1px solid #304261;padding:16px 10px;color:#9ab0cf;font-size:11px;line-height:1.7}.content{min-width:0}.top{background:white;border-bottom:1px solid #e5eaf1;min-height:76px;display:flex;align-items:center;justify-content:space-between;padding:15px 35px;gap:16px}.top strong{font-size:14px}.top small{display:block;color:#7a8a9f;font-size:12px;margin-top:5px}.topright{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.tag{border-radius:30px;padding:6px 10px;background:#eaf1ff;color:#2e60a5;font-size:11px;font-weight:700}.role{border:1px solid #d8e2ef;background:white;border-radius:9px;padding:9px 12px;color:#203653;max-width:210px;font-weight:650}.main{max-width:1220px;margin:auto;padding:33px 35px 55px}.eyebrow{font-size:11px;font-weight:800;letter-spacing:2px;color:#3677db;text-transform:uppercase}.pagehead{display:flex;justify-content:space-between;gap:14px;align-items:start;margin-bottom:25px}.pagehead h1{font-size:30px;letter-spacing:-.8px;margin:8px 0}.muted{color:#71829b;font-size:13px;line-height:1.6}.card{background:white;border:1px solid #e0e7f1;box-shadow:0 12px 35px rgba(18,42,80,.035);border-radius:16px;padding:26px;margin-bottom:18px}.card h2{font-size:17px;margin:0 0 6px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:19px}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:19px}.field{display:flex;flex-direction:column;gap:8px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:750;color:#293b55}.field input,.field textarea,.field select{width:100%;border:1px solid #d9e2ee;background:#fcfdff;border-radius:9px;padding:12px 13px;color:#1d2e45;outline:0}.field input:focus,.field textarea:focus{border-color:#4283e8;box-shadow:0 0 0 3px #4283e820}.field textarea{min-height:100px;resize:vertical}.choice{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.option{border:1px solid #d9e2ee;border-radius:10px;padding:12px 15px;display:flex;align-items:center;gap:9px;font-size:13px;font-weight:650;cursor:pointer}.option:has(input:checked){border-color:#397cf1;background:#eef5ff}.option input{accent-color:#357af0}.btn{border:0;border-radius:10px;padding:12px 17px;font-weight:750;font-size:13px;background:#246fe3;color:white}.btn:hover{filter:brightness(.95)}.btn.secondary{background:#eaf1fb;color:#244875}.btn.outline{background:white;color:#2b5eac;border:1px solid #c6d6ee}.btn.danger{background:#fff0ed;color:#ae4039}.actions{display:flex;gap:10px;justify-content:flex-end;align-items:center;flex-wrap:wrap;margin-top:22px}.notice{background:#edf5ff;border:1px solid #cfe3ff;border-radius:11px;padding:13px 16px;color:#345c92;font-size:12px;line-height:1.65}.notice.warn{background:#fff7e9;border-color:#ffe0a8;color:#8e5f18}.notice.good{background:#eaf8f1;border-color:#bfe8d4;color:#28674b}.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:22px 0}.kpi{background:white;border:1px solid #dfe7f1;border-radius:15px;padding:20px}.kpi b{font-size:28px;display:block;margin-top:10px}.kpi small{color:#74849b;font-size:12px}.jobrow{display:flex;align-items:center;justify-content:space-between;padding:17px 0;border-bottom:1px solid #edf0f5;gap:15px}.jobrow:last-child{border:0}.jobrow h3{font-size:14px;margin:0 0 6px}.jobrow p{font-size:12px;color:#7b8da2;margin:0}.pill{display:inline-block;padding:7px 10px;border-radius:30px;background:#e9f1ff;color:#295db0;font-size:11px;font-weight:750;white-space:nowrap}.pill.green{background:#e5f7ee;color:#20734d}.pill.amber{background:#fff3da;color:#8f620d}.pill.violet{background:#efe9ff;color:#6944a7}.stepper{display:flex;gap:7px;margin-top:18px;flex-wrap:wrap}.step{flex:1;min-width:130px;border-radius:10px;background:#f0f3f8;padding:12px;text-align:center;color:#8491a3;font-size:11px;font-weight:700}.step.done{background:#e6f7ef;color:#237451}.step.current{background:#e9f2ff;color:#2864b3}.empty{text-align:center;padding:65px 25px}.empty .symbol{font-size:40px}.empty h3{margin-bottom:5px} .small{font-size:12px}.hr{border:0;border-top:1px solid #edf0f4;margin:24px 0}.info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.infobox{background:#f7f9fc;border:1px solid #e6ebf4;border-radius:12px;padding:16px}.infobox small{display:block;color:#8292a6;margin-bottom:7px}.infobox strong{font-size:13px}.hidden{display:none!important}.toast{position:fixed;bottom:20px;right:23px;background:#182b48;color:white;padding:14px 20px;border-radius:12px;box-shadow:0 14px 45px #182b4840;font-size:12px;z-index:5;max-width:390px}.layout-2{display:grid;grid-template-columns:1.3fr .7fr;gap:18px}.timeline{border-left:2px solid #dae5f2;padding-left:19px;margin:17px 0}.event{position:relative;margin:0 0 18px;color:#53657e;font-size:13px}.event:before{content:"";position:absolute;left:-26px;top:3px;width:10px;height:10px;border-radius:100%;background:#4586e8;border:3px solid white;box-shadow:0 0 0 1px #d4e2f5}.event small{display:block;color:#9aabc0;margin-top:5px} footer{color:#91a0b3;font-size:11px;margin-top:25px;text-align:center}@media(max-width:960px){.shell{grid-template-columns:1fr}.side{padding:14px;gap:8px}.brand{margin-bottom:7px}.sidebottom,.sidetitle{display:none}.nav{display:flex;flex-wrap:wrap}.navbtn{width:auto}.top{padding:15px 20px}.main{padding:25px 18px}.layout-2{grid-template-columns:1fr}}@media(max-width:620px){.fields,.grid,.info-grid,.kpis{grid-template-columns:1fr}.card{padding:18px}.pagehead h1{font-size:24px}.top{display:block}.topright{margin-top:12px}.actions .btn{flex:1}}
+.uploadbox{border:1.5px dashed #a9bedc;background:#f8fbff;border-radius:12px;padding:20px;text-align:center}.uploadbox strong{font-size:13px}.uploadbox .muted{font-size:12px}.attachment-list{display:grid;gap:10px;margin:12px 0}.attachment-item{display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap;border:1px solid #e1e8f0;background:#fbfcff;padding:10px 13px;border-radius:9px}.attachment-item a{color:#2262b6;font-size:12px;font-weight:700}.fileerror{color:#ad4038;font-size:12px;margin-top:8px}
+/* SJR_JOB_WORKSPACE_V2 */
+/* sjr-v33-layout */
+.workspace-controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin:18px 0}.workspace-filters{display:flex;gap:9px;flex:1;flex-wrap:wrap}.workspace-filters input,.workspace-filters select{min-height:42px;border:1px solid #d9e2ee;background:#fff;border-radius:10px;padding:9px 12px;color:#203653;max-width:100%;font-size:13px}.workspace-filters input{flex:2;min-width:210px}.workspace-filters select{flex:1;min-width:150px}.workspace-views{display:flex;gap:5px;background:#eaf0f8;border-radius:10px;padding:4px}.workspace-views button{border:0;background:transparent;color:#526782;border-radius:7px;padding:9px 13px;font-weight:750;font-size:12px}.workspace-views button.is-active{background:white;color:#2268cf;box-shadow:0 2px 8px #16284314}.workspace-list{display:grid;gap:10px}.workspace-item{display:grid;grid-template-columns:minmax(0,2fr) minmax(125px,.7fr) minmax(120px,.8fr) auto;align-items:center;gap:18px;padding:18px;border:1px solid #e5ebf4;background:#fff;border-radius:13px}.workspace-code{font-size:11px;font-weight:800;color:#2a70d5;letter-spacing:.4px}.workspace-item h3{font-size:15px;margin:5px 0}.workspace-meta{font-size:12px;color:#7688a0;line-height:1.6}.workspace-key{font-size:11px;color:#8494aa;display:block;margin-bottom:5px}.workspace-value{font-size:12px;font-weight:700;color:#263a56}.workspace-item .btn{white-space:nowrap}.workspace-list.is-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.workspace-list.is-cards .workspace-item{grid-template-columns:1fr auto;align-items:start}.workspace-list.is-cards .workspace-item>.workspace-primary{grid-column:1/-1}.workspace-list.is-cards .workspace-item>.workspace-extra{display:none}.workspace-list.is-cards .workspace-item>.workspace-status{grid-column:1}.workspace-list.is-cards .workspace-item>.workspace-open{grid-column:2}.workspace-kpis{grid-template-columns:repeat(4,minmax(0,1fr))}.workspace-kpi{box-shadow:0 8px 22px #20345106}.workspace-kpi b{color:#192e4e}.workspace-subtitle{font-size:12px;color:#7990ac}.workspace-rowbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:12px;flex-wrap:wrap}.workspace-count{font-size:12px;color:#71829b}@media(max-width:1000px){.workspace-item{grid-template-columns:1fr auto}.workspace-extra{display:none}.workspace-status{grid-column:1}.workspace-open{grid-column:2}.workspace-kpis{grid-template-columns:repeat(2,1fr)}}@media(max-width:640px){.workspace-item,.workspace-list.is-cards .workspace-item{grid-template-columns:1fr}.workspace-list.is-cards{grid-template-columns:1fr}.workspace-status,.workspace-open,.workspace-list.is-cards .workspace-item>.workspace-status,.workspace-list.is-cards .workspace-item>.workspace-open{grid-column:1}.workspace-views{width:100%}.workspace-views button{flex:1}.workspace-filters input,.workspace-filters select{width:100%;flex:auto}.workspace-kpis{grid-template-columns:repeat(2,1fr)}}
+
+/* SJR_JOB_WORKSPACE_V3: scoped redesign, preserves SJR form, API and attachments */
+.sjr-v3-heading{display:flex;align-items:end;justify-content:space-between;gap:20px;margin:2px 0 28px;flex-wrap:wrap}.sjr-v3-heading h1{font-size:34px;letter-spacing:-1.1px;margin:7px 0 6px}.sjr-v3-heading p{color:#77859a;font-size:13px;margin:0}.sjr-v3-toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.sjr-v3-search{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #dfe7f1;border-radius:10px;padding:0 12px;min-width:270px}.sjr-v3-search input{border:0;background:transparent;padding:13px 0;outline:0;width:270px;max-width:100%;font-size:12px;color:#253b5c}.sjr-v3-search span{font-size:24px;color:#91a0b4}.sjr-v3-button,.sjr-v3-open{border:1px solid #dde6f1;border-radius:10px;padding:12px 15px;background:#fff;color:#273b59;font-weight:700;font-size:12px;cursor:pointer}.sjr-v3-sort{display:flex;align-items:center;gap:5px}.sjr-v3-sort select{border:0;background:transparent;color:#273b59;max-width:145px;outline:0;font-weight:700;font-size:12px}.sjr-v3-kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-bottom:22px}.sjr-v3-kpi{background:#fff;border:1px solid #dce6f4;border-radius:12px;min-height:90px;display:flex;align-items:center;gap:11px;padding:13px 15px}.sjr-v3-kpi-icon{background:#eaf2ff;color:#266add;border-radius:50%;display:grid;place-items:center;width:39px;height:39px;font-size:21px;flex-shrink:0}.sjr-v3-kpi:nth-child(2) .sjr-v3-kpi-icon{background:#f1ebff;color:#7251d1}.sjr-v3-kpi:nth-child(3) .sjr-v3-kpi-icon{background:#ffeced;color:#d35467}.sjr-v3-kpi:nth-child(5) .sjr-v3-kpi-icon{background:#e5f7ed;color:#24874c}.sjr-v3-kpi strong{display:block;font-size:24px}.sjr-v3-kpi small{display:block;color:#6b7991;font-size:11px;line-height:1.4}.sjr-v3-filterrow{background:#fff;padding:13px 15px;border:1px solid #dfe7f1;border-radius:12px;margin-bottom:13px;display:flex;gap:12px;align-items:end;flex-wrap:wrap}.sjr-v3-filterrow[hidden]{display:none}.sjr-v3-filterrow label{display:flex;flex-direction:column;gap:5px;font-size:11px;color:#6b7991}.sjr-v3-filterrow select{border:1px solid #dfe7f1;border-radius:8px;padding:8px;background:white;min-width:180px}.sjr-v3-tablewrap{border:1px solid #dfe6ee;border-radius:15px;background:#fff;box-shadow:0 7px 22px rgba(19,42,73,.025);overflow:auto}.sjr-v3-table{width:100%;border-collapse:collapse;min-width:960px}.sjr-v3-table th{font-size:12px;font-weight:650;text-align:left;background:#f9fbfe;color:#6f7e93;padding:18px 14px;border-bottom:1px solid #e7edf4;white-space:nowrap}.sjr-v3-table td{border-bottom:1px solid #ebeff5;padding:18px 14px;font-size:12px;color:#45546c;line-height:1.5}.sjr-v3-code{color:#375680!important;white-space:nowrap}.sjr-v3-title{font-weight:750;color:#1a2b46!important;min-width:175px}.sjr-v3-table tr:hover td{background:#f9fbff}.sjr-v3-pill{border-radius:99px;display:inline-block;padding:7px 10px;white-space:nowrap;font-weight:700;font-size:11px}.sjr-v3-violet{background:#f1eaff;color:#704ac7}.sjr-v3-blue{background:#e8f1ff;color:#2763c8}.sjr-v3-teal{background:#e5f8f5;color:#087e75}.sjr-v3-red{background:#ffebee;color:#c63b5a}.sjr-v3-amber{background:#fff2dd;color:#a65b00}.sjr-v3-green{background:#e7f8ee;color:#0b8a4c}.sjr-v3-neutral{background:#f1f3f7;color:#677588}.sjr-v3-open{padding:9px 13px;white-space:nowrap}.sjr-v3-open:hover{background:#edf5ff;color:#246bd4}.sjr-v3-empty{text-align:center;padding:35px!important}.sjr-v3-footer{padding:15px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;color:#6e7d93;font-size:12px}.sjr-v3-pager{display:flex;align-items:center;gap:12px}.sjr-v3-pager button{background:#fff;border:1px solid #dfe7f1;border-radius:8px;padding:6px 12px;cursor:pointer}.sjr-v3-pager button:disabled{opacity:.35;cursor:default}@media(max-width:1280px){.sjr-v3-kpis{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:720px){.sjr-v3-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.sjr-v3-heading h1{font-size:27px}.sjr-v3-toolbar{width:100%}.sjr-v3-search{flex:1;min-width:180px}.sjr-v3-search input{width:100%}.sjr-v3-footer{flex-wrap:wrap}}
+
+/* sjr-v34-modal-layout */
+.sjr-modal-active{overflow:hidden}
+.sjr-modal-backdrop{position:fixed;inset:0;background:rgba(13,28,51,.58);z-index:100;display:flex;align-items:center;justify-content:center;padding:22px}
+.sjr-modal-dialog{width:min(1080px,100%);max-height:min(92vh,950px);display:flex;flex-direction:column;background:#fff;border-radius:20px;border:1px solid #dce5f0;box-shadow:0 28px 85px rgba(8,22,45,.26);overflow:hidden}
+.sjr-modal-header{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;padding:23px 28px 19px;border-bottom:1px solid #e5ebf3;flex-shrink:0}
+.sjr-modal-header h2{font-size:25px;line-height:1.2;margin:5px 0}
+.sjr-modal-header p{margin:0}
+.sjr-modal-close{width:40px;height:40px;border:1px solid #dfe7f1;border-radius:11px;background:#fff;color:#324866;cursor:pointer;font-size:18px;flex-shrink:0}
+.sjr-modal-close:hover{background:#f3f7fc}
+.sjr-modal-close:disabled{opacity:.5;cursor:wait}
+.sjr-modal-content{padding:20px 28px 28px;overflow-y:auto;min-height:0;overscroll-behavior:contain}
+.sjr-modal-content .card{padding:0;border:0;box-shadow:none;margin:0}
+.sjr-modal-content .fields{gap:15px 20px}
+.sjr-modal-content .field textarea{min-height:86px}
+.sjr-modal-content .uploadbox{padding:15px}
+.sjr-modal-content .actions{position:sticky;bottom:-28px;background:white;border-top:1px solid #e9eef5;padding:15px 0;margin-top:18px}
+@media(max-width:720px){.sjr-modal-backdrop{padding:8px;align-items:stretch}.sjr-modal-dialog{max-height:100%;border-radius:14px}.sjr-modal-header{padding:17px}.sjr-modal-content{padding:16px}.sjr-modal-content .fields{grid-template-columns:1fr}.sjr-modal-content .actions{bottom:-16px}}
+
+/* sjr-v35-compact-modal: presentation-only update */
+@media (min-width: 681px){
+ .sjr-modal-backdrop{padding:32px 24px;background:rgba(13,28,51,.44)}
+ .sjr-modal-dialog{width:min(780px,calc(100vw - 52px));max-height:min(84vh,760px);border-radius:17px;box-shadow:0 24px 70px rgba(8,22,45,.22)}
+ .sjr-modal-header{padding:15px 22px 13px}
+ .sjr-modal-header h2{font-size:21px;margin:3px 0 3px}
+ .sjr-modal-header p{font-size:12px}
+ .sjr-modal-close{width:34px;height:34px}
+ .sjr-modal-content{padding:15px 22px 17px}
+ .sjr-modal-content .fields{gap:10px 14px}
+ .sjr-modal-content .field{gap:5px}
+ .sjr-modal-content .field label{font-size:11px}
+ .sjr-modal-content .field input,.sjr-modal-content .field select{padding:9px 11px;min-height:38px}
+ .sjr-modal-content .field textarea{padding:9px 11px;min-height:70px}
+ .sjr-modal-content .uploadbox{padding:10px 12px}
+ .sjr-modal-content .uploadbox input{max-width:100%}
+ .sjr-modal-content .option{padding:9px 11px}
+ .sjr-modal-content .actions{bottom:-17px;padding:12px 0 3px;margin-top:12px}
+ .sjr-modal-content .notice{padding:9px 11px}
+ .sjr-modal-content .hr{margin:15px 0}
+}
+@media (max-width:680px){
+ .sjr-modal-dialog{width:100%;max-height:94dvh;align-self:center}
+ .sjr-modal-header h2{font-size:21px}
+ .sjr-modal-content{padding:13px 15px 18px}
+ .sjr-modal-content .uploadbox{padding:12px}
+}
+
+/* sjr-v36-refined-new-job */
+.sjr-modal-dialog{width:min(830px,calc(100vw - 40px));max-height:min(88vh,860px)}
+.sjr-modal-content .fields{gap:13px 16px}
+.sjr-editor{border:1px solid #cddcf0;border-radius:12px;overflow:hidden;background:#fff}
+.sjr-editor:focus-within{border-color:#397af0;box-shadow:0 0 0 3px #397af018}
+.sjr-editor-toolbar{display:flex;align-items:center;flex-wrap:wrap;gap:5px;padding:8px;background:#f3f7fd;border-bottom:1px solid #dbe7f4}
+.sjr-editor-toolbar button,.sjr-editor-toolbar select{font-size:12px;line-height:1.2;min-height:30px;padding:6px 9px;border:1px solid transparent;background:white;color:#284a7e;border-radius:7px;cursor:pointer}
+.sjr-editor-toolbar button:hover{border-color:#abc8f3;background:#e7f0ff}.sjr-editor-toolbar select{flex:1;min-width:95px;border-color:#dae5f3;max-width:160px}
+.sjr-editor-area{min-height:112px;max-height:235px;overflow-y:auto;padding:12px 14px;outline:0;font-size:13px;line-height:1.65;color:#243957}
+.sjr-editor-area:empty:before{content:attr(data-placeholder);color:#98a7bd;pointer-events:none}
+.sjr-editor-area h3{font-size:16px;margin:8px 0}.sjr-editor-area ul,.sjr-editor-area ol{padding-left:22px}
+.sjr-editor-foot{display:flex;justify-content:space-between;gap:10px;color:#8493ab;font-size:10px;flex-wrap:wrap}
+.sjr-attachment-label span{color:#8091ab;font-weight:500}
+.sjr-upload-area{position:relative;min-height:115px;border:1.5px dashed #9bbdf3;background:#f7faff;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:4px;padding:16px 12px;cursor:pointer}
+.sjr-upload-area:hover{background:#ecf4ff;border-color:#3d7be3}.sjr-upload-icon{font-size:26px;color:#3975d4;font-weight:700;line-height:1}
+.sjr-upload-area strong{font-size:12px;color:#24549a}.sjr-upload-area p{font-size:10px;color:#7688a4;margin:2px 0}
+.sjr-upload-area input[type=file]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.sjr-upload-selected{display:grid;gap:6px}.sjr-file-empty{font-size:11px;color:#8090a7}.sjr-file-item{display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid #e0e8f4;background:#fff;border-radius:9px;padding:9px 12px;color:#264265;font-size:11px}
+.sjr-file-item small{color:#8090a7}.sjr-designer-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.sjr-designer-card{display:flex;align-items:center;gap:10px;border:1px solid #dae4f2;border-radius:11px;padding:11px;cursor:pointer;background:white;position:relative}
+.sjr-designer-card:has(input:checked){border-color:#3b7eea;background:#f0f6ff;box-shadow:0 0 0 1px #3b7eea}
+.sjr-designer-card input{position:absolute;opacity:0;width:1px;height:1px}.sjr-designer-icon{display:grid;place-items:center;width:36px;height:36px;flex-shrink:0;background:#edf3fe;color:#2e6fd7;border-radius:10px;font-size:18px}
+.sjr-designer-text{display:flex;flex-direction:column;gap:4px;flex:1}.sjr-designer-text strong{font-size:12px}.sjr-designer-text small{font-size:10px;color:#7889a0;line-height:1.35}.sjr-designer-check{display:grid;place-items:center;width:21px;height:21px;border-radius:50%;border:1px solid #cbd7e9;color:transparent;font-size:12px}
+.sjr-designer-card:has(input:checked) .sjr-designer-check{background:#3178e8;border-color:#3178e8;color:white}
+@media(max-width:620px){.sjr-designer-options{grid-template-columns:1fr}.sjr-modal-dialog{width:calc(100vw - 16px)}.sjr-editor-toolbar select{max-width:none}}
+
+/* SJR V3.7: compact reference-style attachment table */
+.sjr-attachment-section{gap:10px!important}
+.sjr-attachment-head,.sjr-file-table-header{display:flex;align-items:center;gap:11px;color:#21416e;font-size:15px}
+.sjr-attachment-head small{font-size:12px;font-weight:500;color:#8191aa}
+.sjr-doc-icon{background:#eaf3ff;border:1px solid #b8d3f7;color:#326db8;border-radius:50%;height:35px;width:35px;display:grid;place-items:center;flex-shrink:0;font-size:20px}
+.sjr-attachment-section .sjr-upload-area{border:1.5px dashed #9ebff0;min-height:118px;padding:16px 12px;background:#f6faff;cursor:pointer}
+.sjr-attachment-section .sjr-upload-area:hover{background:#eff6ff;border-color:#427bd2}
+.sjr-attachment-section .sjr-upload-area input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.sjr-upload-controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.sjr-upload-controls .btn{padding:9px 13px}
+.sjr-upload-controls span{font-size:11px;color:#7689a4}
+.sjr-file-table-header{margin-top:4px}
+.sjr-file-table-scroll{max-width:100%;overflow-x:auto;border:1px solid #dbe6f3;border-radius:11px}
+.sjr-file-table{width:100%;border-collapse:collapse;min-width:450px;background:white;font-size:12px}
+.sjr-file-table thead{background:#eff5fc;color:#385479}
+.sjr-file-table th,.sjr-file-table td{padding:11px 12px;text-align:left;border-bottom:1px solid #e5edf6}
+.sjr-file-table tbody tr:last-child td{border-bottom:0}
+.sjr-file-table td:nth-child(2){max-width:275px;overflow-wrap:anywhere;font-weight:650;color:#263f63}
+.sjr-remove-file{background:#fff;border:1px solid #cbdaf0;color:#b13d49;padding:7px 11px;border-radius:8px;cursor:pointer}
+.sjr-remove-file:hover{background:#fff0f1}
+.sjr-file-empty{text-align:center!important;color:#8b99ad!important;font-weight:400!important}
+
+/* SJR V3.8: independent attachment cards */
+.sjr-attachment-section{display:grid!important;gap:13px!important}
+.sjr-attachment-card{border:1px solid #dbe5f3;background:#fff;border-radius:13px;padding:16px;display:grid;gap:13px}
+.sjr-attachment-card .sjr-upload-area{min-height:104px}
+.sjr-attachment-card .sjr-file-table-scroll{margin-top:0}
+.sjr-file-pending{font-size:12px;color:#667a99;background:#f6f9fe;border:1px solid #e5ebf5;border-radius:9px;padding:9px 12px}
+.sjr-file-pending.has-file{color:#2160a8;background:#edf5ff;border-color:#b9d5ff;font-weight:650}
+.sjr-attachment-card textarea{min-height:62px;resize:vertical}
+.sjr-attachment-card .sjr-upload-controls{margin-top:0}
+.sjr-file-table th:nth-child(5),.sjr-file-table td:nth-child(5){min-width:130px;max-width:200px;overflow-wrap:anywhere}
+@media(max-width:680px){.sjr-attachment-card{padding:12px}.sjr-file-table{min-width:610px}}
+
+/* V3.9: Satu border untuk Lampiran Dokumen dan Daftar Lampiran */
+.sjr-attachment-section{display:block!important}
+.sjr-attachment-card{gap:14px}
+.sjr-attachment-divider{height:1px;background:#e2e9f4;margin:5px 0 3px}
+.sjr-attachment-card .sjr-file-table-header{margin-top:2px}
+
+/* sjr-v41-two-columns-fix: form left, combined attachments card right */
+@media(min-width:981px){
+ .sjr-modal-dialog{width:min(1460px,calc(100vw - 40px));max-height:92vh}
+ .sjr-newjob-columns{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:22px;align-items:start}
+ .sjr-newjob-right{min-width:0;min-height:0}
+ .sjr-newjob-left{min-width:0}
+ .sjr-modal-content{padding:20px 24px 24px}
+ .sjr-newjob-right .sjr-attachment-card{padding:17px}
+ .sjr-newjob-right .sjr-file-table-scroll{overflow-x:auto}
+ .sjr-newjob-right .sjr-file-table{min-width:540px}
+ .sjr-newjob-left .sjr-editor-area{min-height:130px}
+}
+@media(max-width:980px){
+ .sjr-newjob-columns{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+ .sjr-newjob-left,.sjr-newjob-right{min-width:0}
+ .sjr-newjob-right .sjr-file-table-scroll{overflow-x:auto}
+}
+
+/* SJR V4.3: brief designer hanya terlihat ketika opsi Ya aktif */
+.sjr-designer-brief-fields[hidden]{display:none!important}
+.sjr-designer-brief-fields{display:grid;gap:13px;padding:16px;border:1px solid #d7e5fb;border-radius:12px;background:#f8fbff;margin-top:3px}
+.sjr-designer-brief-heading{display:flex;align-items:center;gap:9px;font-size:13px;color:#234d89}
+.sjr-designer-brief-heading span{display:grid;place-items:center;background:#e7f0ff;border-radius:9px;width:28px;height:28px;color:#286ee0}
+.sjr-designer-brief-fields textarea{min-height:94px;resize:vertical}
+.sjr-designer-brief-fields input{max-width:100%}
+
+/* SJR_DETAIL_V44: UI-only detail layout */
+.sjr-detail-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:0 0 24px;flex-wrap:wrap}.sjr-detail-heading h1{font-size:29px;line-height:1.2;letter-spacing:-.7px;margin:8px 0}.sjr-detail-heading p{margin:0;color:#71829b;font-size:13px}.sjr-detail-top-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.sjr-detail-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:start}.sjr-detail-col{min-width:0}.sjr-detail-card{padding:22px;margin-bottom:18px}.sjr-detail-cardtitle{display:flex;align-items:center;gap:10px;margin-bottom:18px}.sjr-detail-cardtitle h2{margin:0;font-size:17px}.sjr-detail-icon{height:34px;width:34px;background:#eaf3ff;color:#2c6fcc;border-radius:11px;display:grid;place-items:center;font-weight:850}.sjr-detail-infos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.sjr-detail-infobox{min-width:0;background:#f7f9fd;border:1px solid #e8edf5;border-radius:11px;padding:12px}.sjr-detail-infobox small{display:block;color:#71839a;font-size:11px;margin-bottom:5px}.sjr-detail-infobox strong{display:block;color:#1b2b45;font-size:13px;overflow-wrap:anywhere}.sjr-detail-sub{border-top:1px solid #edf0f5;margin-top:19px;padding-top:17px}.sjr-detail-sub h3{font-size:13px;margin:0 0 8px}.sjr-detail-para{white-space:pre-wrap;overflow-wrap:anywhere;color:#405675;font-size:13px;line-height:1.7;margin:0}.sjr-detail-deadline{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#f2f7ff;border:1px solid #dbe8fa;padding:13px 15px;border-radius:10px;margin-top:18px;font-size:12px}.sjr-detail-deadline strong{color:#265ca8}.sjr-detail-hint{margin-top:12px;color:#71839a;font-size:12px;line-height:1.6}.sjr-detail-count{background:#eaf1ff;color:#3268b6;padding:4px 9px;border-radius:99px;font-size:12px}.sjr-detail-table-wrap{width:100%;overflow:auto}.sjr-detail-table{border-collapse:collapse;width:100%;min-width:475px}.sjr-detail-table th{background:#f1f6fe;text-align:left;font-weight:750;font-size:11px;color:#405a7b;padding:11px 9px}.sjr-detail-table td{border-bottom:1px solid #e8eef6;font-size:12px;color:#445b77;padding:12px 9px;vertical-align:middle;max-width:170px;overflow-wrap:anywhere}.sjr-detail-file{display:flex;gap:8px;align-items:center;font-weight:650;color:#203756}.sjr-detail-fileicon{background:#eaf2fd;color:#2e6fbe;font-size:9px;border-radius:7px;padding:8px 6px;font-weight:800}.sjr-detail-download{display:inline-block;color:#245cae;text-decoration:none;font-weight:750;white-space:nowrap}.sjr-detail-empty{text-align:center!important;color:#8998ae!important}.sjr-detail-card .timeline{margin-bottom:0}@media(max-width:1080px){.sjr-detail-grid{grid-template-columns:1fr}}@media(max-width:620px){.sjr-detail-infos{grid-template-columns:1fr}.sjr-detail-card{padding:16px}}
+
+/* SJR_DETAIL_V3_APPROVED_UI */
+.sjr-detail-v44{max-width:none!important;margin:0!important;padding:24px 22px 50px!important}
+.sjr-detail-heading{align-items:flex-end!important;margin-bottom:20px!important}.sjr-detail-heading h1{font-size:27px!important}.sjr-detail-grid{grid-template-columns:minmax(0,1.72fr) minmax(330px,1fr)!important;gap:16px!important}
+.sjr-detail-card{padding:21px!important;border-radius:15px!important}.sjr-detail-cardtitle{margin-bottom:17px!important}.sjr-v3-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.sjr-v3-stat{border:1px solid #e6edf7;background:#f5f8fd;border-radius:10px;padding:12px;min-height:68px}.sjr-v3-stat small{display:block;color:#7485a0;font-size:11px;margin-bottom:5px}.sjr-v3-stat strong{font-size:12px;overflow-wrap:anywhere}.sjr-v3-brief{margin-top:18px}.sjr-v3-brief h3{font-size:13px;margin-bottom:9px}.sjr-v3-brief p{background:#f7faff;border:1px solid #e3edff;border-radius:10px;padding:14px!important;line-height:1.7}
+.sjr-v3-designer{border-color:#bdd4ff!important}.sjr-v3-designer-top{display:flex;align-items:center;gap:10px}.sjr-v3-designer-top h2{margin:0!important}.sjr-v3-spacer{flex:1}.sjr-v3-approved{border-radius:20px;padding:6px 10px;color:#16834a;background:#e4f6eb;font-size:11px;font-weight:750}.sjr-v3-open{width:37px;height:37px;display:grid;place-items:center;border:1px solid #d5e1f2;border-radius:9px;color:#2359a7;text-decoration:none;background:#fff;font-size:18px}.sjr-v3-designer-text{white-space:pre-line;line-height:1.75;margin:16px 0}.sjr-v3-deadline{display:flex;align-items:center;justify-content:space-between;gap:10px;border-radius:9px;border:1px solid #f3d9a5;border-left:3px solid #dd9c25;background:#fffaf0;padding:10px 13px;margin:13px 0 17px}.sjr-v3-deadline span{font-size:11px;text-transform:uppercase;letter-spacing:.7px;color:#93631d;font-weight:750}.sjr-v3-deadline strong{font-size:13px;color:#845012}.sjr-v3-divider{border:0;border-top:1px solid #dce7fa;margin:20px 0 17px}.sjr-v3-subtitle{font-size:14px;font-weight:750;margin-bottom:12px}.sjr-v3-tabs{display:flex;width:max-content;gap:4px;background:#eef3fa;border-radius:9px;padding:4px;margin:13px 0 17px}.sjr-v3-tabs button{border:0;background:transparent;color:#677e9d;font-size:12px;font-weight:750;padding:9px 12px;border-radius:7px}.sjr-v3-tabs button.active{color:#2456aa;background:#fff;box-shadow:0 1px 3px #cbd7e8}.sjr-v3-version{border:1px solid #dce7f8;border-radius:10px;overflow:hidden;margin:10px 0}.sjr-v3-versionhead{background:#f1f5fc;display:flex;justify-content:space-between;padding:11px 12px;gap:9px;font-size:12px}.sjr-v3-versionbody{padding:13px}.sjr-v3-muted{color:#7c8fab;font-size:11px}.sjr-v3-file{border:1px solid #e1eaf7;border-radius:10px;padding:10px;display:flex;gap:12px;align-items:center;margin-top:10px;min-width:0}.sjr-v3-fileicon{flex:none;width:46px;height:46px;border-radius:9px;background:#fff0f0;color:#bd3344;display:grid;place-items:center;font-size:11px;font-weight:800}.sjr-v3-fileicon.zip{background:#f1eaff;color:#7956bd}.sjr-v3-fileicon.image{background:#eaf2ff;color:#2863b5}.sjr-v3-fileinfo{min-width:0;flex:1}.sjr-v3-fileinfo b{display:block;font-size:12px;overflow-wrap:anywhere}.sjr-v3-fileinfo small{color:#778ba7;font-size:11px}.sjr-v3-action{flex:none;width:37px;height:37px;display:grid;place-items:center;border:1px solid #d4e1f5;border-radius:9px;background:white;color:#235cae;text-decoration:none;font-size:17px}.sjr-v3-note{color:#40669d;background:#edf4ff;padding:12px;border-radius:9px;margin-top:13px;font-size:12px}.sjr-v3-reference{display:flex;align-items:center;gap:10px;border:1px solid #e0e9f6;border-radius:11px;padding:9px;margin:9px 0}.sjr-v3-reference .sjr-v3-fileicon{width:43px;height:43px}.sjr-v3-reference .sjr-v3-fileinfo{overflow:hidden}.sjr-v3-reference small{display:block}.sjr-v3-history .event{font-size:12px;font-weight:650;padding-bottom:20px}.sjr-v3-history .event small{font-weight:400}
+@media(max-width:1050px){.sjr-detail-grid{grid-template-columns:1fr!important}.sjr-v3-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.sjr-v3-stats{grid-template-columns:1fr 1fr}.sjr-detail-v44{padding:14px!important}.sjr-v3-designer-top{flex-wrap:wrap}}
+
+/* V5.4.2 only: safe server-filtered rich text in Project Detail */
+.sjr-v541-brief-body:has(>p),.sjr-v541-brief-body:has(>div),.sjr-v541-brief-body:has(>ul),.sjr-v541-brief-body:has(>ol){white-space:normal}
+.sjr-v541-brief-body p,.sjr-v541-brief-body div{margin:0 0 .6em}
+.sjr-v541-brief-body p:last-child,.sjr-v541-brief-body div:last-child{margin-bottom:0}
+.sjr-v541-brief-body ul,.sjr-v541-brief-body ol{padding-left:24px;margin:6px 0 12px}
+.sjr-v541-brief-body h3{font-size:1.13em;margin:10px 0 6px}
+.sjr-v541-brief-body code{background:#ecf1f8;border-radius:4px;padding:1px 4px}
+.sjr-v541-brief-body pre{background:#f0f4fa;padding:10px;border-radius:8px;white-space:pre-wrap}
+
+
+/* SJR V5.5.8 — item preview belongs to Brief Designer; Project documents live separately */
+.sjr-v558-brief-layout{display:flex;align-items:flex-start;gap:18px}
+.sjr-v558-brief-text{flex:1;min-width:0}
+.sjr-v558-preview{width:190px;flex:0 0 190px;margin:0}
+.sjr-v558-preview a{display:block;border-radius:10px;overflow:hidden;border:1px solid #d5e4f8;background:white}
+.sjr-v558-preview img{display:block;width:100%;height:156px;object-fit:contain;background:#fff}
+.sjr-v558-preview figcaption{color:#6782a5;font-size:10px;line-height:1.35;margin-top:5px;text-align:center}
+.sjr-v558-doc-table{overflow-x:auto;border:1px solid #dce8f7;border-radius:10px}
+.sjr-v558-doc-table table{width:100%;border-collapse:collapse;font-size:12px}
+.sjr-v558-doc-table th{background:#f2f6fc;color:#647b9b;text-align:left;font-size:11px;padding:12px 10px;white-space:nowrap}
+.sjr-v558-doc-table td{padding:12px 10px;border-top:1px solid #e8eff8;vertical-align:middle}
+.sjr-v558-file{display:flex;align-items:center;gap:9px;min-width:170px;overflow-wrap:anywhere;color:#1d395e;font-weight:600}
+.sjr-v558-filetype{display:inline-grid;place-items:center;background:#e7efff;color:#305db8;border-radius:7px;padding:7px;min-width:38px;font-size:10px}
+.sjr-v558-doc-action{display:inline-flex;align-items:center;justify-content:center;border:1px solid #d4e3f7;width:30px;height:30px;border-radius:8px;color:#2065ca;text-decoration:none}
+.sjr-v558-doc-empty{color:#6b819e;font-size:13px;padding:10px 0}
+@media(max-width:600px){.sjr-v558-brief-layout{flex-direction:column}.sjr-v558-preview{width:min(100%,190px);flex-basis:auto}.sjr-v558-preview img{width:100%;height:156px}}
+/* SJR V5.5.3 UI Alignment — visuals only; existing Designer API and form unchanged */
+.sjr-v553-design-workspace .sjr-v553-grid{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(290px,.9fr);gap:18px;align-items:start}
+.sjr-v553-left,.sjr-v553-right{min-width:0}
+.sjr-v553-design-workspace .card{margin-bottom:16px}
+.sjr-v553-design-workspace .sjr-v553-brief{border:1px solid #9ac3ff;background:linear-gradient(115deg,#edf5ff,#fff 75%);padding:21px;border-radius:16px}
+.sjr-v553-brief h2,.sjr-v553-panel h2{display:flex;align-items:center;gap:9px;margin:0 0 16px;font-size:16px;color:#152b4d}
+.sjr-v553-symbol{color:#2065ca;font-size:18px}
+.sjr-v553-brief-content{font-size:15px;line-height:1.7;color:#243f63;white-space:normal;min-height:38px}
+.sjr-v553-deadline{margin-top:14px;background:#e7f0ff;color:#53739b;border-radius:8px;padding:11px 13px;font-size:12px}
+.sjr-v553-deadline strong{color:#24486d;font-weight:700}
+.sjr-v553-panel{padding:20px!important;border-radius:16px}
+.sjr-v553-square{display:inline-grid;place-items:center;background:#e7f1ff;color:#286cd2;width:28px;height:28px;border-radius:8px;font-size:15px}
+.sjr-v553-subtitle{font-size:13px;color:#425b7d;margin:14px 0 12px}
+.sjr-v553-design-workspace .sjr-v541-gallery{padding:4px 0 0}
+.sjr-v553-design-workspace .sjr-v541-shot{width:175px}
+.sjr-v553-design-workspace .sjr-v541-shot img{width:175px;height:128px}
+.sjr-v553-topstatus{display:flex;align-items:center;gap:12px;margin:8px 0 18px;color:#647d9e;font-size:12px;flex-wrap:wrap}
+.sjr-v553-flow{background:#eaf2ff;color:#426da8;font-size:11px;padding:10px 12px;border-radius:7px;margin-bottom:14px;letter-spacing:.02em}
+.sjr-v553-statusline{font-size:13px;color:#516c90;margin:0 0 16px}
+.sjr-v553-design-workspace .sjr-v552-version{padding:0;overflow:hidden;border-color:#d4e2f5}
+.sjr-v553-design-workspace .sjr-v552-version>strong{display:block;background:#f1f6ff;padding:12px 14px;color:#213b5f}
+.sjr-v553-design-workspace .sjr-v552-version>p{padding:0 14px;margin:12px 0}
+.sjr-v553-design-workspace .sjr-v552-file{margin:0 14px}
+.sjr-v553-info{margin:0}
+.sjr-v553-info>div{display:grid;grid-template-columns:minmax(0,44%) minmax(0,56%);gap:10px;border-bottom:1px solid #ebf0f7;padding:11px 0;align-items:start}
+.sjr-v553-info>div:last-child{border-bottom:0}
+.sjr-v553-info dt{font-size:12px;color:#687fa0}
+.sjr-v553-info dd{font-size:12px;font-weight:700;color:#203b62;margin:0;overflow-wrap:anywhere}
+.sjr-v553-timeline{border-left:2px solid #cadef6;margin:12px 0 14px 5px;padding-left:16px}
+.sjr-v553-event{position:relative;margin:0 0 18px}
+.sjr-v553-event:before{content:'';position:absolute;width:9px;height:9px;background:#3b82f6;border:2px solid white;box-shadow:0 0 0 1px #afd0ff;border-radius:50%;left:-23px;top:3px}
+.sjr-v553-event strong{font-size:12px;color:#25466e}
+.sjr-v553-event p{margin:5px 0 0;color:#768aa3;font-size:11px;line-height:1.5;white-space:pre-wrap}
+.sjr-v553-table-wrap{overflow-x:auto}
+.sjr-v553-table{width:100%;border-collapse:collapse;font-size:12px}
+.sjr-v553-table th,.sjr-v553-table td{text-align:left;padding:9px;border-bottom:1px solid #e9eff8}
+.sjr-v553-table th{color:#647da0;background:#f4f8fe}
+@media(max-width:980px){.sjr-v553-design-workspace .sjr-v553-grid{grid-template-columns:1fr}}
+
+/* SJR V5.5.11 — Marketing visibility enhancements */
+.sjr-v5511-status-stack{display:flex;flex-direction:column;align-items:flex-start;gap:5px}
+.sjr-v5511-status-stack .sjr-v3-pill{white-space:nowrap}
+.sjr-v5511-progress-note{font-size:10px;color:#7083a0}
+.sjr-v5511-progress-chip{font-size:11px;font-weight:700;padding:5px 10px;border-radius:16px;background:#e8f0ff;color:#2459b3}
+.sjr-v5511-amber{background:#fff2d9;color:#9a5704}.sjr-v5511-red{background:#ffebee;color:#ae3048}.sjr-v5511-green{background:#e4f7ec;color:#16764c}.sjr-v5511-violet{background:#f0eaff;color:#7045a6}
+.sjr-v5511-icon-action{width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #cfe0f8;border-radius:8px;color:#2768d8;text-decoration:none;flex-shrink:0;background:#fff}
+.sjr-v5511-icon-action:hover{background:#eef5ff;border-color:#8fb8ff}
+.sjr-v54-file>a.sjr-v5511-icon-action{margin-left:auto}
+.sjr-v5511-project-progress{margin-top:12px}.sjr-v5511-project-item{display:flex;justify-content:space-between;gap:14px;border-top:1px solid #e6edf7;padding:10px 0;font-size:11px;color:#456080}.sjr-v5511-project-item strong{text-align:right;color:#183b69}
+.sjr-v5511-timeline{padding:0 4px 0 14px}.sjr-v5511-event{border-left:2px solid #c7dafa;padding:0 0 16px 16px;position:relative}.sjr-v5511-event:before{content:'';position:absolute;width:9px;height:9px;left:-6px;top:3px;background:#347de6;border:2px solid white;border-radius:50%;box-shadow:0 0 0 1px #b6d4ff}.sjr-v5511-event strong{display:block;font-size:12px;color:#173a68}.sjr-v5511-event small{display:block;margin-top:3px;font-size:11px;color:#74869e;line-height:1.5;white-space:pre-wrap}
+.sjr-v554-file{gap:12px}.sjr-v554-file .sjr-v5511-icon-action{margin-left:auto}
+
+/* SJR V5.6 - isolated multi-item readiness */
+.sjr-v560-readiness{border:1px solid #d7e3f7;border-radius:12px;padding:14px;margin-top:12px;background:#f8fbff}
+.sjr-v560-readiness>strong{font-size:13px;color:#142b51}
+.sjr-v560-readiness>p{font-size:12px;color:#526b90;margin:8px 0 12px}
+.sjr-v560-check{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #e4ebf7;padding:9px 0;font-size:12px;color:#233c60}
+.sjr-v560-check span:last-child{font-weight:600;text-align:right}
+.sjr-v560-readiness .btn{margin-top:12px;width:100%;font-size:12px}
+.sjr-v560-readiness .btn:disabled{opacity:.5;cursor:not-allowed}
+.sjr-v560-readiness small{display:block;margin-top:9px;color:#657c9c}
+.sjr-v560-help{color:#a12632!important}
+</style><style id="sjr-v31-layout">
+/* V3.1: full-width workspace only; keep other SJR screens intact */
+.main:has(.sjr-v3-heading){max-width:none;width:100%;margin:0;padding:28px clamp(20px,2.25vw,42px) 55px}
+.sjr-v3-heading{margin-bottom:18px}
+.sjr-v31-actions{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:15px 0 14px}
+.sjr-v31-left{display:flex;align-items:center;gap:10px;flex-wrap:wrap;min-width:0;flex:1}.sjr-v31-left .sjr-v3-search{flex:1 1 280px;max-width:480px;min-width:190px}.sjr-v31-left .sjr-v3-search input{width:100%}
+.sjr-v31-new{display:inline-flex;align-items:center;justify-content:center;min-width:136px;min-height:42px}
+.sjr-v3-tablewrap{width:100%}
+@media(max-width:680px){.main:has(.sjr-v3-heading){padding:20px 14px 40px}.sjr-v31-actions{align-items:stretch}.sjr-v31-left{width:100%}.sjr-v31-left > *{flex:1}.sjr-v31-new{width:100%}}
+</style>
+<style id="sjr-detail-v31-hotfix">
+/* Scoped correction: approved V3 UI, no workflow changes. */
+.main:has(.sjr-detail-v44){max-width:none!important;width:100%!important;margin:0!important;padding:22px clamp(14px,1.4vw,24px) 48px!important}
+.main:has(.sjr-detail-v44) .sjr-detail-v44{width:100%!important;max-width:none!important;margin:0!important;padding:0!important}
+.main:has(.sjr-detail-v44) .sjr-detail-grid{width:100%;grid-template-columns:minmax(0,1.72fr) minmax(310px,1fr)!important}
+.sjr-v3-table td:last-child,.sjr-v3-table th:last-child{text-align:center;white-space:nowrap;width:72px}
+.sjr-v3-table .sjr-open-detail-icon,.sjr-detail-v44 .sjr-design-link-icon{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ flex:none!important;width:38px!important;height:38px!important;min-width:38px!important;max-width:38px!important;
+ padding:0!important;margin:0!important;line-height:1!important;white-space:nowrap!important;box-sizing:border-box!important;
+ background:#fff;border:1px solid #d5e1f2;border-radius:9px;color:#2359a7;text-decoration:none;
+ font-size:0!important;overflow:hidden!important;vertical-align:middle;
+}
+.sjr-v3-table .sjr-open-detail-icon svg,.sjr-detail-v44 .sjr-design-link-icon svg{display:block!important;flex-shrink:0!important;width:19px!important;height:19px!important}
+.sjr-v3-table .sjr-open-detail-icon:hover,.sjr-detail-v44 .sjr-design-link-icon:hover{background:#edf5ff;color:#1b64cb}
+.sjr-v3-table .sjr-open-detail-icon:focus-visible,.sjr-detail-v44 .sjr-design-link-icon:focus-visible{outline:3px solid #9ac3ff;outline-offset:2px}
+@media(max-width:850px){.main:has(.sjr-detail-v44) .sjr-detail-grid{grid-template-columns:1fr!important}}
+</style>
+<style id="sjr-v532-reference-ui">
+/* restore the Marketing UI reference on New Job V5.3 only */
+.v52-dialog .v532-rich-block{margin-bottom:12px}.v52-dialog .v532-rich-block>label{margin-bottom:7px}.v52-dialog .v532-rich-block .sjr-editor{border-radius:12px;overflow:hidden}.v52-dialog .v532-rich-block .sjr-editor-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:5px;padding:9px;background:#f3f7fd;border-bottom:1px solid #dce6f4}.v52-dialog .v532-rich-block .sjr-editor-toolbar button,.v52-dialog .v532-rich-block .sjr-editor-toolbar select{width:auto!important;min-height:32px;font-size:12px!important;margin:0;padding:6px 10px}.v52-dialog .v532-rich-block .sjr-editor-area{min-height:138px;padding:13px;font-size:13px;line-height:1.6;outline:none}.v52-dialog .v532-rich-block .sjr-editor-area:focus{box-shadow:inset 0 0 0 2px #a7c6f8}.v52-dialog .v532-rich-block .sjr-editor-foot{text-align:right;font-size:11px;color:#8293ab;margin-top:5px}
+.v52-dialog .v532-attachments .sjr-attachment-head{display:flex;align-items:center;gap:10px;margin-bottom:15px}.v52-dialog .v532-attachments .sjr-attachment-head strong{font-size:13px}.v52-dialog .v532-attachments .sjr-attachment-head small{font-size:11px;color:#8391aa}.v52-dialog .v532-attachments .sjr-upload-area{position:relative;padding:22px 10px;text-align:center;border:2px dashed #abcaff;background:#f4f8ff;border-radius:12px;cursor:pointer}.v52-dialog .v532-attachments .sjr-upload-icon{font-size:27px;color:#3172df}.v52-dialog .v532-attachments .sjr-upload-area>strong{display:block;color:#2860b6;font-size:12px}.v52-dialog .v532-attachments .sjr-upload-area>p{font-size:10px;color:#788ca7;margin:6px 0 0}.v52-dialog .v532-attachments input[type=file]{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}.v52-dialog .v532-attachments .sjr-file-pending{margin:10px 0 13px;padding:10px;border:1px solid #e0e9f4;background:#f6f8fc;border-radius:8px;font-size:11px;color:#74849b;overflow-wrap:anywhere}.v52-dialog .v532-attachments textarea{min-height:75px;resize:vertical}.v52-dialog .v532-attachments .v532-add-attachment{background:#e9f2ff;border-color:#dce9fc;color:#285a9c}.v52-dialog .v532-attachments .sjr-attachment-divider{border-top:1px solid #e0e9f5;margin:17px 0}.v52-dialog .v532-attachments .sjr-file-table-header{display:flex;align-items:center;gap:9px;font-size:12px;margin-bottom:11px}.v52-dialog .v532-attachments .sjr-file-table-scroll{overflow-x:auto}.v52-dialog .v532-attachments .sjr-file-table{width:100%;border-collapse:collapse;font-size:10px;min-width:330px}.v52-dialog .v532-attachments .sjr-file-table th{background:#edf3fb;color:#4d6488;text-align:left;font-weight:700;padding:10px 6px}.v52-dialog .v532-attachments .sjr-file-table td{border-bottom:1px solid #e4ebf5;padding:9px 6px;max-width:120px;overflow-wrap:anywhere}.v52-dialog .v532-attachments .sjr-file-empty{text-align:center;color:#8090a5}.v52-dialog .v532-remove{color:#bd3446;background:transparent;border:1px solid #dae4f2;border-radius:6px;padding:5px;font-size:10px;cursor:pointer}.v52-dialog .v532-attachments .sjr-doc-icon{background:#e8f1ff;color:#3473ca;padding:8px;border-radius:50%}
+</style>
+<style id="sjr-v52-style">.v52-dialog{max-width:1390px!important;width:min(96vw,1390px)!important}.v52-body{padding:20px 24px}.v52-columns{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(280px,1fr);gap:16px}.v52-card{background:#fff;border:1px solid #e2e9f2;border-radius:14px;padding:18px;margin-bottom:15px}.v52-card h3{font-size:15px;margin:0 0 14px;color:#182b49}.v52-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.v52-card label{display:block;font-size:12px;font-weight:650;color:#33445e;margin-bottom:11px}.v52-card input:not([type=checkbox]):not([type=file]),.v52-card textarea,.v52-card select{display:block;width:100%;border:1px solid #ced8e6;border-radius:9px;background:#fff;padding:10px;margin-top:6px;color:#17243a}.v52-card input[type=file]{width:100%;margin:10px 0}.v52-between{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:8px}.v52-between h3{margin:0}.v52-btn{background:white;border:1px solid #cbd5e1;border-radius:9px;padding:9px 13px;font-weight:650;color:#263a5b;cursor:pointer}.v52-btn.primary{color:white;background:#275dd5;border-color:#275dd5}.v52-btn:disabled{opacity:.6;cursor:not-allowed}.v52-item{padding:15px;border:1px solid #dbe4f1;border-radius:12px;margin:13px 0;background:#fbfcff}.v52-check{display:flex!important;gap:9px;align-items:center;font-size:13px!important}.v52-design{padding:11px;border-radius:10px;background:#eef4ff}.v52-design[hidden]{display:none}.v52-sub{font-size:12px;color:#63748c;line-height:1.5}.v52-preview{border:1px dashed #b7c8df;border-radius:10px;padding:12px}.v52-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:9px}.v52-photo{border:1px solid #dbe4f1;border-radius:9px;overflow:hidden;background:white;padding:5px}.v52-photo img{width:100%;height:95px;object-fit:cover;border-radius:5px}.v52-photo small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.v52-photo button,.v52-doc button{border:none;background:none;color:#aa3344;cursor:pointer}.v52-doc{display:flex;justify-content:space-between;gap:10px;padding:9px;border-bottom:1px solid #e5eaf1;font-size:12px;overflow-wrap:anywhere}.v52-footer{display:flex;justify-content:flex-end;gap:10px;padding-top:13px;border-top:1px solid #e6ecf4}.v52-error{background:#fff1f2;color:#9f1239;border:1px solid #fecdd3;padding:12px;border-radius:9px;margin-bottom:15px}.v52-error[hidden],.v52-saved[hidden],.v52-body[hidden]{display:none}.v52-saved{padding:26px}.v52-saved li{padding:5px}.v52-dialog .sjr-modal-content{display:none}@media(max-width:850px){.v52-columns,.v52-grid{grid-template-columns:1fr}.v52-dialog{width:98vw!important}.v52-body{padding:12px}}
+/* SJR V5.2.1: make multi-item form scroll inside the modal. */
+.v52-dialog{height:min(92dvh,950px)!important;max-height:calc(100dvh - 24px)!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}
+.v52-dialog>.sjr-modal-header{flex:0 0 auto!important}
+.v52-dialog>.v52-body{flex:1 1 auto!important;min-height:0!important;overflow-y:auto!important;overflow-x:hidden!important;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;scrollbar-gutter:stable}
+.v52-dialog>.v52-saved{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain}
+.v52-dialog .v52-footer{position:sticky;bottom:-20px;z-index:2;background:#fff;padding:14px 0 10px}
+@media(max-width:850px){.v52-dialog{height:calc(100dvh - 16px)!important;max-height:calc(100dvh - 16px)!important}.v52-dialog>.v52-body{padding-bottom:18px}}
+</style>
+<style id="sjr-v53-compact-css">
+/* V5.3: presentation only; existing input names, API and upload flow unchanged */
+.v52-dialog{width:min(1280px,96vw)!important}
+.v52-body{scrollbar-gutter:stable;padding:18px 22px}
+.v52-columns{grid-template-columns:minmax(0,1.75fr) minmax(270px,.85fr);align-items:start;gap:15px}
+.v52-card{padding:16px;margin-bottom:12px}
+.v52-item{padding:0;margin:10px 0;overflow:hidden;background:#fff}
+.v53-item-head{display:flex;align-items:center;gap:8px;padding:9px 12px;background:#f8faff}
+.v53-toggle{display:flex;align-items:center;justify-content:space-between;flex:1;min-width:0;gap:10px;border:0;background:transparent;text-align:left;color:#213451;cursor:pointer;padding:6px 3px}
+.v53-head-label{display:flex;flex-direction:column;min-width:0;gap:4px}
+.v53-item-summary{font-size:11px;color:#7b8ca3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%;font-weight:500}
+.v53-chevron{color:#4774b4;font-size:21px;line-height:1;transform:rotate(180deg);transition:transform .15s}
+.v53-collapsed .v53-chevron{transform:rotate(0)}
+.v53-item-fields{padding:14px}
+.v53-collapsed .v53-item-fields{display:none}
+.v52-preview{background:#f9fbff;padding:14px;position:relative}
+.v52-preview strong:before{content:'▧';color:#3978df;margin-right:9px;font-size:19px}
+.v52-preview .v52-file-input{border:1px solid #d4e1f3;border-radius:9px;padding:9px;background:#fff;font-size:12px}
+.v52-preview .v52-file-input::file-selector-button{border:0;border-radius:7px;background:#e8f1ff;color:#2457a6;padding:8px 11px;font-weight:700;margin-right:9px;cursor:pointer}
+.v52-gallery{margin-top:10px}
+.v52-card h3{margin-bottom:12px}
+.v52-card textarea{min-height:65px}
+@media(max-width:850px){.v52-columns{grid-template-columns:1fr}.v52-dialog{width:min(97vw,760px)!important}}
+@media(max-width:500px){.v52-body{padding:12px}.v53-item-head{padding:8px}.v53-item-fields{padding:11px}.v53-item-summary{max-width:210px}}
+</style>
+<style id="sjr-v531-typography-revisi">
+/* Only New Job multi-item dialog. No changes to workspace or backend. */
+.v52-dialog{font-size:12px;line-height:1.45}
+.v52-dialog .sjr-modal-header h2{font-size:19px!important;line-height:1.25!important;letter-spacing:-.3px}
+.v52-dialog .sjr-modal-header p{font-size:11px!important;line-height:1.5}
+.v52-dialog .v52-card h3{font-size:13px!important;line-height:1.4}
+.v52-dialog .v52-card label{font-size:11px!important;line-height:1.4}
+.v52-dialog .v52-card input:not([type=checkbox]):not([type=file]),
+.v52-dialog .v52-card textarea,
+.v52-dialog .v52-card select{font-size:12px!important;line-height:1.4}
+.v52-dialog .v52-btn,
+.v52-dialog .v53-toggle,
+.v52-dialog .v52-photo button,
+.v52-dialog .v52-doc button{font-size:12px!important;line-height:1.4!important;font-weight:650}
+.v52-dialog .v53-item-head .v52-item-title{font-size:12px!important;line-height:1.4}
+.v52-dialog .v52-sub,
+.v52-dialog .v52-card p,
+.v52-dialog .v52-doc{font-size:11px!important;line-height:1.55}
+.v52-dialog .v52-check{font-size:11px!important}
+.v52-dialog .v52-file-input,
+.v52-dialog .v52-file-input::file-selector-button{font-size:11px!important;line-height:1.4}
+.v52-dialog .v52-footer .v52-btn{font-size:12px!important}
+.v52-dialog .v52-error,.v52-dialog .v52-saved{font-size:12px}
+</style>
+
+<style id="sjr-v534-ui">
+/* SJR New Job V5.3.4: scoped visual adjustments. */
+.v52-dialog .v534-section-heading{display:flex;align-items:center;gap:10px;line-height:1.35;min-height:36px}
+.v52-dialog .v534-section-icon,.v52-dialog .v534-icon{display:inline-flex;align-items:center;justify-content:center;flex:none;width:36px;height:36px;border-radius:50%;background:#eff6ff;border:1px solid #b9d6ff;color:#2563eb}
+.v52-dialog .v534-section-icon svg,.v52-dialog .v534-icon svg{width:18px;height:18px;stroke-width:1.9}
+.v52-dialog .v532-attachments .sjr-attachment-head,.v52-dialog .v532-attachments .sjr-file-table-header{display:flex;align-items:center;gap:10px}
+.v52-dialog .v534-designer-zone{margin-top:14px}
+.v52-dialog .v534-designer-zone .v52-check{margin:0;display:flex;align-items:center;gap:7px}
+.v52-dialog .v534-designer-zone .v52-design:not([hidden]){margin-top:12px}
+.v52-dialog .v534-designer-zone .v52-design[hidden]{display:none!important}
+</style>
+<style id="sjr-v533-cleanup">
+/* Only for Marketing New Job multi-item modal. */
+.v52-dialog #sjrV52Details[hidden]{display:none!important;visibility:hidden!important;position:absolute!important}
+.v52-dialog .v532-rich-block .sjr-editor{border:1px solid #d4e0ee;border-radius:11px;overflow:hidden}
+.v52-dialog .v532-rich-block .sjr-editor-area{min-height:135px;max-height:250px;padding:12px 14px}
+.v52-dialog .v532-rich-block .sjr-editor-toolbar button{white-space:nowrap}
+.v52-dialog .v532-rich-block .sjr-editor-toolbar button:focus-visible,.v52-dialog .v532-rich-block .sjr-editor-toolbar select:focus-visible{outline:2px solid #3c7be9;outline-offset:2px}
+.v52-dialog .v532-attachments .sjr-doc-icon{display:inline-flex;align-items:center;justify-content:center;flex:0 0 33px}
+.v52-dialog .v532-attachments .sjr-upload-icon{display:flex;align-items:center;justify-content:center;color:#3275e0}
+.v52-dialog .v532-attachments .sjr-upload-area:focus-visible{outline:3px solid #7caff7;outline-offset:2px}
+.v52-dialog .v52-preview strong:before{content:none!important;display:none!important}
+.v52-dialog .v533-preview-title{display:flex;align-items:center;gap:8px;font-size:12px;color:#243a5b}
+.v52-dialog .v533-preview-title svg{color:#3479db;flex-shrink:0}
+.v52-dialog .v52-preview .v52-file-input{width:100%;margin:12px 0 0;padding:10px;border:1.5px dashed #abc8f7;border-radius:9px;background:#f6f9ff;max-width:100%;color:#57708e;cursor:pointer}
+.v52-dialog .v52-preview .v52-file-input::file-selector-button{background:#e5efff;color:#245baa;border:1px solid #cedffc;font-size:11px;border-radius:7px}
+/* Attachment list: cards at narrow side-column widths so long names never compress actions. */
+.v52-dialog .v532-attachments .sjr-file-table-scroll{border:0;overflow:visible;max-width:100%}
+.v52-dialog .v532-attachments .sjr-file-table{min-width:0!important;width:100%;display:block;border:0;background:transparent}
+.v52-dialog .v532-attachments .sjr-file-table thead{display:none}
+.v52-dialog .v532-attachments .sjr-file-table tbody{display:flex;flex-direction:column;gap:9px;width:100%}
+.v52-dialog .v532-attachments .sjr-file-table tr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;border:1px solid #dfe8f4;border-radius:9px;background:#fafcff;padding:10px 11px;align-items:start}
+.v52-dialog .v532-attachments .sjr-file-table td{display:block;max-width:none!important;min-width:0;padding:0!important;border:0!important;overflow-wrap:anywhere;word-break:normal;font-size:11px;line-height:1.5}
+.v52-dialog .v532-attachments .sjr-file-table td:nth-child(1){display:none}
+.v52-dialog .v532-attachments .sjr-file-table td:nth-child(2){grid-column:1;grid-row:1;font-weight:650;color:#233b5b}
+.v52-dialog .v532-attachments .sjr-file-table td:nth-child(3){grid-column:1;grid-row:2;display:inline;color:#6b7d96}
+.v52-dialog .v532-attachments .sjr-file-table td:nth-child(3):after{content:' · '}
+.v52-dialog .v532-attachments .sjr-file-table td:nth-child(4){grid-column:1;grid-row:3;color:#6b7d96}
+.v52-dialog .v532-attachments .sjr-file-table td:nth-child(5){grid-column:1;grid-row:4;color:#647997}
+.v52-dialog .v532-attachments .sjr-file-table td:nth-child(5):not(:empty):before{content:'Catatan: ';font-weight:650}
+.v52-dialog .v532-attachments .sjr-file-table td:nth-child(6){grid-column:2;grid-row:1 / span 4;align-self:start}
+.v52-dialog .v532-attachments .sjr-file-table td.sjr-file-empty{grid-column:1/-1;display:block;font-weight:400}
+.v52-dialog .v532-remove{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;padding:0;border:1px solid #e4cbd1;border-radius:8px;color:#ad3347;background:#fff}
+.v52-dialog .v532-remove:hover{background:#fff0f2}
+</style>
+<style id="sjr-v535-editor-toolbar">
+/* Rich text toolbar, adapted to approved reference and scoped to New Job modal only. */
+.v52-dialog .v535-toolbar{position:relative;display:flex;align-items:center;justify-content:flex-start;flex-wrap:wrap;gap:3px;padding:7px 9px;background:#f6f8fc;border-bottom:1px solid #dae4f2}
+.v52-dialog .v535-toolbar select{flex:0 0 136px;max-width:136px;min-height:34px;border:1px solid #d2dfef;border-radius:8px;background:#fff;color:#213c65;font-size:12px}
+.v52-dialog .v535-toolbar button.v535-tool{width:32px;height:32px;min-height:32px;display:inline-flex;align-items:center;justify-content:center;padding:5px;border:0;border-radius:7px;background:transparent;color:#344e70;font-size:15px;line-height:1;transition:background .12s}
+.v52-dialog .v535-toolbar button.v535-tool:hover{background:#e7eefb;color:#2563eb}
+.v52-dialog .v535-toolbar .v535-separator{height:22px;width:1px;background:#d7e0ee;margin:0 4px}
+.v52-dialog .v535-toolbar .v535-color-button{width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;border-radius:7px;position:relative;cursor:pointer}
+.v52-dialog .v535-toolbar .v535-color-button:hover{background:#e7eefb}
+.v52-dialog .v535-toolbar .v535-color-dot{display:block;width:19px;height:19px;border-radius:50%;background:#687ee7;box-shadow:inset 0 0 0 1px #c9d4f7}
+.v52-dialog .v535-toolbar input[type=color]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;padding:0}
+.v52-dialog .v535-toolbar .v535-emoji-panel{position:absolute;z-index:30;top:100%;right:5px;display:flex;gap:3px;padding:6px;border:1px solid #d6e3f5;background:#fff;border-radius:9px;box-shadow:0 8px 20px #20385420}
+.v52-dialog .v535-toolbar .v535-emoji-panel[hidden]{display:none!important}
+.v52-dialog .v535-toolbar .v535-emoji-panel button{font-size:18px;background:#fff;border:0;padding:5px;border-radius:5px;cursor:pointer}
+.v52-dialog .v535-toolbar .v535-emoji-panel button:hover{background:#edf4ff}
+.v52-dialog .v535-rich-editor code{background:#eef2f9;border-radius:3px;padding:1px 3px;font-family:ui-monospace,SFMono-Regular,monospace}
+@media (max-width:800px){.v52-dialog .v535-toolbar select{flex-basis:105px;max-width:105px}.v52-dialog .v535-toolbar .v535-separator{margin:0 2px}}
+</style>
+<style id="sjr-v536-editor-polish">
+/* V5.3.6: compact but legible editing toolbar; visual-only changes. */
+.v52-dialog .v532-rich-block .sjr-editor.v535-rich-editor{border:1px solid #cbdaf0;border-radius:11px;overflow:hidden;background:#fff;box-shadow:0 1px 2px rgba(21,48,88,.04)}
+.v52-dialog .v535-rich-editor .v535-toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;gap:5px;padding:8px 10px;background:#f3f6fc;min-height:52px;overflow:visible}
+.v52-dialog .v535-rich-editor .v535-toolbar select{flex:0 0 145px;width:145px!important;max-width:145px;height:36px!important;min-height:36px!important;padding:0 10px!important;font-size:12px!important;border-radius:8px;border:1px solid #d2dfef;background:#fff}
+.v52-dialog .v535-rich-editor .v535-toolbar button.v535-tool{flex:0 0 35px;width:35px!important;min-width:35px;max-width:35px;height:35px!important;min-height:35px!important;padding:0!important;border-radius:7px;background:transparent;color:#324c70;display:inline-flex;align-items:center;justify-content:center;font-size:17px!important;font-weight:500;line-height:1}
+.v52-dialog .v535-rich-editor .v535-toolbar button.v535-tool svg{width:19px;height:19px;display:block;stroke-width:1.9}
+.v52-dialog .v535-rich-editor .v535-toolbar button.v535-tool:hover,.v52-dialog .v535-rich-editor .v535-toolbar button.v535-tool:focus-visible{background:#e4edff;color:#1d5fd3;outline:none;box-shadow:inset 0 0 0 1px #c3d7f9}
+.v52-dialog .v535-rich-editor .v535-toolbar .v535-separator{flex:0 0 1px;width:1px;height:22px;margin:0 3px;background:#d5dfee}
+.v52-dialog .v535-rich-editor .v535-toolbar .v535-color-button{flex:0 0 35px;width:35px;height:35px;border-radius:7px}
+.v52-dialog .v535-rich-editor .v535-toolbar .v535-color-dot{width:17px;height:17px;border:2px solid #fff;box-shadow:0 0 0 1px #b7c8e3}
+.v52-dialog .v535-rich-editor .sjr-editor-area{min-height:166px;padding:15px 16px!important;font-size:13px!important;line-height:1.65;outline:none;color:#1b3151}
+.v52-dialog .v535-rich-editor .sjr-editor-area:focus{box-shadow:inset 0 0 0 1px #91b8f1}
+.v52-dialog .v532-rich-block .sjr-editor-foot{margin-top:6px;color:#788aa8;font-size:11px}
+@media(max-width:1050px){.v52-dialog .v535-rich-editor .v535-toolbar{justify-content:flex-start;flex-wrap:wrap;gap:4px}.v52-dialog .v535-rich-editor .v535-toolbar select{flex-basis:135px;width:135px!important}}
+@media(max-width:580px){.v52-dialog .v535-rich-editor .v535-toolbar{padding:7px}.v52-dialog .v535-rich-editor .v535-toolbar button.v535-tool{flex-basis:32px;width:32px!important;min-width:32px;height:32px!important;min-height:32px!important}.v52-dialog .v535-rich-editor .v535-toolbar .v535-separator{margin:0 1px}}
+</style>
+<style id="sjr-v537-toolbar-alignment">
+/* V5.3.7: compact 16px icon sizing and true vertical centering of color control. */
+.v52-dialog .v535-rich-editor .v535-toolbar{
+  justify-content:flex-start!important;align-items:center!important;
+  flex-wrap:wrap!important;column-gap:3px!important;row-gap:3px!important;
+  padding:6px 8px!important;min-height:44px!important;
+}
+.v52-dialog .v535-rich-editor .v535-toolbar select{
+  flex:0 0 132px!important;width:132px!important;max-width:132px!important;
+  height:32px!important;min-height:32px!important;padding:0 9px!important;
+}
+.v52-dialog .v535-rich-editor .v535-toolbar button.v535-tool{
+  flex:0 0 30px!important;width:30px!important;min-width:30px!important;
+  max-width:30px!important;height:30px!important;min-height:30px!important;
+  padding:0!important;margin:0!important;font-size:13px!important;
+  line-height:1!important;display:inline-flex!important;
+  align-items:center!important;justify-content:center!important;
+}
+.v52-dialog .v535-rich-editor .v535-toolbar button.v535-tool svg{
+  width:16px!important;height:16px!important;stroke-width:1.85!important;
+  display:block!important;flex:none!important;
+}
+.v52-dialog .v535-rich-editor .v535-toolbar .v535-separator{
+  flex:0 0 1px!important;height:18px!important;margin:0 4px!important;
+  align-self:center!important;
+}
+/* The color control is a label, unlike the other toolbar buttons: override form-label rules. */
+.v52-dialog .v535-rich-editor .v535-toolbar label.v535-color-button{
+  box-sizing:border-box!important;flex:0 0 30px!important;
+  width:30px!important;min-width:30px!important;max-width:30px!important;
+  height:30px!important;min-height:30px!important;margin:0!important;
+  padding:0!important;display:inline-flex!important;flex-direction:row!important;
+  align-items:center!important;justify-content:center!important;
+  line-height:1!important;vertical-align:middle!important;align-self:center!important;
+  position:relative!important;
+}
+.v52-dialog .v535-rich-editor .v535-toolbar label.v535-color-button .v535-color-dot{
+  box-sizing:border-box!important;position:static!important;display:block!important;
+  width:15px!important;height:15px!important;min-width:15px!important;
+  min-height:15px!important;margin:0!important;flex:0 0 15px!important;
+  border:2px solid #fff!important;border-radius:50%!important;
+  box-shadow:0 0 0 1px #b7c8e3!important;
+}
+.v52-dialog .v535-rich-editor .v535-toolbar label.v535-color-button input[type=color]{
+  position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+  opacity:0!important;cursor:pointer!important;margin:0!important;padding:0!important;
+}
+@media(max-width:580px){.v52-dialog .v535-rich-editor .v535-toolbar select{flex-basis:110px!important;width:110px!important;max-width:110px!important}}
+</style>
+<style id="sjr-v538-select-spacing">
+/* V5.3.8: consistent inset chevrons for select controls inside New Job only.
+   Explicit SVG avoids native platform arrows ignoring CSS background-position. */
+.v52-dialog .v52-card select,
+.v52-dialog .v535-rich-editor .v535-toolbar select{
+  appearance:none!important;
+  -webkit-appearance:none!important;
+  -moz-appearance:none!important;
+  padding-right:38px!important;
+  background-color:#fff!important;
+  background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%3E%3Cpath%20d='m3.5%205.25%203.5%203.5%203.5-3.5'%20stroke='%233C5474'%20stroke-width='1.6'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E")!important;
+  background-repeat:no-repeat!important;
+  background-size:14px 14px!important;
+  background-position:right 15px center!important;
+}
+/* Keep the toolbar dropdown compact while preserving the arrow inset. */
+.v52-dialog .v535-rich-editor .v535-toolbar select{
+  padding-left:10px!important;
+  padding-right:34px!important;
+  background-position:right 13px center!important;
+}
+</style>
+<style id="sjr-v539-upload-border-consistency">
+/* V5.3.9: match Project document upload border to Item preview outer border. */
+.v52-dialog .v532-attachments .sjr-upload-area{
+  border:1px dashed #b7c8df;
+  border-radius:10px;
+  background:#f9fbff;
+  box-shadow:none;
+}
+.v52-dialog .v532-attachments .sjr-upload-area:hover{
+  border-color:#93b3e1;
+  background:#f5f9ff;
+}
+</style>
+<style id="sjr-v54-multi-item-detail">
+/* SJR V5.4 — read-only multi-item project detail; scoped visual styles. */
+.sjr-v54-summary{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:0 0 17px}
+.sjr-v54-chip{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:#fff7e9;color:#9a6000;border:1px solid #f3dfb8;border-radius:999px;font-size:12px;font-weight:700}
+.sjr-v54-item{border:1px solid #dfe9f7;border-radius:13px;overflow:hidden;margin:0 0 12px;background:#fff}
+.sjr-v54-item-head{padding:13px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;background:#f7faff}
+.sjr-v54-item-head strong{font-size:13px;color:#1c3354}.sjr-v54-item-head small{display:block;margin-top:4px;color:#657c9b;font-size:11px}
+.sjr-v54-item-body{padding:14px 16px}.sjr-v54-state{font-size:11px;font-weight:750;border-radius:999px;padding:6px 9px;white-space:nowrap;background:#e8f8f0;color:#157a4b}.sjr-v54-state.need{background:#fff1db;color:#9d6205}
+.sjr-v54-previews{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}.sjr-v54-preview{display:block;width:140px;max-width:100%;text-decoration:none;color:#446080}
+.sjr-v54-preview img{width:140px;height:105px;display:block;object-fit:cover;border:1px solid #dce8f8;border-radius:9px;background:#f1f5fa}
+.sjr-v54-preview span{display:block;font-size:10px;margin-top:5px;line-height:1.4;overflow-wrap:anywhere}
+.sjr-v54-designer{border-top:1px solid #e8eef8;margin-top:14px;padding-top:12px}.sjr-v54-designer h4{font-size:12px;margin:0 0 6px}.sjr-v54-designer p{font-size:12px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere;margin:0 0 7px}
+.sjr-v54-muted{color:#72849f;font-size:12px}.sjr-v54-notice{padding:12px 14px;border-radius:10px;border:1px solid #d9e6f9;background:#f3f8ff;color:#315b94;font-size:12px;line-height:1.5}
+.sjr-v54-file{padding:11px 0;border-bottom:1px solid #edf1f7;display:flex;justify-content:space-between;gap:10px;align-items:center}.sjr-v54-file:last-child{border-bottom:0}
+.sjr-v54-file b{display:block;font-size:12px;overflow-wrap:anywhere}.sjr-v54-file small{display:block;color:#7789a3;font-size:11px;line-height:1.5;margin-top:3px}.sjr-v54-file a{color:#245fc1;white-space:nowrap;font-size:12px}
+@media(max-width:670px){.sjr-v54-item-head{align-items:flex-start}.sjr-v54-preview,.sjr-v54-preview img{width:115px}.sjr-v54-preview img{height:90px}}
+
+/* V5.4.1 Marketing Detail — visual refinement (read only). */
+.sjr-v541-info{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:4px 0 22px;border-bottom:1px solid #e7edf5}
+.sjr-v541-info-cell{padding:5px 16px 15px 0;min-width:0}
+.sjr-v541-info-cell:not(:first-child){padding-left:17px;border-left:1px solid #e9eef7}
+.sjr-v541-info-cell small{font-size:11px;color:#7b8ca6;display:block;margin-bottom:6px}
+.sjr-v541-info-cell strong{font-size:13px;font-weight:700;color:#213556;overflow-wrap:anywhere}
+.sjr-v541-brief-label{font-size:13px;font-weight:750;color:#213556;margin:0 0 11px}
+.sjr-v541-brief-body{border-left:3px solid #89b5fb;padding:7px 0 7px 16px;background:none;color:#263853;line-height:1.75;font-size:13px;white-space:pre-wrap;overflow-wrap:anywhere}
+.sjr-v541-brief-body a{color:#245ed7;text-decoration:underline;text-underline-offset:2px}
+.sjr-v541-brief-note{font-size:11px;color:#8292a8;margin-top:10px}
+.sjr-v541-item-list{display:grid;gap:12px;margin-top:14px}
+.sjr-v541-item{border:1px solid #dfe8f6;border-radius:13px;background:#fff;overflow:hidden}
+.sjr-v541-item[open]{border-color:#c8dafa;box-shadow:0 3px 10px rgba(36,80,135,.035)}
+.sjr-v541-item>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:13px;padding:14px 15px;background:#fff}
+.sjr-v541-item>summary::-webkit-details-marker{display:none}
+.sjr-v541-cover{width:74px;height:64px;flex:0 0 74px;border:1px solid #e1eaf7;border-radius:10px;background:#f4f7fc;object-fit:cover}
+.sjr-v541-cover-empty{display:grid;place-items:center;color:#91a5c2;font-size:22px}
+.sjr-v541-ident{flex:1;min-width:0}
+.sjr-v541-ident .index{font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#7790b1}
+.sjr-v541-ident strong{display:block;font-size:14px;color:#172e50;margin:3px 0 6px;line-height:1.2}
+.sjr-v541-meta{display:flex;gap:6px 12px;flex-wrap:wrap;font-size:11px;color:#647d9c}
+.sjr-v541-side{display:flex;align-items:flex-end;flex-direction:column;gap:8px}
+.sjr-v541-status{font-size:10px;font-weight:750;border-radius:999px;padding:5px 9px;background:#e8f7ef;color:#14784a;white-space:nowrap}
+.sjr-v541-status.need{background:#fff1db;color:#9d6205}
+.sjr-v541-expand{color:#4c79b5;font-size:11px;white-space:nowrap}
+.sjr-v541-item[open] .sjr-v541-expand::before{content:'Sembunyikan · '}
+.sjr-v541-item:not([open]) .sjr-v541-expand::before{content:'Lihat detail · '}
+.sjr-v541-details{border-top:1px solid #e8eef8;padding:15px 16px 17px;background:#fafcff}
+.sjr-v541-detail-title{font-size:11px;font-weight:750;color:#5b7292;margin:0 0 9px}
+.sjr-v541-gallery{display:flex;gap:11px;flex-wrap:wrap}
+.sjr-v541-shot{display:block;width:160px;max-width:100%;color:#547196;text-decoration:none}
+.sjr-v541-shot img{display:block;width:160px;height:112px;object-fit:cover;border:1px solid #dce6f6;border-radius:9px;background:#fff}
+.sjr-v541-shot small{font-size:10px;overflow-wrap:anywhere;display:block;line-height:1.5;margin-top:5px}
+.sjr-v541-designer-box{background:#fff;border:1px solid #e5ecf7;border-radius:10px;padding:13px 14px;margin-top:14px}
+.sjr-v541-designer-box p{font-size:12px;white-space:pre-wrap;line-height:1.65;margin:6px 0 10px;color:#253a5c}
+.sjr-v541-designer-box .sjr-v541-design-foot{display:flex;gap:10px;flex-wrap:wrap;font-size:11px;color:#617998}
+.sjr-v541-design-label{font-weight:750;font-size:12px;color:#243956}
+.sjr-v541-no-designer{font-size:11px;color:#577b69;margin-top:12px}
+.sjr-v541-counter{display:flex;gap:8px;flex-wrap:wrap;font-size:11px;color:#607896;margin:10px 0 0}
+.sjr-v541-counter span{background:#f2f6fc;border-radius:7px;padding:6px 9px}
+@media(max-width:1150px){.sjr-v541-info{grid-template-columns:repeat(2,minmax(0,1fr))}.sjr-v541-info-cell:nth-child(3){border-left:0;padding-left:0}}
+@media(max-width:600px){.sjr-v541-info{grid-template-columns:1fr}.sjr-v541-info-cell:not(:first-child){border-left:0;padding-left:0}.sjr-v541-item>summary{gap:8px;padding:10px}.sjr-v541-cover{width:58px;height:56px;flex-basis:58px}.sjr-v541-side{max-width:120px}.sjr-v541-status{white-space:normal;text-align:center}.sjr-v541-shot,.sjr-v541-shot img{width:125px}}
+</style>
+<style id="sjr-v552-style">.sjr-v552-form{display:grid;gap:10px;margin:12px 0 18px;padding:16px;border:1px solid #dbe6f5;border-radius:12px;background:#f8fbff}.sjr-v552-form input[type=file],.sjr-v552-form textarea{width:100%;border:1px solid #ccd9eb;border-radius:9px;padding:10px;background:white;font:inherit}.sjr-v552-form textarea{resize:vertical;min-height:80px}.sjr-v552-actions{display:flex;gap:9px;justify-content:flex-end;flex-wrap:wrap}.sjr-v552-error{color:#ae1239;background:#fff0f3;padding:10px;border-radius:8px}.sjr-v552-sent{padding:12px;background:#e7f5ed;border-radius:9px;color:#146c42}.sjr-v552-version{border:1px solid #dce6f4;border-radius:10px;padding:12px;margin:10px 0}.sjr-v552-version>p{white-space:pre-wrap}.sjr-v552-file{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:9px 0;border-top:1px solid #edf2f7;overflow-wrap:anywhere}.sjr-v552-file>a{flex-shrink:0}.sjr-v552-form [hidden]{display:none!important}</style>
+<style id="sjr-v554-review-style">
+.sjr-v554-revision-alert{background:#fff5e7;border:1px solid #f2d49d;color:#81520a;padding:12px 14px;border-radius:9px;margin:10px 0;font-size:12px}.sjr-v554-revision-alert p{white-space:pre-wrap;margin:6px 0 0}.sjr-v554-review{border-top:1px solid #e4ecf8;margin-top:16px;padding-top:14px;color:#213556}
+.sjr-v554-review>h3{font-size:13px;margin:0 0 12px;color:#18355b}
+.sjr-v554-version{border:1px solid #dce6f5;border-radius:10px;overflow:hidden;margin:10px 0;background:#fff}
+.sjr-v554-version-head{background:#f1f6fd;padding:10px 12px;font-size:12px}
+.sjr-v554-version>p{padding:0 12px;white-space:pre-wrap;font-size:12px}
+.sjr-v554-file{padding:10px 12px;border-top:1px solid #e9eff8;display:flex;gap:12px;justify-content:space-between;align-items:center;font-size:11px;overflow-wrap:anywhere}
+.sjr-v554-file a{color:#1e5bd4;white-space:nowrap}
+.sjr-v554-note{margin:0 12px 12px;background:#f2f7fe;padding:10px 12px;border-radius:8px;font-size:12px}
+.sjr-v554-note p{white-space:pre-wrap;margin:6px 0 0}
+.sjr-v554-form{display:grid;gap:9px;margin-top:15px}
+.sjr-v554-form label{font-size:12px;font-weight:700}
+.sjr-v554-form textarea{display:block;width:100%;background:#fff;border:1px solid #cddcf0;border-radius:9px;padding:11px 12px;font:inherit;font-size:12px;resize:vertical}
+.sjr-v554-actions{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap}
+.sjr-v554-hint{font-size:11px;color:#647b9b;line-height:1.6}
+.sjr-v554-error{font-size:12px;color:#aa183b;background:#fff0f3;padding:9px;border-radius:7px}
+</style>
+<style id="sjr-v555-style">.sjr-v555-active{border:1px solid #cfdef4;border-radius:12px;background:#f7faff;padding:16px;margin:14px 0 18px;display:grid;gap:12px}.sjr-v555-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.sjr-v555-head h3{margin:4px 0 0;font-size:15px;color:#193251}.sjr-v555-overline{font-size:10px;letter-spacing:.1em;font-weight:750;color:#40659d}.sjr-v555-pill{border-radius:999px;background:#fff1d9;color:#9a5700;padding:6px 12px;font-size:11px;font-weight:700}.sjr-v555-help{font-size:12px;line-height:1.55;margin:0;color:#587092}.sjr-v555-files{border:1px solid #d8e4f4;border-radius:9px;background:white;padding:5px 12px}.sjr-v555-files .sjr-v552-file:last-child{border-bottom:0}.sjr-v555-note{border:1px solid #d8e4f4;border-radius:9px;background:white;padding:12px;white-space:pre-wrap;margin:0;color:#183252}.sjr-v555-send{margin:0}.sjr-v555-editor .sjr-v555-head{margin-bottom:5px}.sjr-v555-history-title{margin:20px 0 8px}.sjr-v555-active .sjr-v552-error[hidden]{display:none!important}@media(max-width:640px){.sjr-v555-head{align-items:flex-start;flex-wrap:wrap}.sjr-v555-active{padding:12px}}</style>
+<style id="sjr-v556-attachment-table-style">
+/* SJR_V556_ATTACHMENT_TABLE: draft mutable; sent versions read-only */
+.sjr-v556-scroll{overflow-x:auto;width:100%;border:1px solid #dbe6f4;border-radius:10px;background:#fff;margin:9px 0 14px}
+.sjr-v556-table{border-collapse:collapse;width:100%;min-width:700px;font-size:11px;color:#263b5a}
+.sjr-v556-table th{background:#f1f5fb;color:#617898;font-weight:750;text-align:left;padding:12px 10px;border-bottom:1px solid #dbe6f4;white-space:nowrap}
+.sjr-v556-table td{padding:10px;border-bottom:1px solid #e5edf7;vertical-align:middle}
+.sjr-v556-table tr:last-child td{border-bottom:0}
+.sjr-v556-table th:first-child,.sjr-v556-table td:first-child{width:38px;text-align:center}
+.sjr-v556-table th:last-child,.sjr-v556-table td:last-child{width:83px;text-align:center}
+.sjr-v556-name{display:flex;align-items:center;gap:8px;min-width:175px;max-width:320px}
+.sjr-v556-name strong{overflow-wrap:anywhere;font-weight:700;font-size:11px}
+.sjr-v556-type{flex:none;min-width:34px;height:32px;padding:0 5px;border-radius:8px;display:grid;place-items:center;background:#e9f1ff;color:#2868b7;font-size:9px;font-weight:800}
+.sjr-v556-type.type-pdf{color:#c74753;background:#fff0f0}.sjr-v556-type.type-zip{color:#7554bb;background:#f2ecff}
+.sjr-v556-actions{display:flex;align-items:center;justify-content:center;gap:5px}
+.sjr-v556-icon{display:inline-grid;place-items:center;width:30px;height:30px;border:1px solid #d9e5f6;border-radius:8px;background:white;color:#2865b8;cursor:pointer;padding:0;text-decoration:none}
+.sjr-v556-icon:hover{background:#edf4ff}.sjr-v556-icon.danger{color:#c23d52}.sjr-v556-icon.danger:hover{background:#fff0f3;border-color:#f0bac4}.sjr-v556-icon:disabled{opacity:.4;cursor:wait}
+</style>
+<style id="sjr-v557-sent-table-spacing">
+/* V5.5.7: breathing room for read-only attachment tables in sent versions only. */
+.sjr-v553-design-workspace .sjr-v552-version > .sjr-v556-scroll {
+  width: auto;
+  margin: 12px 14px 16px;
+}
+@media (max-width: 640px) {
+  .sjr-v553-design-workspace .sjr-v552-version > .sjr-v556-scroll {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+</style>
+
+<!-- SJR_V578_PREVIEW_NO_DUPLICATE_START -->
+<style>
+details.sjr-v541-item[open] > summary > img.sjr-v541-cover { display: none !important; }
+</style>
+<!-- SJR_V578_PREVIEW_NO_DUPLICATE_END -->
+</head><body><div class="shell"><aside class="side"><div class="brand"><div class="brandicon">S</div><div><strong>Enterprise BPM</strong><small>Simple Job Request</small></div></div><div><p class="sidetitle">MENU SJR</p><nav id="nav" class="nav"></nav></div><div class="sidebottom">SJR-02 · LAMPIRAN PEKERJAAN<br>Kirim Brief menggunakan database pengujian.<br>PROD-02 hingga PROD-09 tidak diubah.</div></aside><section class="content"><header class="top"><div><strong>Simple Job Request / Workspace</strong><small>Marketing · Designer · Produksi · Manager Produksi</small></div><div class="topright"><span class="tag">SJR-02 · KIRIM BRIEF + LAMPIRAN</span><select id="role" class="role" aria-label="Pilih divisi"><option value="marketing">Marketing</option><option value="designer">Designer</option><option value="production">Produksi</option><option value="manager">Manager Produksi</option></select></div></header><main id="main" class="main"></main></section></div><div id="toast" class="toast hidden" role="status"></div><script>
+(()=>{'use strict';const state={role:'marketing',page:'list',modalOpen:false,jobs:[],selected:null,serial:1},roles={marketing:'Marketing',designer:'Designer',production:'Produksi',manager:'Manager Produksi'};const $=id=>document.getElementById(id),esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));let tick=0;function notify(t){const n=$('toast');n.textContent=t;n.classList.remove('hidden');setTimeout(()=>{if(tick===i)n.classList.add('hidden')},3500);const i=++tick}function menu(){return state.role==='marketing'?[['list','▦','Job Workspace']]:[['list','▦',state.role==='designer'?'Inbox Designer':'Inbox Pekerjaan']]}function nav(){const n=$('nav');n.innerHTML=menu().map(([id,ico,label])=>`<button class="navbtn ${state.page===id?'active':''}" data-page="${id}"><span class="symbol">${ico}</span>${label}</button>`).join('');n.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>{state.page=b.dataset.page;render()})}function head(s,t,d){return `<div class="pagehead"><div><div class="eyebrow">${esc(s)}</div><h1>${esc(t)}</h1><div class="muted">${esc(d)}</div></div></div>`}function badge(j){let t={DESIGNER:'Menunggu Designer',AWAITING_DESIGNER:'Menunggu Designer',DESIGN_IN_PROGRESS:'Dalam Proses',DESIGN_REVIEW:'Review Marketing',DESIGN_REVISION:'Perlu Revisi',REVIEW:'Review Marketing',REVISION:'Revisi Designer',DESIGN_APPROVED:'Disetujui Marketing',PRODUCTION:'Inbox Produksi',CLARIFICATION:'Klarifikasi Marketing',TECHNICAL:'Persiapan Teknis',HPP:'Perhitungan HPP',APPROVAL:'Persetujuan HPP',HPP_REVISION:'Revisi HPP',DONE:'HPP Disetujui',MULTI_ITEM_PENDING:'Menunggu Kesiapan Item',MULTI_ITEM_SENT:'Dikirim ke Produksi'};let cl=['DONE'].includes(j.status)?'green':['REVISION','CLARIFICATION','HPP_REVISION'].includes(j.status)?'amber':['DESIGNER','REVIEW'].includes(j.status)?'violet':'';return `<span class="pill ${cl}">${t[j.status]||j.status}</span>`}function form(){return `<form id="briefForm"><div class="card"><div class="sjr-newjob-columns"><div class="sjr-newjob-left"><div class="fields"><div class="field"><label>Nama pelanggan *</label><input name="client" required placeholder="Contoh: Indicia"></div><div class="field"><label>Nama pekerjaan *</label><input name="title" required placeholder="Contoh: Floor Display Mulan Nutrition"></div><div class="field"><label>PIC pelanggan</label><input name="pic" placeholder="Nama kontak"></div><div class="field"><label>Target selesai *</label><input name="deadline" type="date" required></div><div class="field full"><label>Detail Brief / Spesifikasi *</label><div class="sjr-editor"><div class="sjr-editor-toolbar"><select id="sjrTextStyle" aria-label="Gaya teks"><option value="p">Normal</option><option value="h3">Judul Kecil</option></select><button type="button" data-editor="bold" title="Tebal"><b>B</b></button><button type="button" data-editor="italic" title="Miring"><em>I</em></button><button type="button" data-editor="underline" title="Garis bawah"><u>U</u></button><button type="button" data-editor="insertUnorderedList" title="Daftar">• Daftar</button><button type="button" data-editor="insertOrderedList" title="Daftar bernomor">1. Daftar</button><button type="button" data-editor="link" title="Sisipkan tautan">Tautan</button><button type="button" data-editor="removeFormat" title="Hapus format">Hapus format</button></div><div id="sjrRichEditor" class="sjr-editor-area" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Detail Brief / Spesifikasi" data-placeholder="Jelaskan konsep, spesifikasi material, ukuran, kebutuhan, referensi, dll."></div></div><textarea name="details" id="sjrDetailsValue" hidden></textarea><div class="sjr-editor-foot"><span id="sjrEditorCount">0 / 10.000 karakter</span></div></div><div class="field"><label>Kuantitas *</label><input name="qty" required placeholder="Contoh: 50 unit"></div><div class="field"><label>Catatan tambahan</label><input name="notes" placeholder="Opsional"></div><div class="field full"><label>Apakah membutuhkan Designer? *</label><div class="sjr-designer-options"><label class="sjr-designer-card"><input type="radio" name="designer" value="yes" required><span class="sjr-designer-icon">✦</span><span class="sjr-designer-text"><strong>Perlu Designer</strong><small>Desain dibuat terlebih dahulu dan diperiksa Marketing.</small></span><span class="sjr-designer-check">✓</span></label><label class="sjr-designer-card"><input type="radio" name="designer" value="no"><span class="sjr-designer-icon">▦</span><span class="sjr-designer-text"><strong>Tanpa Designer</strong><small>Brief langsung masuk ke Produksi untuk ditindaklanjuti.</small></span><span class="sjr-designer-check">✓</span></label></div></div><div id="sjrDesignBriefFields" class="field full sjr-designer-brief-fields" hidden><div class="sjr-designer-brief-heading"><span>✦</span><strong>Arahan untuk Designer</strong></div><div class="field"><label for="sjrDesignerBrief">Brief Designer *</label><textarea name="designer_brief" id="sjrDesignerBrief" maxlength="10000" rows="4" placeholder="Jelaskan konsep desain, arahan visual, referensi, dan hasil yang diharapkan..." disabled></textarea></div><div class="field"><label for="sjrDesignerDeadline">Deadline Designer *</label><input name="designer_deadline" id="sjrDesignerDeadline" type="date" disabled></div></div></div></div><div class="sjr-newjob-right"><div class="field full sjr-attachment-section"><section class="sjr-attachment-card"><div class="sjr-attachment-head"><span class="sjr-doc-icon">▤</span><strong>Lampiran Dokumen <small>(opsional)</small></strong></div><div class="sjr-upload-area" id="sjrUploadArea" role="button" tabindex="0" aria-label="Pilih dokumen untuk dilampirkan"><div class="sjr-upload-icon">⇧</div><strong>Klik untuk memilih dokumen</strong><p>Gambar, PDF, Office, ZIP, AI, PSD, EPS · Maks. 5 file, 200 MB/file</p><input id="sjrAttachments" type="file" accept=".jpg,.jpeg,.png,.webp,.pdf,.doc,.docx,.xls,.xlsx,.zip,.ai,.psd,.eps" aria-label="Pilih lampiran pekerjaan" /></div><div class="sjr-file-pending" id="sjrFilePending">Belum ada file dipilih.</div><div class="field"><label for="sjrAttachmentNote">Catatan Lampiran (opsional)</label><textarea id="sjrAttachmentNote" maxlength="1000" rows="2" placeholder="Contoh: Referensi desain, ukuran material, logo klien..."></textarea></div><div class="sjr-upload-controls"><button type="button" class="btn secondary" id="sjrAddAttachment">＋ Tambah Lampiran</button></div><div class="sjr-attachment-divider"></div><div class="sjr-file-table-header"><span class="sjr-doc-icon">▤</span><strong>Daftar Lampiran <span id="sjrFileCount">(0)</span></strong></div><div class="sjr-file-table-scroll"><table class="sjr-file-table"><thead><tr><th>No.</th><th>Nama File</th><th>Tipe</th><th>Ukuran</th><th>Catatan</th><th>Aksi</th></tr></thead><tbody id="sjrFileList"><tr><td colspan="6" class="sjr-file-empty">Belum ada lampiran ditambahkan.</td></tr></tbody></table></div></section></div></div></div><hr class="hr"><div class="notice">Setelah dikirim: <strong>Perlu Designer</strong> → Designer mengerjakan desain → Marketing review/revisi → Produksi. <strong>Tanpa Designer</strong> → langsung masuk Inbox Produksi.</div><div class="actions"><button class="btn" type="submit">Kirim Brief Pekerjaan →</button></div></div></form>`}function newJobModal(){return `<div class="sjr-modal-backdrop" id="sjrModalBackdrop"><section class="sjr-modal-dialog v52-dialog" role="dialog" aria-modal="true" aria-labelledby="sjrModalTitle"><header class="sjr-modal-header"><div><div class="eyebrow">MARKETING / SIMPLE JOB REQUEST</div><h2 id="sjrModalTitle">New Job · Multi-Item V5.4.2.4</h2><p class="muted">Satu Project, banyak item. Penyimpanan tahap ini belum meneruskan ke Designer atau Produksi.</p></div><button type="button" class="sjr-modal-close" id="sjrModalClose" aria-label="Tutup">✕</button></header><form id="sjrV52Form" class="v52-body"><div id="sjrV52Error" class="v52-error" hidden></div><div class="v52-columns"><div><section class="v52-card"><h3 class="v534-section-heading"><span class="v534-section-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 11h18"/></svg></span><span>Informasi Project</span></h3><div class="v52-grid"><label>Klien *<input name="client" maxlength="200" required placeholder="Nama klien"></label><label>Nama Project *<input name="title" maxlength="250" required placeholder="Contoh: Revisual Rest Area KM 7+200"></label><label>PIC Pelanggan<input name="pic" maxlength="200" placeholder="Nama PIC"></label><label>Target Selesai *<input type="date" name="deadline" required></label></div><div class="v532-rich-block"><label for="sjrV52Editor">Detail Brief / Spesifikasi Umum *</label><div class="sjr-editor v535-rich-editor"><div class="sjr-editor-toolbar v535-toolbar" id="sjrV52Toolbar" role="toolbar" aria-label="Format Detail Brief"><select id="sjrV52TextStyle" aria-label="Gaya teks"><option value="p">Normal</option><option value="h3">Judul Kecil</option></select><span class="v535-separator" aria-hidden="true"></span><button type="button" class="v535-tool" data-v532-cmd="bold" title="Tebal" aria-label="Tebal" ><b>B</b></button><button type="button" class="v535-tool" data-v532-cmd="italic" title="Miring" aria-label="Miring" ><i>I</i></button><button type="button" class="v535-tool" data-v532-cmd="underline" title="Garis bawah" aria-label="Garis bawah" ><u>U</u></button><button type="button" class="v535-tool" data-v532-cmd="link" title="Sisipkan tautan" aria-label="Sisipkan tautan" ><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.6l3-3a5 5 0 0 0-7.1-7.1l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.6l-3 3a5 5 0 0 0 7.1 7.1l1.7-1.7"/></svg></button><span class="v535-separator" aria-hidden="true"></span><button type="button" class="v535-tool" data-v532-cmd="insertUnorderedList" title="Daftar poin" aria-label="Daftar poin" ><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h12M9 12h12M9 18h12"/><path d="M4 6h.01M4 12h.01M4 18h.01"/></svg></button><button type="button" class="v535-tool" data-v532-cmd="insertOrderedList" title="Daftar bernomor" aria-label="Daftar bernomor" ><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 6h11M10 12h11M10 18h11"/><path d="M3 4h2v5M3 9h3M3 13h2a1 1 0 0 1 0 2H3v2h3M3 21h3"/></svg></button><span class="v535-separator" aria-hidden="true"></span><label class="v535-color-button" title="Warna teks" aria-label="Warna teks"><span class="v535-color-dot" id="v535ColorDot" aria-hidden="true"></span><input type="color" id="v535TextColor" value="#687ee7" aria-label="Pilih warna teks"></label><button type="button" class="v535-tool" data-v532-cmd="code" title="Format kode" aria-label="Format kode" ><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 17-5-5 5-5m8 0 5 5-5 5m-2-14-4 20"/></svg></button><button type="button" class="v535-tool" data-v532-cmd="attach" title="Pilih lampiran Project" aria-label="Pilih lampiran Project" ><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.44 11.05-9.2 9.2a6 6 0 0 1-8.48-8.48l9.2-9.2a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.82l8.49-8.49"/></svg></button><span class="v535-separator" aria-hidden="true"></span><button type="button" class="v535-tool" data-v532-cmd="emoji" title="Sisipkan emoji" aria-label="Sisipkan emoji" ><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></button><div class="v535-emoji-panel" id="v535EmojiPanel" hidden role="group" aria-label="Pilih emoji"><button type="button" data-v535-emoji="✓">✓</button><button type="button" data-v535-emoji="★">★</button><button type="button" data-v535-emoji="📌">📌</button><button type="button" data-v535-emoji="😊">😊</button><button type="button" data-v535-emoji="⚠️">⚠️</button></div></div><div id="sjrV52Editor" class="sjr-editor-area" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Detail Brief / Spesifikasi Umum" data-placeholder="Jelaskan spesifikasi, material, ukuran, dan kebutuhan pekerjaan..."></div></div><textarea name="details" id="sjrV52Details" hidden></textarea><div class="sjr-editor-foot"><span id="sjrV52Count">0 / 10.000 karakter</span></div></div></section><section class="v52-card"><div class="v52-between"><h3 class="v534-section-heading"><span class="v534-section-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5 9-5z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg></span><span>Item Pekerjaan</span></h3><button class="v52-btn" type="button" id="sjrV52Add">+ Tambah Item</button></div><div id="sjrV52Items"></div></section></div><div><section class="v52-card v532-attachments"><div class="sjr-attachment-head"><span class="sjr-doc-icon v534-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M12 18v-7m0 0-3 3m3-3 3 3"/></svg></span><strong>Lampiran Dokumen Project <small>(opsional)</small></strong></div><div class="sjr-upload-area" id="sjrV52UploadArea" role="button" tabindex="0" aria-label="Pilih dokumen"><div class="sjr-upload-icon"><svg viewBox="0 0 24 24" width="31" height="31" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V3m0 0L7 8m5-5 5 5"/><path d="M4 16v4h16v-4"/></svg></div><strong>Klik untuk memilih dokumen</strong><p>Gambar, PDF, Office, ZIP, AI, PSD, EPS · Maks. 5 file, 200 MB/file</p><input type="file" id="sjrV52AttachPick" accept=".jpg,.jpeg,.png,.webp,.pdf,.doc,.docx,.xls,.xlsx,.zip,.ai,.psd,.eps" aria-label="Pilih dokumen project"></div><div class="sjr-file-pending" id="sjrV52FilePending">Belum ada file dipilih.</div><label>Catatan Lampiran (opsional)<textarea id="sjrV52AttachNote" maxlength="1000" rows="2" placeholder="Contoh: Referensi desain, ukuran material, logo klien..."></textarea></label><button class="v52-btn v532-add-attachment" type="button" id="sjrV52AttachAdd">+ Tambah Lampiran</button><div class="sjr-attachment-divider"></div><div class="sjr-file-table-header"><span class="sjr-doc-icon v534-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01"/></svg></span><strong>Daftar Lampiran <span id="sjrV52DocCount">(0)</span></strong></div><div class="sjr-file-table-scroll"><table class="sjr-file-table"><thead><tr><th>No.</th><th>Nama File</th><th>Tipe</th><th>Ukuran</th><th>Catatan</th><th>Aksi</th></tr></thead><tbody id="sjrV52Attachments"><tr><td colspan="6" class="sjr-file-empty">Belum ada lampiran ditambahkan.</td></tr></tbody></table></div></section><section class="v52-card"><h3>Ringkasan Project</h3><div id="sjrV52Summary"></div><p class="v52-sub">Setelah disimpan, Project berstatus <strong>Menunggu Kesiapan Item</strong>. Tidak ada pengiriman sebagian ke Produksi.</p></section></div></div><div class="v52-footer"><button type="button" class="v52-btn" id="sjrV52Cancel">Batal</button><button type="submit" class="v52-btn primary" id="sjrV52Save">Simpan Project Multi-Item</button></div></form><div id="sjrV52Saved" class="v52-saved" hidden></div></section></div>`}
+function relevant(j){if(state.role==='marketing')return true;if(state.role==='designer')return j.designer&&['DESIGNER','AWAITING_DESIGNER','DESIGN_IN_PROGRESS','REVIEW','DESIGN_REVIEW','REVISION','DESIGN_REVISION','DESIGN_APPROVED'].includes(j.status);if(state.role==='production')return ['PRODUCTION','CLARIFICATION','TECHNICAL','HPP','APPROVAL','HPP_REVISION','DONE'].includes(j.status);return ['APPROVAL','HPP_REVISION','DONE'].includes(j.status)}const workspaceState={search:'',status:'all',designer:'all',sort:'newest',page:1,pageSize:8};
+const statusText={DESIGNER:'Menunggu Designer',DESIGN_REVIEW:'Menunggu Review Marketing',DESIGN_REVISION:'Perlu Revisi',REVIEW:'Review Marketing',REVISION:'Menunggu Revisi',DESIGN_APPROVED:'Disetujui Marketing',PRODUCTION:'Ke Produksi',CLARIFICATION:'Klarifikasi',TECHNICAL:'Persiapan Teknis',HPP:'Perhitungan HPP',APPROVAL:'Persetujuan HPP',HPP_REVISION:'Revisi HPP',DONE:'HPP Disetujui',MULTI_ITEM_PENDING:'Menunggu Kesiapan Item',MULTI_ITEM_SENT:'Dikirim ke Produksi'};
+function sjrDate(value){if(!value)return '-';const raw=String(value).slice(0,10);const parts=raw.split('-');return parts.length===3?`${parts[2]}/${parts[1]}/${parts[0]}`:raw}
+function sjrStatus(j){const c={DESIGNER:'violet',DESIGN_REVIEW:'blue',DESIGN_REVISION:'red',REVIEW:'blue',REVISION:'red',DESIGN_APPROVED:'green',PRODUCTION:'teal',CLARIFICATION:'amber',TECHNICAL:'blue',HPP:'blue',APPROVAL:'amber',HPP_REVISION:'red',DONE:'green',MULTI_ITEM_PENDING:'amber',MULTI_ITEM_SENT:'teal'};return `<span class="sjr-v3-pill sjr-v3-${c[j.status]||'blue'}">${esc(statusText[j.status]||j.status)}</span>`}
+// V5.5.11: Project status and design progress are distinct.
+function sjrV5511Progress(items){
+ const relevant=(items||[]).filter(i=>!!i.requires_designer), total=relevant.length;
+ if(!total)return {label:'Tanpa Designer',kind:'neutral',done:0,total:0};
+ const states=relevant.map(i=>String(i.design_state||'PENDING'));
+ const approved=states.filter(x=>x==='APPROVED').length;
+ let label='Menunggu Designer',kind='violet';
+ if(approved===total){label='Semua Desain Disetujui';kind='green';}
+ else if(states.includes('REVISION_REQUESTED')){label='Perlu Revisi Desain';kind='red';}
+ else if(states.includes('IN_REVIEW')){label='Review Marketing';kind='blue';}
+ else if(states.includes('DRAFT')){label='Draft Desain';kind='amber';}
+ else if(approved>0){label='Sebagian Desain Disetujui';kind='blue';}
+ return {label,kind,done:approved,total};
+}
+function sjrV5511Status(j){
+ if(!j.multi_item)return sjrStatus(j);
+ const entry=sjrV54Cache.get(j.id),items=entry?.data?.items;
+ if(!Array.isArray(items))return sjrStatus(j)+'<div class="sjr-v5511-progress-note">Status desain sedang dimuat</div>';
+ const p=sjrV5511Progress(items);
+ return `<div class="sjr-v5511-status-stack">${sjrStatus(j)}<span class="sjr-v3-pill sjr-v3-${p.kind}">${esc(p.label)}${p.total?' · '+p.done+'/'+p.total:''}</span></div>`;
+}
+function workspaceFiltered(){const all=state.jobs.filter(relevant);const q=workspaceState.search.toLowerCase().trim();return all.filter(j=>(!q||[j.code,j.title,j.client].join(' ').toLowerCase().includes(q))&&(workspaceState.status==='all'||j.status===workspaceState.status)&&(workspaceState.designer==='all'||(j.designer?'yes':'no')===workspaceState.designer)).sort((a,b)=>{if(workspaceState.sort==='title')return a.title.localeCompare(b.title);if(workspaceState.sort==='deadline')return String(a.deadline||'9999').localeCompare(String(b.deadline||'9999'));return Number(b.id)-Number(a.id)})}
+function listing(){if(state.loadError)return `<div class="card" role="alert" style="padding:24px;color:#a32933"><h2>Gagal memuat Inbox SJR</h2><p>${esc(state.loadError)}</p><p>Ini masalah akses atau koneksi, bukan berarti tidak ada pekerjaan.</p></div>`;const all=state.jobs.filter(relevant),jobs=workspaceFiltered(),pages=Math.max(1,Math.ceil(jobs.length/workspaceState.pageSize));workspaceState.page=Math.min(workspaceState.page,pages);const from=(workspaceState.page-1)*workspaceState.pageSize,slice=jobs.slice(from,from+workspaceState.pageSize);
+const count=s=>all.filter(j=>s.includes(j.status)).length;
+return `<div class="sjr-v3-heading"><div><div class="eyebrow">${esc(roles[state.role])} / SJR</div><h1>${state.role==='designer'?'Inbox Designer':'Job Workspace'}</h1><p>${state.role==='designer'?'Kelola brief desain, revisi, dan hasil desain yang perlu diserahkan ke Marketing.':'Pantau seluruh pekerjaan, status, dan tindak lanjut sesuai divisi Anda.'}</p></div></div>
+${state.role==='designer'?`<div class="sjr-v3-kpis"><div class="sjr-v3-kpi"><span class="sjr-v3-kpi-icon">▤</span><div><strong>${all.length}</strong><small>Total Tugas Desain</small></div></div><div class="sjr-v3-kpi"><span class="sjr-v3-kpi-icon">◷</span><div><strong>${count(['DESIGNER','AWAITING_DESIGNER'])}</strong><small>Menunggu Dikerjakan</small></div></div><div class="sjr-v3-kpi"><span class="sjr-v3-kpi-icon">↻</span><div><strong>${count(['REVISION','DESIGN_REVISION'])}</strong><small>Perlu Revisi</small></div></div><div class="sjr-v3-kpi"><span class="sjr-v3-kpi-icon">⚙</span><div><strong>${count(['DESIGN_IN_PROGRESS'])}</strong><small>Sedang Dikerjakan</small></div></div><div class="sjr-v3-kpi"><span class="sjr-v3-kpi-icon">✓</span><div><strong>${count(['REVIEW','DESIGN_REVIEW'])}</strong><small>Menunggu Review Marketing</small></div></div></div>`: `<div class="sjr-v3-kpis"><div class="sjr-v3-kpi"><span class="sjr-v3-kpi-icon">▤</span><div><strong>${all.length}</strong><small>Total Pekerjaan</small></div></div><div class="sjr-v3-kpi"><span class="sjr-v3-kpi-icon">◷</span><div><strong>${count(['DESIGNER'])}</strong><small>Menunggu Designer</small></div></div><div class="sjr-v3-kpi"><span class="sjr-v3-kpi-icon">↻</span><div><strong>${count(['REVISION','HPP_REVISION'])}</strong><small>Menunggu Revisi</small></div></div><div class="sjr-v3-kpi"><span class="sjr-v3-kpi-icon">⚙</span><div><strong>${all.filter(j=>j.status!=='DONE').length}</strong><small>Dalam Proses</small></div></div><div class="sjr-v3-kpi"><span class="sjr-v3-kpi-icon">✓</span><div><strong>${count(['DONE'])}</strong><small>HPP Disetujui</small></div></div></div>`}
+<div class="sjr-v3-filterrow" id="wsFilterRow" hidden><label>Status <select id="wsStatus"><option value="all">Semua status</option>${Object.entries(statusText).map(([k,v])=>`<option value="${k}" ${workspaceState.status===k?'selected':''}>${v}</option>`).join('')}</select></label><label>Kebutuhan Designer <select id="wsDesigner"><option value="all">Semua kebutuhan</option><option value="yes" ${workspaceState.designer==='yes'?'selected':''}>Perlu Designer</option><option value="no" ${workspaceState.designer==='no'?'selected':''}>Tanpa Designer</option></select></label><button type="button" id="wsClear" class="sjr-v3-button">Reset Filter</button></div>
+<div class="sjr-v31-actions"><div class="sjr-v31-left"><label class="sjr-v3-search"><span>⌕</span><input type="search" id="wsSearch" placeholder="Cari No. SJR, pekerjaan, atau klien..." aria-label="Cari pekerjaan" value="${esc(workspaceState.search)}"></label><button type="button" id="wsFilterBtn" class="sjr-v3-button" aria-expanded="false">☷ Filter</button><label class="sjr-v3-button sjr-v3-sort">⇅ <select id="wsSort" aria-label="Urutkan pekerjaan"><option value="newest" ${workspaceState.sort==='newest'?'selected':''}>Terbaru</option><option value="deadline" ${workspaceState.sort==='deadline'?'selected':''}>Target Terdekat</option><option value="title" ${workspaceState.sort==='title'?'selected':''}>Nama Pekerjaan</option></select></label></div>${state.role==='marketing'?'<button type="button" class="btn sjr-v31-new" id="wsNewJob">＋ New Job</button>':''}</div>
+<div class="sjr-v3-tablewrap"><table class="sjr-v3-table"><thead><tr><th>No. SJR</th><th>Pekerjaan</th><th>Klien</th><th>Kebutuhan Designer</th><th>Target Selesai</th><th>Status</th><th>Aksi</th></tr></thead><tbody id="wsResults">${slice.length?slice.map(j=>`<tr><td class="sjr-v3-code">${esc(j.code)}</td><td class="sjr-v3-title">${esc(j.title)}</td><td>${esc(j.client)}</td><td><span class="sjr-v3-pill ${j.designer?'sjr-v3-green':'sjr-v3-neutral'}">${j.designer?'Ya':'Tidak'}</span></td><td>${esc(sjrDate(j.deadline))}</td><td>${sjrV5511Status(j)}</td><td><button type="button" class="sjr-v3-open sjr-open-detail-icon" data-open="${j.id}" title="Buka Detail Pekerjaan" aria-label="Buka Detail Pekerjaan ${esc(j.code)}"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4H5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-3"/><path d="M13 4h7v7"/><path d="M10 14 20 4"/></svg></button></td></tr>`).join(''):`<tr><td colspan="7" class="sjr-v3-empty">Tidak ada pekerjaan sesuai pencarian atau filter.</td></tr>`}</tbody></table><div class="sjr-v3-footer"><span>Menampilkan ${jobs.length?from+1:0}–${Math.min(from+workspaceState.pageSize,jobs.length)} dari ${jobs.length} pekerjaan</span><div class="sjr-v3-pager"><button type="button" data-page-num="${workspaceState.page-1}" ${workspaceState.page===1?'disabled':''}>‹</button><span>${workspaceState.page} / ${pages}</span><button type="button" data-page-num="${workspaceState.page+1}" ${workspaceState.page===pages?'disabled':''}>›</button></div></div></div>`}
+function bindWorkspace(){const search=$('wsSearch');if(!search)return;const add=$('wsNewJob');if(add)add.onclick=()=>{state.modalOpen=true;render()};search.addEventListener('input',e=>{workspaceState.search=e.target.value;workspaceState.page=1;updateWorkspaceResults()});$('wsSort').addEventListener('change',e=>{workspaceState.sort=e.target.value;workspaceState.page=1;render()});$('wsFilterBtn').onclick=()=>{const row=$('wsFilterRow');row.hidden=!row.hidden;$('wsFilterBtn').setAttribute('aria-expanded',String(!row.hidden))};$('wsStatus').addEventListener('change',e=>{workspaceState.status=e.target.value;workspaceState.page=1;render()});$('wsDesigner').addEventListener('change',e=>{workspaceState.designer=e.target.value;workspaceState.page=1;render()});$('wsClear').onclick=()=>{workspaceState.status='all';workspaceState.designer='all';workspaceState.page=1;render()};document.querySelectorAll('[data-page-num]').forEach(b=>b.onclick=()=>{workspaceState.page=Number(b.dataset.pageNum);render()})}
+function updateWorkspaceResults(){const existing=$('wsResults');if(!existing)return;const temp=document.createElement('div');temp.innerHTML=listing();const result=temp.querySelector('#wsResults');if(result){existing.innerHTML=result.innerHTML;existing.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>{state.selected=Number(b.dataset.open);state.page='detail';render()})}const footer=document.querySelector('.sjr-v3-footer');if(footer){footer.innerHTML=temp.querySelector('.sjr-v3-footer').innerHTML;footer.querySelectorAll('[data-page-num]').forEach(b=>b.onclick=()=>{workspaceState.page=Number(b.dataset.pageNum);render()})}}
+function log(j,txt){j.logs.unshift({text:txt,time:new Date().toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'})})}function selectHtml(j){return `<div class="info-grid"><div class="infobox"><small>Nomor SJR</small><strong>${esc(j.code)}</strong></div><div class="infobox"><small>Klien</small><strong>${esc(j.client)}</strong></div><div class="infobox"><small>Target</small><strong>${esc(j.deadline)}</strong></div><div class="infobox"><small>Kuantitas</small><strong>${esc(j.qty)}</strong></div><div class="infobox"><small>Designer</small><strong>${j.designer?'Diperlukan':'Tidak diperlukan'}</strong></div><div class="infobox"><small>Status</small>${badge(j)}</div></div>`}function panel(j){if(j.persisted)return `<div class="card"><h2>Brief sudah terkirim</h2><p class="muted">Pekerjaan tersimpan di database pengujian. Tindakan Designer, review Marketing dan Produksi akan diaktifkan pada tahap berikutnya.</p></div>`;let s=j.status,r=state.role;let q=(title,desc,field,placeholder,btn,act,cls='')=>`<div class="card"><h2>${title}</h2><p class="muted">${desc}</p><form data-action="${act}">${field?`<div class="field"><label>${field}</label><textarea required name="message" placeholder="${placeholder}"></textarea></div>`:''}<div class="actions"><button class="btn ${cls}" type="submit">${btn}</button></div></form></div>`;if(r==='designer'&&['DESIGNER','REVISION'].includes(s))return q('Kirim Hasil Desain','Simulasikan penyerahan file desain dengan memasukkan nama berkas atau tautan referensi.','Referensi / nama file desain','Contoh: desain-display-v2.pdf','Kirim ke Marketing','submitDesign');if(r==='marketing'&&s==='REVIEW')return `<div class="card"><h2>Review Desain oleh Marketing</h2><p class="muted">Hasil Designer: <strong>${esc(j.designResult||'-')}</strong></p><div class="grid"><form data-action="revision"><div class="field"><label>Catatan revisi *</label><textarea name="message" required placeholder="Jelaskan bagian yang perlu diperbaiki"></textarea></div><div class="actions"><button class="btn danger">Minta Revisi Desain</button></div></form><form data-action="approveDesign"><div class="notice good">Jika sudah sesuai, hasil desain final akan diteruskan ke Inbox Produksi.</div><div class="actions"><button class="btn">Setujui & Teruskan ke Produksi →</button></div></form></div></div>`;if(r==='marketing'&&s==='CLARIFICATION')return q('Jawab Klarifikasi Produksi',`Pertanyaan: ${esc(j.clarification||'-')}`,'Jawaban / klarifikasi','Jelaskan informasi yang diminta','Kirim Jawaban ke Produksi','replyClarification');if(r==='production'&&s==='PRODUCTION')return `<div class="card"><h2>Pemeriksaan Awal Produksi</h2><p class="muted">Baca Brief, pastikan kebutuhan pekerjaan jelas.</p><div class="grid"><form data-action="clarify"><div class="field"><label>Pertanyaan klarifikasi *</label><textarea name="message" required placeholder="Informasi apa yang belum jelas?"></textarea></div><div class="actions"><button class="btn secondary">Minta Klarifikasi</button></div></form><form data-action="startTechnical"><div class="notice good">Brief siap untuk dipersiapkan secara teknis.</div><div class="actions"><button class="btn">Mulai Persiapan Teknis →</button></div></form></div></div>`;if(r==='production'&&s==='TECHNICAL')return q('Persiapan Teknis','Masukkan ringkasan metode produksi dan kebutuhan material.','Rencana teknis *','Material, ukuran, metode, mesin...','Lanjut Hitung HPP','saveTechnical');if(r==='production'&&['HPP','HPP_REVISION'].includes(s))return `<div class="card"><h2>${s==='HPP_REVISION'?'Perbaiki Perhitungan HPP':'Perhitungan HPP'}</h2>${j.hppFeedback?`<div class="notice warn">Catatan Manager: ${esc(j.hppFeedback)}</div>`:''}<form data-action="submitHpp"><div class="fields"><div class="field"><label>Estimasi HPP (Rupiah) *</label><input name="hpp" type="number" min="1" step="1" required placeholder="Contoh: 12500000"></div><div class="field"><label>Catatan biaya</label><input name="message" placeholder="Bahan, proses, tenaga kerja..."></div></div><div class="actions"><button class="btn">Kirim untuk Persetujuan HPP →</button></div></form></div>`;if(r==='manager'&&s==='APPROVAL')return `<div class="card"><h2>Persetujuan HPP — Manager Produksi</h2><p class="muted">HPP diajukan: <strong>Rp ${Number(j.hpp||0).toLocaleString('id-ID')}</strong></p><div class="grid"><form data-action="reviseHpp"><div class="field"><label>Catatan perbaikan *</label><textarea name="message" required placeholder="Keterangan perubahan biaya"></textarea></div><div class="actions"><button class="btn danger">Minta Perbaikan HPP</button></div></form><form data-action="approveHpp"><div class="notice good">Setujui perhitungan HPP untuk menyelesaikan tahap biaya.</div><div class="actions"><button class="btn">Setujui HPP ✓</button></div></form></div></div>`;return `<div class="card"><h2>Tidak ada tindakan untuk divisi ini saat ini</h2><p class="muted">Pantau status pekerjaan. Pilih divisi lain di pojok kanan atas untuk menyimulasikan langkah berikutnya.</p></div>`}function sjrV3FormatType(file){return String(file.name||'').split('.').pop().toUpperCase().slice(0,8)||'FILE'}
+function sjrV3TypeClass(type){return type==='ZIP'?' zip':(['PNG','JPG','JPEG','WEBP','GIF'].includes(type)?' image':'')}
+function sjrV3FileCard(a,href,meta){const type=sjrV3FormatType(a);return `<div class="sjr-v3-file"><span class="sjr-v3-fileicon${sjrV3TypeClass(type)}">${esc(type)}</span><div class="sjr-v3-fileinfo"><b>${esc(a.name)}</b><small>${esc(meta)}</small></div>${href?`<a class="sjr-v3-action" href="${esc(href)}" title="Unduh ${esc(a.name)}" aria-label="Unduh ${esc(a.name)}" target="_blank" rel="noopener">⇩</a>`:''}</div>`}
+function sjrV3Versions(j){const target=document.getElementById('sjrV3DesignResults');if(!target)return;const versions=(j.sjrVersions||[]).slice().sort((a,b)=>b.version-a.version);if(!versions.length){target.innerHTML='<p class="sjr-v3-muted">Belum ada hasil desain yang dikirim.</p>';return}const approved=j.status==='DESIGN_APPROVED';const current=versions[0];const tab=state.sjrV3Tab||'approved';const selected=tab==='all'?versions:approved?[current]:versions.slice(0,1);target.innerHTML=`<div class="sjr-v3-tabs"><button type="button" data-sjr-v3-tab="approved" class="${tab==='approved'?'active':''}">${approved?'Versi disetujui':'Versi terbaru'}</button><button type="button" data-sjr-v3-tab="all" class="${tab==='all'?'active':''}">Semua versi (${versions.length})</button></div>${selected.map(v=>`<div class="sjr-v3-version"><div class="sjr-v3-versionhead"><strong>Versi ${esc(v.version)}</strong><span class="sjr-v3-muted">${esc(v.sentAt||'')}</span></div><div class="sjr-v3-versionbody"><div style="font-size:12px">Catatan Designer: ${esc(v.note||'-')}</div>${(v.files||[]).map(f=>sjrV3FileCard({name:f.name},f.downloadUrl,(f.name.split('.').pop()||'FILE').toUpperCase()+' · '+(f.sizeText||'-'))).join('')||'<p class="sjr-v3-muted">Tidak ada file.</p>'}</div></div>`).join('')}${approved?'<div class="sjr-v3-note">Desain disetujui Marketing dan menunggu integrasi antrean Produksi SJR.</div>':''}`;target.querySelectorAll('[data-sjr-v3-tab]').forEach(b=>b.onclick=()=>{state.sjrV3Tab=b.dataset.sjrV3Tab;sjrV3Versions(j)})}
+async function sjrV3LoadDesign(j){if(!j.designer||!j.persisted)return;try{const res=await fetch('/sjr/api/design-detail?sjr='+encodeURIComponent(j.code),{credentials:'same-origin',headers:{'Accept':'application/json'}});if(!res.ok)throw new Error('detail desain tidak tersedia');const data=await res.json();if(state.selected!==j.id||state.page!=='detail')return;j.sjrVersions=Array.isArray(data.submissions)?data.submissions:[];sjrV3Versions(j)}catch(e){const el=document.getElementById('sjrV3DesignResults');if(el)el.innerHTML='<p class="sjr-v3-muted">Detail hasil desain belum dapat dimuat. Gunakan ikon buka untuk melihat versi pada Design Workspace.</p>'}}
+
+// SJR_V55_DESIGNER_ITEM_INBOX_READ_ONLY
+const sjrV54Cache=new Map();
+async function sjrV54Load(j){
+ if(!j?.multi_item||sjrV54Cache.has(j.id))return;
+ sjrV54Cache.set(j.id,{loading:true});
+ try{
+  const r=await fetch('/simple-jobs/api/jobs-v52/'+encodeURIComponent(j.id),{credentials:'same-origin',headers:{'Accept':'application/json'}});
+  if(!r.ok)throw new Error('Gagal membaca item Project (HTTP '+r.status+').');
+  const data=await r.json();sjrV54Cache.set(j.id,{data});
+ }catch(e){sjrV54Cache.set(j.id,{error:e.message});}
+ if(state.page==='detail'&&state.selected===j.id)render();
+}
+function sjrV541RichPlain(text){
+ // Existing V5.2 API stores plain text. Escape first and auto-link validated URLs;
+ // do not attempt to reconstruct formatting that was never persisted.
+ const plain=String(text||'-');const urlRe=/https?:\/\/[^\s<>"']+/g;
+ let out='',last=0,match;
+ while((match=urlRe.exec(plain))!==null){
+  const raw=match[0],clean=raw.replace(/[.,;!?)]+$/,'');
+  out+=esc(plain.slice(last,match.index));
+  if(clean){out+='<a href="'+esc(clean)+'" target="_blank" rel="noopener noreferrer">'+esc(clean)+'</a>'+esc(raw.slice(clean.length));}
+  else out+=esc(raw);
+  last=match.index+raw.length;
+ }
+ return out+esc(plain.slice(last));
+}
+function sjrV5511Activity(items,job){
+ const events=[{title:'Project dibuat oleh Marketing',note:'Project '+String(job.code||'')+' tersimpan; '+items.length+' item',order:-1}];
+ for(const [index,item] of items.entries()){
+  if(!item.requires_designer)continue;
+  const id=Number(item.id),rec=sjrV554Cache.get(id),name=String(item.item_name||('Item '+(index+1)));
+  events.push({title:name+' · Brief Designer tersedia',note:'Deadline '+sjrDate(item.designer_deadline),order:index});
+  if(rec?.data){
+   const versions=[...(rec.data.versions||[])].sort((a,b)=>Number(a.version)-Number(b.version));
+   for(const version of versions){
+    const rev=(rec.data.reviews||[]).find(r=>Number(r.submission_id)===Number(version.id));
+    const ver='Versi '+Number(version.version);
+    events.push({title:name+' · '+ver+(version.state==='DRAFT'?' disimpan sebagai Draft':' dikirim Designer'),note:String(version.note||'-'),order:index*100+Number(version.version)*2});
+    if(rev)events.push({title:name+' · '+ver+(rev.decision==='APPROVED'?' disetujui Marketing':' diminta revisi'),note:String(rev.note||'-'),order:index*100+Number(version.version)*2+1});
+   }
+  }else events.push({title:name+' · '+sjrV554State(item.design_state),note:'Detail versi dimuat dari Designer',order:index*100+99});
+ }
+ return events.map(e=>`<div class="sjr-v5511-event"><strong>${esc(e.title)}</strong><small>${esc(e.note)}</small></div>`).join('');
+}
+// SJR_V560_PROJECT_READINESS_UI - computed display only; POST revalidates on server.
+function sjrV560Readiness(items, sent){
+ const all=Array.isArray(items)?items:[];
+ const needs=all.filter(x=>!!x.requires_designer);
+ const incomplete=needs.filter(x=>String(x.design_state)!=='APPROVED');
+ return {ready:all.length>0&&incomplete.length===0, sent:!!sent, approved:needs.length-incomplete.length,
+   needed:needs.length, total:all.length, incomplete};
+}
+async function sjrV560Send(jobId){
+ const btn=document.getElementById('sjrV560Send');
+ if(!btn||btn.disabled)return;
+ if(!window.confirm('Kirim seluruh Project beserta semua item dan lampiran ke Produksi? Pengiriman ini tidak dapat dibatalkan.'))return;
+ btn.disabled=true;
+ const msg=document.getElementById('sjrV560Message');
+ try{
+  const r=await fetch('/simple-jobs/api/jobs-v56/'+encodeURIComponent(jobId)+'/handoff',{
+   method:'POST',credentials:'same-origin',headers:{'Accept':'application/json','Content-Type':'application/json',
+    'X-CSRF-TOKEN':document.querySelector('meta[name="csrf-token"]')?.content||''},body:'{}'});
+  const data=await r.json();
+  if(!r.ok)throw new Error(data.message||Object.values(data.errors||{}).flat().join(' ')||'Pengiriman Project gagal.');
+  const job=state.jobs.find(x=>Number(x.id)===Number(jobId));
+  if(job){job.status='MULTI_ITEM_SENT';job.multi_item=true;}
+  sjrV54Cache.delete(jobId);
+  await sjrV54Load(job);
+  notify('Project berhasil dikirim ke Production Inbox Multi-Item.');
+ }catch(e){if(msg){msg.textContent=e.message;msg.hidden=false;}btn.disabled=false;}
+}
+function sjrMultiDetail(j){
+ const entry=sjrV54Cache.get(j.id);
+ const h=`<div class="sjr-detail-heading"><div><div class="eyebrow">MARKETING / DETAIL PROJECT / ${esc(j.code)}</div><h1>${esc(j.title)}</h1><p>${esc(j.client)} · Target ${esc(sjrDate(j.deadline))}</p></div><div class="sjr-detail-top-actions"><button class="btn outline" id="back">← Job Workspace</button></div></div>`;
+ if(!entry||entry.loading)return `<div class="sjr-detail-v44">${h}<section class="card sjr-detail-card" role="status">Memuat daftar item dan preview Project...</section></div>`;
+ if(entry.error)return `<div class="sjr-detail-v44">${h}<section class="card sjr-detail-card" role="alert"><h2>Detail belum dapat dimuat</h2><p>${esc(entry.error)}</p><p>Periksa sesi Marketing dan API V5.2. Data yang sudah tersimpan tidak berubah.</p><button class="btn" id="sjrV54Retry" type="button">Coba Lagi</button></section></div>`;
+ const d=entry.data,items=Array.isArray(d.items)?d.items:[],attachments=Array.isArray(d.attachments)?d.attachments:[];
+ const job=d.job||{},readiness=sjrV560Readiness(items,job.status==='MULTI_ITEM_SENT'),totalQty=items.reduce((v,i)=>v+(Number(i.quantity)||0),0),designers=items.filter(i=>i.requires_designer).length;
+ const info=[['Nomor SJR',j.code],['Klien',job.client_name||j.client],['PIC Pelanggan',job.client_pic||'-'],['Total Kuantitas',totalQty+' unit']];
+ const body=items.map((i,idx)=>{
+  const needs=!!i.requires_designer,prev=Array.isArray(i.previews)?i.previews:[];
+  const url=p=>'/simple-jobs/api/jobs-v52/'+encodeURIComponent(j.id)+'/previews/'+encodeURIComponent(p.id);
+  const cover=prev.length?`<img class="sjr-v541-cover" src="${url(prev[0])}" alt="Preview ${esc(i.item_name)}" loading="lazy">`:'<span class="sjr-v541-cover sjr-v541-cover-empty" aria-hidden="true">▧</span>';
+  const gallery=prev.length?`<div class="sjr-v541-gallery">${prev.map(p=>`<a class="sjr-v541-shot" href="${url(p)}" target="_blank" rel="noopener" title="Lihat ${esc(p.original_name)}"><img src="${url(p)}" alt="Preview ${esc(i.item_name)}" loading="lazy"><small>${esc(p.original_name)}</small></a>`).join('')}</div>`:'<p class="sjr-v54-muted">Belum ada preview untuk item ini.</p>';
+  const status=needs?`<div class="sjr-v541-designer-box"><div class="sjr-v541-design-label">Brief Designer</div><p>${esc(i.designer_brief||'-')}</p><div class="sjr-v541-design-foot"><span>Deadline: ${esc(sjrDate(i.designer_deadline)||'-')}</span><span>Status: ${esc(sjrV554State(i.design_state))}</span></div><div class="sjr-v554-review-slot" data-review-item="${Number(i.id)}">Memuat riwayat hasil desain...</div></div>`:'<div class="sjr-v541-no-designer">Item ini tidak membutuhkan proses Designer.</div>';
+  return `<details class="sjr-v541-item" ${idx===0?'open':''}><summary>${cover}<div class="sjr-v541-ident"><span class="index">ITEM ${idx+1}</span><strong>${esc(i.item_name)}</strong><div class="sjr-v541-meta"><span>${esc(i.dimensions)} ${esc(i.dimension_unit)}</span><span>Qty ${esc(i.quantity)}</span><span>${prev.length} preview</span></div></div><div class="sjr-v541-side"><span class="sjr-v541-status ${needs?'need':''}">${needs?'Perlu Designer':'Tanpa Designer'}</span><span class="sjr-v541-expand" aria-hidden="true">⌄</span></div></summary><div class="sjr-v541-details"><div class="sjr-v541-detail-title">Preview Item (${prev.length})</div>${gallery}${status}</div></details>`;
+ }).join('');
+ const files=attachments.map(a=>`<div class="sjr-v54-file"><div><b>${esc(a.original_name)}</b><small>${(Number(a.byte_size||0)/1048576).toFixed(2)} MB · ${esc(a.attachment_note||'Tanpa catatan')}</small></div><a class="sjr-v5511-icon-action" href="/simple-jobs/api/jobs/${encodeURIComponent(j.id)}/attachments/${encodeURIComponent(a.id)}/download" target="_blank" rel="noopener" title="Unduh ${esc(a.original_name)}" aria-label="Unduh ${esc(a.original_name)}"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 17v4h16v-4"/></svg></a></div>`).join('');
+ return `<div class="sjr-detail-v44">${h}<div class="sjr-v54-summary"><span class="sjr-v54-chip">${readiness.sent?'Dikirim ke Produksi':readiness.ready?'Siap Dikirim ke Produksi':'Menunggu Kesiapan Item'}</span><span class="sjr-v54-muted">${items.length} item · ${totalQty} unit · ${designers} memerlukan Designer</span>${designers?`<span class="sjr-v5511-progress-chip sjr-v5511-${sjrV5511Progress(items).kind}">${esc(sjrV5511Progress(items).label)} · ${sjrV5511Progress(items).done}/${designers} disetujui</span>`:`<span class="sjr-v5511-progress-chip sjr-v5511-green">Tidak memerlukan Designer</span>`}</div><div class="sjr-detail-grid"><div class="sjr-detail-col"><section class="card sjr-detail-card"><div class="sjr-detail-cardtitle"><span class="sjr-detail-icon">▤</span><h2>Informasi Project</h2></div><div class="sjr-v541-info">${info.map(([k,v])=>`<div class="sjr-v541-info-cell"><small>${esc(k)}</small><strong>${esc(v)}</strong></div>`).join('')}</div><h3 class="sjr-v541-brief-label">Detail Brief / Spesifikasi Umum</h3><div class="sjr-v541-brief-body">${job.brief_details_html?job.brief_details_html:sjrV541RichPlain(job.brief_details||j.details||'-')}</div></section><section class="card sjr-detail-card"><div class="sjr-detail-cardtitle"><span class="sjr-detail-icon">▤</span><h2>Daftar Item Project (${items.length})</h2></div><div class="sjr-v541-counter"><span>${items.length} jenis item</span><span>${totalQty} total unit</span><span>${designers} perlu Designer</span></div><div class="sjr-v541-item-list">${body||'<p class="sjr-v54-muted">Belum ada item.</p>'}</div></section></div><div class="sjr-detail-col"><section class="card sjr-detail-card"><div class="sjr-detail-cardtitle"><span class="sjr-detail-icon">⇧</span><h2>Lampiran Dokumen Project (${attachments.length})</h2></div>${files||'<p class="sjr-v54-muted">Tidak ada lampiran dokumen.</p>'}</section><section class="card sjr-detail-card"><h2>Status & Alur Project</h2><div class="sjr-v54-notice">${readiness.sent?'Project sudah dikirim ke Production Inbox Multi-Item.':readiness.ready?'Seluruh item siap. Marketing dapat mengirim Project lengkap ke Produksi.':'Project belum siap: '+readiness.incomplete.length+' item desain masih menunggu persetujuan Marketing.'}</div><div class="sjr-v560-readiness"><strong>Kesiapan seluruh item</strong><p>${readiness.total} jenis item · ${readiness.needed} perlu Designer · ${readiness.approved}/${readiness.needed} desain disetujui</p>${items.map(i=>`<div class="sjr-v560-check"><span>${esc(i.item_name)}</span><span>${!i.requires_designer?'Siap · Tanpa Designer':i.design_state==='APPROVED'?'Siap · Disetujui':'Belum siap · '+esc(sjrV554State(i.design_state))}</span></div>`).join('')}<button type="button" id="sjrV560Send" class="btn" ${!readiness.ready||readiness.sent?'disabled':''}>${readiness.sent?'Sudah Dikirim ke Produksi':'Kirim Seluruh Project ke Produksi'}</button><p class="sjr-v560-help" id="sjrV560Message" hidden role="alert"></p><small>Pengiriman satu Project utuh, tidak parsial dan tidak otomatis.</small></div><div class="sjr-v5511-project-progress">${items.filter(i=>i.requires_designer).map(i=>`<div class="sjr-v5511-project-item"><span>${esc(i.item_name)}</span><strong>${esc(sjrV554State(i.design_state))}</strong></div>`).join('')||'<p>Seluruh item tidak membutuhkan Designer.</p>'}</div></section><section class="card sjr-detail-card"><div class="sjr-detail-cardtitle"><span class="sjr-detail-icon">◷</span><h2>Riwayat Aktivitas</h2></div><div id="sjrV5511Activity" class="sjr-v5511-timeline">${sjrV5511Activity(items,j)}</div></section></div></div></div>`;
+}
+
+ // SJR_V554_MARKETING_ITEM_REVIEW
+ const sjrV554Cache=new Map();
+ function sjrV554State(x){return ({PENDING:'Menunggu Designer',DRAFT:'Draft Desain',IN_REVIEW:'Menunggu Review Marketing',REVISION_REQUESTED:'Perlu Revisi',APPROVED:'Disetujui Marketing',NOT_REQUIRED:'Tanpa Designer'})[x]||String(x||'Menunggu Designer');}
+ function sjrV554Panel(itemId,record){
+   if(record?.error)return `<p class="sjr-v554-error" role="alert">${esc(record.error)} <button class="btn outline" data-review-retry="${itemId}" type="button">Muat ulang</button></p>`;
+   const versions=(record?.data?.versions||[]).filter(v=>v.state!=='DRAFT');
+   const reviews=record?.data?.reviews||[];
+   const item=Array.from(sjrV54Cache.values()).flatMap(e=>e?.data?.items||[]).find(x=>Number(x.id)===itemId);
+   const stateLabel=sjrV554State(item?.design_state);
+   if(!versions.length)return '<p class="sjr-v554-hint">Belum ada hasil desain yang dikirim Designer.</p>';
+   const latest=versions.slice().sort((a,b)=>b.version-a.version)[0];
+   const blocks=versions.slice().sort((a,b)=>b.version-a.version).map(v=>{
+     const review=reviews.find(r=>Number(r.submission_id)===Number(v.id));
+     return `<div class="sjr-v554-version"><div class="sjr-v554-version-head"><strong>Versi ${Number(v.version)} · ${review?sjrV554State(review.decision):'Dikirim ke Marketing'}</strong></div><p>Catatan Designer: ${esc(v.note||'-')}</p>${(v.files||[]).map(f=>`<div class="sjr-v554-file"><span>${esc(f.name)} · ${(Number(f.size)/1048576).toFixed(2)} MB</span><a class="sjr-v5511-icon-action" href="/simple-jobs/api/designer-items-v55/${itemId}/results/files/${Number(f.id)}" target="_blank" rel="noopener" title="Unduh ${esc(f.name)}" aria-label="Unduh ${esc(f.name)}"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 17v4h16v-4"/></svg></a></div>`).join('')}${review?`<div class="sjr-v554-note"><strong>Keputusan Marketing:</strong> ${esc(review.decision==='APPROVED'?'Setujui Desain':'Minta Revisi')}${review.note?`<p>${esc(review.note)}</p>`:''}</div>`:''}</div>`;
+   }).join('');
+   const waiting=item?.design_state==='IN_REVIEW';
+   const form=waiting?`<form class="sjr-v554-form" data-review-form="${itemId}"><input type="hidden" name="submission_id" value="${Number(latest.id)}"><label for="sjrReviewNote${itemId}">Catatan Review Marketing</label><textarea id="sjrReviewNote${itemId}" name="note" rows="3" maxlength="3000" placeholder="Wajib diisi jika meminta revisi; opsional untuk persetujuan."></textarea><p class="sjr-v554-error" role="alert" hidden></p><div class="sjr-v554-actions"><button type="submit" class="btn outline" data-decision="revision">Minta Revisi</button><button type="submit" class="btn primary" data-decision="approve">Setujui Desain</button></div></form>`:`<div class="sjr-v554-hint">Status item: ${esc(stateLabel)}. Tidak ada keputusan baru yang dapat dibuat saat ini.</div>`;
+   return `<div class="sjr-v554-review"><h3>Review Hasil Desain Item</h3>${blocks}${form}</div>`;
+ }
+ async function sjrV554Load(itemId, force=false){
+   if(!force && sjrV554Cache.has(itemId))return;
+   sjrV554Cache.set(itemId,{loading:true});
+   try{
+     const r=await fetch('/simple-jobs/api/designer-items-v55/'+itemId+'/results',{credentials:'same-origin',headers:{'Accept':'application/json'}});
+     const data=await r.json();if(!r.ok)throw new Error(data.message||'Gagal membaca riwayat item.');
+     sjrV554Cache.set(itemId,{data});
+   }catch(e){sjrV554Cache.set(itemId,{error:e.message});}
+   sjrV554RefreshSlots();
+   const activity=document.getElementById('sjrV5511Activity'),job=state.jobs.find(j=>j.id===state.selected),entry=sjrV54Cache.get(job?.id);
+   if(activity&&entry?.data?.items)activity.innerHTML=sjrV5511Activity(entry.data.items,job);
+ }
+ function sjrV554RefreshSlots(){
+   if(state.role!=='marketing'||state.page!=='detail')return;
+   document.querySelectorAll('[data-review-item]').forEach(slot=>{
+     const id=Number(slot.dataset.reviewItem),entry=sjrV554Cache.get(id);
+     if(!entry || entry.loading)return;
+     slot.innerHTML=sjrV554Panel(id,entry);
+     const retry=slot.querySelector('[data-review-retry]');if(retry)retry.onclick=()=>sjrV554Load(id,true);
+     const form=slot.querySelector('[data-review-form]');if(form)form.addEventListener('submit',e=>sjrV554Submit(e,id));
+   });
+ }
+ function sjrV554Hydrate(){
+   if(state.role!=='marketing'||state.page!=='detail')return;
+   document.querySelectorAll('[data-review-item]').forEach(el=>{
+     const id=Number(el.dataset.reviewItem),entry=sjrV554Cache.get(id);
+     if(!entry)sjrV554Load(id);else if(!entry.loading)sjrV554RefreshSlots();
+   });
+ }
+ async function sjrV554Submit(event,itemId){
+   event.preventDefault();const form=event.currentTarget,action=event.submitter?.dataset.decision;
+   if(!['approve','revision'].includes(action))return;
+   const error=form.querySelector('[role=alert]'),note=form.elements.note.value.trim();
+   if(action==='revision'&&!note){error.textContent='Catatan revisi wajib diisi.';error.hidden=false;return;}
+   const confirmText=action==='approve'?'Setujui desain item ini?':'Minta revisi item ini dan kembalikan ke Designer?';
+   if(!window.confirm(confirmText))return;
+   const buttons=[...form.querySelectorAll('button')];buttons.forEach(b=>b.disabled=true);error.hidden=true;
+   try{
+     const body={submission_id:Number(form.elements.submission_id.value),decision:action,note};
+     const r=await fetch('/simple-jobs/api/marketing-items-v55/'+itemId+'/review',{method:'POST',credentials:'same-origin',headers:{'Accept':'application/json','Content-Type':'application/json','X-CSRF-TOKEN':document.querySelector('meta[name=csrf-token]').content},body:JSON.stringify(body)});
+     const data=await r.json();if(!r.ok)throw new Error(data.errors?Object.values(data.errors).flat().join(' '):data.message||'Gagal menyimpan review.');
+     notify(data.message||'Keputusan berhasil disimpan.');
+     const job=state.jobs.find(j=>j.id===state.selected);
+     const cache=sjrV54Cache.get(job?.id),item=cache?.data?.items?.find(i=>Number(i.id)===itemId);
+     if(item)item.design_state=data.result.design_state;
+     sjrV554Cache.delete(itemId);render();
+   }catch(e){error.textContent=e.message;error.hidden=false;buttons.forEach(b=>b.disabled=false);}
+ }
+
+// V5.5 Stage 1: item-specific read-only Designer detail, isolated from legacy Design Workspace.
+const sjrV552Cache=new Map();
+async function sjrV552Read(itemId,refresh=false){
+ if(!refresh&&sjrV552Cache.has(itemId))return;
+ sjrV552Cache.set(itemId,{loading:true});
+ try{
+  const res=await fetch('/simple-jobs/api/designer-items-v55/'+itemId+'/results',{credentials:'same-origin',headers:{'Accept':'application/json'}});
+  const json=await res.json();if(!res.ok)throw new Error(json.message||'Gagal membaca hasil desain (HTTP '+res.status+').');
+  sjrV552Cache.set(itemId,{data:json});
+ }catch(e){sjrV552Cache.set(itemId,{error:e.message});}
+ if(state.page==='detail'&&state.jobs.find(j=>j.id===state.selected)?.designer_item_v55?.item_id===itemId)render();
+}
+// SJR_V555_DRAFT_ACTIVE_UI: draft aktif terpisah dari riwayat terkirim.
+const sjrV555Editing=new Set();
+function sjrV552ResultUI(i){
+ const entry=sjrV552Cache.get(i.item_id);
+ if(!entry||entry.loading)return '<p class="sjr-v3-muted">Memuat draft dan hasil desain...</p>';
+ if(entry.error)return `<p class="sjr-v3-muted" role="alert">${esc(entry.error)}</p><button type="button" class="btn outline" id="sjrV552Retry">Muat Ulang</button>`;
+ const versions=entry.data.versions||[],draft=versions.find(v=>v.state==='DRAFT');
+ const blocked=['IN_REVIEW','APPROVED'].includes(entry.data.design_state);
+ const edit=sjrV555Editing.has(i.item_id);
+ const old=versions.filter(v=>v.state!=='DRAFT');
+ const fileIcon=(kind)=>kind==='PDF'?'file-text':kind==='ZIP'?'file-archive':['PNG','JPG','JPEG','WEBP'].includes(kind)?'image':'file';
+ const miniIcon=(name)=>name==='download'?'<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"/></svg>':'<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2m3 0-1 15H6L5 6m5 4v7m4-7v7"/></svg>';
+ const fileTable=(v,canDelete=false)=>{const files=v.files||[];if(!files.length)return '<p class="sjr-v3-muted">Belum ada file.</p>';return `<div class="sjr-v556-scroll"><table class="sjr-v556-table"><thead><tr><th>No.</th><th>Nama File</th><th>Tipe</th><th>Ukuran</th><th>Diupload Oleh</th><th>Tanggal</th><th>Aksi</th></tr></thead><tbody>${files.map((f,n)=>{const type=String(f.name||'').split('.').pop().toUpperCase().slice(0,5)||'FILE';const name=esc(f.name);const at=String(f.created_at||'').slice(0,10);const stamp=/^\d{4}-\d{2}-\d{2}$/.test(at)?at.split('-').reverse().join('/'):'—';const url='/simple-jobs/api/designer-items-v55/'+i.item_id+'/results/files/'+f.id;return `<tr><td>${n+1}</td><td><div class="sjr-v556-name"><span class="sjr-v556-type ${['PDF','ZIP'].includes(type)?'type-'+type.toLowerCase():''}" aria-hidden="true">${esc(type)}</span><strong title="${name}">${name}</strong></div></td><td>${esc(type)}</td><td>${(Number(f.size)/1048576).toFixed(2)} MB</td><td>Designer</td><td>${stamp}</td><td><div class="sjr-v556-actions"><a class="sjr-v556-icon" href="${url}" title="Unduh ${name}" aria-label="Unduh ${name}" target="_blank" rel="noopener">${miniIcon('download')}</a>${canDelete?`<button type="button" class="sjr-v556-icon danger" data-v556-delete="${f.id}" data-v556-name="${name}" title="Hapus ${name} dari Draft" aria-label="Hapus ${name} dari Draft">${miniIcon('delete')}</button>`:''}</div></td></tr>`}).join('')}</tbody></table></div>`};
+ const history=old.map(v=>`<div class="sjr-v552-version"><strong>Versi ${esc(v.version)} · Dikirim ke Marketing</strong><p>${esc(v.note||'Tanpa catatan')}</p>${fileTable(v,false)}</div>`).join('');
+ const revision=entry.data.design_state==='REVISION_REQUESTED'?`<div class="sjr-v554-revision-alert"><strong>Catatan Revisi Marketing</strong><p>${esc((entry.data.reviews||[]).filter(r=>r.decision==='REVISION_REQUESTED').slice(-1)[0]?.note||'Perbaiki hasil desain berdasarkan arahan Marketing.')}</p></div>`:'';
+ let active='';
+ if(blocked){
+   active='<p class="sjr-v552-sent">Hasil desain sudah dikirim ke Marketing. Menunggu keputusan review; perubahan dibatasi sampai tahap revisi tersedia.</p>';
+ }else if(draft&&!edit){
+   active=`<section class="sjr-v555-active" aria-label="Draft aktif"><div class="sjr-v555-head"><div><span class="sjr-v555-overline">DRAFT AKTIF</span><h3>Versi ${esc(draft.version)} · Belum Dikirim</h3></div><span class="sjr-v555-pill">Draft</span></div><p class="sjr-v555-help">File dan catatan sudah tersimpan. Kirim versi ini ke Marketing atau pilih Edit Draft untuk menambahkan file maupun memperbarui catatan.</p><strong>File tersimpan (${(draft.files||[]).length})</strong><div class="sjr-v555-files">${fileTable(draft,true)}</div><strong>Catatan Designer</strong><p class="sjr-v555-note">${esc(draft.note||'Belum ada catatan.')}</p><p class="sjr-v552-error" id="sjrV552Error" role="alert" hidden></p><form id="sjrV552Form" class="sjr-v555-send" enctype="multipart/form-data"><input type="hidden" name="note" value="${esc(draft.note||'')}"><div class="sjr-v552-actions"><button class="btn outline" type="button" id="sjrV555Edit">Edit Draft</button><button class="btn primary" type="submit" data-action="submit">Kirim Versi ${esc(draft.version)} ke Marketing</button></div></form></section>`;
+ }else{
+   const num=draft?.version||((old.reduce((n,v)=>Math.max(n,Number(v.version)||0),0))+1);
+   active=`<form id="sjrV552Form" class="sjr-v552-form sjr-v555-editor" enctype="multipart/form-data"><div class="sjr-v555-head"><div><span class="sjr-v555-overline">${draft?'EDIT DRAFT AKTIF':'BUAT HASIL DESAIN'}</span><h3>Versi ${esc(num)} ${draft?'· Mengedit Draft':'· Baru'}</h3></div>${draft?'<button type="button" class="btn outline" id="sjrV555Cancel">Batal Edit</button>':''}</div><label for="sjrV552Files"><strong>${draft?'Tambah File ke Draft':'Upload Hasil Desain'}</strong></label><input type="file" id="sjrV552Files" name="files[]" multiple accept=".jpg,.jpeg,.png,.webp,.pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.zip,.ai,.psd,.eps" aria-describedby="sjrV552Help"><p id="sjrV552Help" class="sjr-v3-muted">Maksimum 10 file per versi, 200 MB per file. ${draft?'File yang sudah tersimpan tidak perlu dipilih ulang.':'Draft dapat dilanjutkan kemudian.'}</p>${draft?`<strong>File saat ini (${(draft.files||[]).length})</strong><div class="sjr-v555-files">${fileTable(draft,true)}</div>`:''}<label for="sjrV552Note"><strong>Catatan Designer</strong></label><textarea id="sjrV552Note" name="note" rows="3" maxlength="3000" placeholder="Jelaskan hasil desain atau perubahan...">${esc(draft?.note||'')}</textarea><p id="sjrV552Error" class="sjr-v552-error" role="alert" hidden></p><div class="sjr-v552-actions"><button class="btn outline" type="submit" data-action="draft">Simpan Draft</button>${draft?'':`<button class="btn primary" type="submit" data-action="submit">Kirim Versi ${esc(num)} ke Marketing</button>`}</div></form>`;
+ }
+ return `${revision}${active}<h3 class="sjr-v555-history-title">Riwayat Versi Terkirim</h3>${history||'<p class="sjr-v3-muted">Belum ada versi yang dikirim ke Marketing.</p>'}`;
+}
+async function sjrV552Submit(event,i){
+ event.preventDefault();const form=event.currentTarget,buttons=[...form.querySelectorAll('button[type=submit]')],error=document.getElementById('sjrV552Error');
+ const submitter=event.submitter,action=submitter?.dataset.action||'draft';
+ if(action==='submit'&&!window.confirm('Kirim hasil desain item ini ke Marketing? Setelah dikirim, draft terkunci sampai ada keputusan Marketing.'))return;
+ error.hidden=true;buttons.forEach(b=>b.disabled=true);
+ try{
+  const data=new FormData(form);data.set('action',action);const response=await fetch('/simple-jobs/api/designer-items-v55/'+i.item_id+'/results',{method:'POST',credentials:'same-origin',headers:{'Accept':'application/json','X-CSRF-TOKEN':document.querySelector('meta[name=csrf-token]').content},body:data});
+  const json=await response.json();if(!response.ok)throw new Error(json.errors?Object.values(json.errors).flat().join(' '):json.message||'Gagal menyimpan.');
+  const job=state.jobs.find(j=>j.designer_item_v55?.item_id===i.item_id);if(job){job.designer_item_v55.design_state=json.result.state;job.status=json.result.state==='IN_REVIEW'?'DESIGN_REVIEW':'DESIGN_IN_PROGRESS';}
+  sjrV555Editing.delete(i.item_id);notify(json.message||'Hasil desain tersimpan.');sjrV552Cache.delete(i.item_id);await sjrV552Read(i.item_id,true);
+ }catch(e){error.textContent=e.message;error.hidden=false;buttons.forEach(b=>b.disabled=false);}
+}
+function sjrV55DesignerDetail(j){
+ const i=j.designer_item_v55, list=Array.isArray(i.previews)?i.previews:[];
+ const url=p=>'/simple-jobs/api/designer-items-v55/'+encodeURIComponent(i.item_id)+'/previews/'+encodeURIComponent(p.id);
+ const previewThumb=list.length?`<figure class="sjr-v558-preview"><a href="${url(list[0])}" target="_blank" rel="noopener" title="Lihat preview item"><img src="${url(list[0])}" alt="Thumbnail ${esc(i.item_name)}" loading="lazy"></a><figcaption>Preview Item${list.length>1?' ('+list.length+' gambar)':''}</figcaption></figure>`:'';
+ const itemStatus=i.design_state||'PENDING';
+ const labels={PENDING:'Menunggu Dikerjakan',DRAFT:'Draft Desain',IN_REVIEW:'Review Marketing',REVISION_REQUESTED:'Perlu Revisi',APPROVED:'Disetujui Marketing'};
+ const statusLabel=labels[itemStatus]||esc(itemStatus.replaceAll('_',' '));
+ const sourceFiles=(Array.isArray(i.attachments)?i.attachments:[]);
+ const docUrl=a=>'/simple-jobs/api/designer-items-v55/'+encodeURIComponent(i.item_id)+'/project-documents/'+encodeURIComponent(a.id);
+ const docTable=sourceFiles.length?`<div class="sjr-v558-doc-table"><table><thead><tr><th>No.</th><th>Nama File</th><th>Tipe</th><th>Ukuran</th><th>Catatan</th><th>Aksi</th></tr></thead><tbody>${sourceFiles.map((a,n)=>{const ext=String(a.name||'').split('.').pop().toUpperCase().slice(0,5)||'FILE';return `<tr><td>${n+1}</td><td><span class="sjr-v558-file"><span class="sjr-v558-filetype">${esc(ext)}</span>${esc(a.name||'Lampiran')}</span></td><td>${esc(ext)}</td><td>${(Number(a.size||0)/1048576).toFixed(2)} MB</td><td>${esc(a.note||'-')}</td><td><a class="sjr-v558-doc-action" href="${docUrl(a)}" target="_blank" rel="noopener" title="Unduh ${esc(a.name)}" aria-label="Unduh ${esc(a.name)}"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-5-5 5 5 5-5M4 17v4h16v-4"/></svg></a></td></tr>`}).join('')}</tbody></table></div>`:'<p class="sjr-v558-doc-empty">Belum ada Lampiran Dokumen Project.</p>';
+
+ const projectInfo=[['Nama Project',i.job_title],['Nama Item',i.item_name],['Ukuran',(i.dimensions||'-')+' '+(i.dimension_unit||'')],['Kuantitas',(i.quantity||0)+' unit'],['Klien',i.client_name],['Nomor SJR',i.job_number],['Deadline Designer',sjrDate(i.designer_deadline)],['Status',statusLabel]];
+ const statusText=itemStatus==='IN_REVIEW'?'Hasil desain telah dikirim; menunggu keputusan Marketing.':itemStatus==='APPROVED'?'Desain item telah disetujui Marketing.':itemStatus==='REVISION_REQUESTED'?'Marketing meminta revisi. Buat versi desain baru berdasarkan catatan review.':itemStatus==='DRAFT'?'Draft desain tersimpan, belum dikirim ke Marketing.':'Pekerjaan desain diproses khusus untuk item ini.';
+ const entry=sjrV552Cache.get(i.item_id),vs=entry?.data?.versions||[];
+ const reviews=entry?.data?.reviews||[];const history=[{title:'Brief item diterima Designer',note:'Tugas desain dibuat pada Project '+i.job_number}];
+ vs.slice().sort((a,b)=>Number(a.version)-Number(b.version)).forEach(v=>{history.push({title:'Versi '+v.version+(v.state==='DRAFT'?' disimpan sebagai draft':' dikirim ke Marketing'),note:v.note||'Tanpa catatan'});const rev=reviews.find(r=>Number(r.submission_id)===Number(v.id));if(rev)history.push({title:rev.decision==='APPROVED'?'Desain Versi '+v.version+' disetujui Marketing':'Revisi Versi '+v.version+' diminta Marketing',note:rev.note||'Tanpa catatan'});});
+ return `<div class="sjr-detail-v44 sjr-v553-design-workspace"><div class="sjr-detail-heading"><div><div class="eyebrow">DESIGN / ${esc(i.job_number)} / ITEM ${esc(i.item_index)}</div><h1>${esc(i.item_name)}</h1><p>${esc(i.job_title)} · ${esc(i.client_name)}</p></div><div class="sjr-detail-top-actions"><button class="btn outline" id="back" type="button">← Inbox Designer</button></div></div>
+ <div class="sjr-v553-topstatus"><span class="sjr-v54-chip">${statusLabel}</span><span>Project belum diteruskan ke Produksi</span></div>
+ <div class="sjr-v553-grid"><div class="sjr-v553-left">
+ <section class="card sjr-v553-brief"><h2><span class="sjr-v553-symbol">✦</span> Brief Designer</h2><div class="sjr-v558-brief-layout"><div class="sjr-v558-brief-text"><div class="sjr-v553-brief-content">${esc(i.designer_brief||'Belum ada brief khusus item ini.').replace(/\n/g,'<br>')}</div><div class="sjr-v553-deadline">◷ &nbsp; Deadline Designer: <strong>${esc(sjrDate(i.designer_deadline))}</strong></div></div>${previewThumb}</div></section>
+ <section class="card sjr-v553-panel"><h2><span class="sjr-v553-square">⇧</span> Lampiran Dokumen Project (${sourceFiles.length})</h2>${docTable}</section>
+ <section class="card sjr-v553-panel sjr-v553-result"><div class="sjr-v553-flow">DESIGNER → REVIEW MARKETING → ITEM DISETUJUI</div><h2>Hasil Desain Item</h2><div class="sjr-v553-statusline">${statusText}</div>${sjrV552ResultUI(i)}</section>
+ </div><aside class="sjr-v553-right"><section class="card sjr-v553-panel"><h2><span class="sjr-v553-square">▤</span> Informasi Pekerjaan</h2><dl class="sjr-v553-info">${projectInfo.map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(String(v??'-'))}</dd></div>`).join('')}</dl></section>
+ <section class="card sjr-v553-panel"><h2><span class="sjr-v553-square">◷</span> Riwayat Aktivitas</h2><div class="sjr-v553-timeline">${history.map(h=>`<div class="sjr-v553-event"><strong>${esc(h.title)}</strong><p>${esc(h.note)}</p></div>`).join('')}</div><p class="sjr-v3-muted">Keputusan review Marketing per item tersedia pada tahap berikutnya.</p></section></aside></div></div>`;
+}
+function detail(){const j=state.jobs.find(x=>x.id===state.selected);if(!j)return listing();if(j.designer_item_v55)return sjrV55DesignerDetail(j);if(j.multi_item)return sjrMultiDetail(j);const files=j.attachments||[];const dl=a=>'/simple-jobs/api/jobs/'+encodeURIComponent(j.id)+'/attachments/'+encodeURIComponent(a.id)+'/download';const dtype=a=>sjrV3FormatType(a);const dsize=a=>((Number(a.size)||0)/1048576).toFixed(2)+' MB';const link=j.designer?'/sjr/design-workspace?sjr='+encodeURIComponent(j.code):null;const info=[['Nomor SJR',j.code],['Klien',j.client],['PIC Pelanggan',j.pic||'-'],['Kuantitas',j.qty]];return `<div class="sjr-detail-v44"><div class="sjr-detail-heading"><div><div class="eyebrow">${esc(roles[state.role])} / DETAIL PEKERJAAN / ${esc(j.code)}</div><h1>${esc(j.title)}</h1><p>${esc(j.client)} · Target ${esc(sjrDate(j.deadline))} &nbsp; ${badge(j)}</p></div><div class="sjr-detail-top-actions"><button class="btn outline" id="back">← ${state.role==='designer'?'Inbox Designer':'Job Workspace'}</button></div></div><div class="sjr-detail-grid"><div class="sjr-detail-col"><section class="card sjr-detail-card"><div class="sjr-detail-cardtitle"><span class="sjr-detail-icon">▤</span><h2>Ringkasan Pekerjaan</h2></div><div class="sjr-v3-stats">${info.map(([k,v])=>`<div class="sjr-v3-stat"><small>${esc(k)}</small><strong>${esc(v)}</strong></div>`).join('')}</div><div class="sjr-v3-brief"><h3>Detail Brief / Spesifikasi</h3><p>${esc(j.details||'-')}</p></div>${j.notes?`<div class="sjr-v3-brief"><h3>Catatan Tambahan</h3><p>${esc(j.notes)}</p></div>`:''}</section>${j.designer?`<section class="card sjr-detail-card sjr-v3-designer"><div class="sjr-v3-designer-top"><span class="sjr-detail-icon">✦</span><h2>${state.role==='designer'?'Brief & Pengerjaan Desain':'Brief Designer &amp; Hasil Desain'}</h2><span class="sjr-v3-spacer"></span>${j.status==='DESIGN_APPROVED'?'<span class="sjr-v3-approved">Disetujui</span>':''}<a href="${esc(link)}" class="sjr-v3-open sjr-design-link-icon" title="${state.role==='designer'?'Kerjakan / lanjutkan desain':'Buka Design Workspace'}" aria-label="${state.role==='designer'?'Kerjakan / lanjutkan desain':'Buka Design Workspace'}"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4H5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-3"/><path d="M13 4h7v7"/><path d="M10 14 20 4"/></svg></a></div><p class="sjr-v3-designer-text">${esc(j.designer_brief||'Belum ada Brief Designer.')}</p><div class="sjr-v3-deadline"><span>◷ &nbsp; Deadline Designer</span><strong>${esc(sjrDate(j.designer_deadline))}</strong></div><hr class="sjr-v3-divider"><div class="sjr-v3-subtitle">◧ &nbsp; Hasil Desain</div><div id="sjrV3DesignResults"><p class="sjr-v3-muted">Memuat hasil desain dari database...</p></div></section>`:''}${j.technical?`<section class="card sjr-detail-card"><h2>Rencana Teknis</h2><p>${esc(j.technical)}</p></section>`:''}${!j.persisted?panel(j):''}</div><div class="sjr-detail-col"><section class="card sjr-detail-card"><div class="sjr-detail-cardtitle"><span class="sjr-detail-icon">⇧</span><h2>Lampiran Referensi <span class="sjr-detail-count">${files.length}</span></h2></div>${files.length?files.map(a=>`<div class="sjr-v3-reference"><span class="sjr-v3-fileicon${sjrV3TypeClass(dtype(a))}">${esc(dtype(a))}</span><div class="sjr-v3-fileinfo"><b>${esc(a.name)}</b><small>${esc(dtype(a))} · ${dsize(a)} · ${esc(a.attachment_note??a.note??a.notes??'-')}</small></div><a class="sjr-v3-action" href="${esc(dl(a))}" title="Unduh ${esc(a.name)}" aria-label="Unduh ${esc(a.name)}" target="_blank" rel="noopener">⇩</a></div>`).join(''):'<p class="sjr-v3-muted">Belum ada lampiran referensi.</p>'}</section><section class="card sjr-detail-card"><div class="sjr-detail-cardtitle"><span class="sjr-detail-icon">◷</span><h2>Riwayat Aktivitas</h2></div><div class="timeline sjr-v3-history">${(j.logs||[]).slice().reverse().map(l=>`<div class="event">${esc(l.text)}<small>${esc(l.time)}</small></div>`).join('')||'<p class="sjr-v3-muted">Belum ada aktivitas.</p>'}</div></section></div></div></div>`}
+function handleAction(form){const j=state.jobs.find(x=>x.id===state.selected);if(!j||j.persisted)return;const a=form.dataset.action,m=(new FormData(form).get('message')||'').toString().trim();const moves={submitDesign:['REVIEW','Designer menyerahkan desain kepada Marketing'],revision:['REVISION','Marketing meminta revisi kepada Designer'],approveDesign:['PRODUCTION','Marketing menyetujui desain final dan mengirim ke Produksi'],clarify:['CLARIFICATION','Produksi meminta klarifikasi Marketing'],replyClarification:['PRODUCTION','Marketing menjawab klarifikasi Produksi'],startTechnical:['TECHNICAL','Produksi memulai persiapan teknis'],saveTechnical:['HPP','Produksi menyelesaikan persiapan teknis'],submitHpp:['APPROVAL','Produksi mengajukan HPP ke Manager'],reviseHpp:['HPP_REVISION','Manager meminta perbaikan HPP'],approveHpp:['DONE','Manager menyetujui HPP']};if(!moves[a])return;if(a==='submitDesign')j.designResult=m;if(a==='revision')j.revision=m;if(a==='clarify')j.clarification=m;if(a==='saveTechnical')j.technical=m;if(a==='submitHpp'){const amount=Number(new FormData(form).get('hpp'));if(!amount||amount<1)return notify('Isi nominal HPP yang valid.');j.hpp=amount;j.hppFeedback=''}if(a==='reviseHpp')j.hppFeedback=m;j.status=moves[a][0];log(j,moves[a][1]+(m?' — '+m:''));notify('Simulasi berhasil. Status diperbarui tanpa mengubah database.');render()}function render(){nav();const main=$('main');main.innerHTML=(state.page==='detail'?detail():listing())+(state.modalOpen&&state.role==='marketing'?newJobModal():'');bindWorkspace();const resultForm=$('sjrV552Form');if(resultForm){const job=state.jobs.find(x=>x.id===state.selected);if(job?.designer_item_v55)resultForm.addEventListener('submit',event=>sjrV552Submit(event,job.designer_item_v55));}const edit555=$('sjrV555Edit');if(edit555){edit555.onclick=()=>{const j=state.jobs.find(x=>x.id===state.selected);if(j?.designer_item_v55){sjrV555Editing.add(j.designer_item_v55.item_id);render();}};}const cancel555=$('sjrV555Cancel');if(cancel555){cancel555.onclick=()=>{const j=state.jobs.find(x=>x.id===state.selected);if(j?.designer_item_v55){sjrV555Editing.delete(j.designer_item_v55.item_id);render();}};}main.querySelectorAll('[data-v556-delete]').forEach(btn=>{btn.onclick=async()=>{
+ const j=state.jobs.find(x=>x.id===state.selected);const i=j?.designer_item_v55;if(!i)return;
+ const fid=Number(btn.dataset.v556Delete);if(!Number.isInteger(fid)||fid<1)return;
+ if(!window.confirm('Hapus file "'+(btn.dataset.v556Name||'')+'" dari Draft Aktif? Tindakan ini tidak dapat dibatalkan.'))return;
+ btn.disabled=true;try{
+ const res=await fetch('/simple-jobs/api/designer-items-v55/'+i.item_id+'/results/files/'+fid,{method:'DELETE',credentials:'same-origin',headers:{'Accept':'application/json','X-CSRF-TOKEN':document.querySelector('meta[name=csrf-token]').content}});
+ const data=await res.json();if(!res.ok)throw new Error(data.message||'Gagal menghapus file.');
+ notify('File Draft dihapus.');sjrV552Cache.delete(i.item_id);await sjrV552Read(i.item_id,true);
+ }catch(e){notify(e.message);btn.disabled=false;}
+ };});const retry552=$('sjrV552Retry');if(retry552){retry552.onclick=()=>{const j=state.jobs.find(x=>x.id===state.selected);if(j?.designer_item_v55)sjrV552Read(j.designer_item_v55.item_id,true);};}const backdrop=$('sjrModalBackdrop');if(backdrop){const close=()=>{if($('sjrModalClose')?.disabled)return;state.modalOpen=false;render()};$('sjrModalClose').onclick=close;backdrop.onclick=e=>{if(e.target===backdrop)close()};setTimeout(()=>backdrop.querySelector('input[name=client]')?.focus(),0)}document.body.classList.toggle('sjr-modal-active',!!backdrop);main.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>{state.page=b.dataset.page;render()});main.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>{state.selected=Number(b.dataset.open);state.page='detail';render()});main.querySelectorAll('form[data-action]').forEach(f=>f.onsubmit=e=>{e.preventDefault();handleAction(f)});if($('back'))$('back').onclick=()=>{state.page='list';render()};if(state.page==='detail'){const job=state.jobs.find(x=>x.id===state.selected);if(job?.multi_item){sjrV54Load(job);sjrV554Hydrate();const send560=$('sjrV560Send');if(send560)send560.onclick=()=>sjrV560Send(job.id);const retry=$('sjrV54Retry');if(retry)retry.onclick=()=>{sjrV54Cache.delete(job.id);sjrV54Load(job);render()}}else if(job?.designer_item_v55){sjrV552Read(job.designer_item_v55.item_id)}else if(job?.designer)sjrV3LoadDesign(job)};const editor=$('sjrRichEditor');const hidden=$('sjrDetailsValue');
+if(editor&&hidden){
+ const sync=()=>{hidden.value=editor.innerText.trim();$('sjrEditorCount').textContent=hidden.value.length.toLocaleString('id-ID')+' / 10.000 karakter'};
+ editor.addEventListener('input',sync);
+ document.querySelectorAll('[data-editor]').forEach(b=>b.addEventListener('click',()=>{editor.focus();const cmd=b.dataset.editor;
+ if(cmd==='link'){const url=prompt('Masukkan URL tautan (https://...)');if(url){if(!/^https:\/\//i.test(url)){notify('Tautan harus dimulai dengan https://');return}document.execCommand('createLink',false,url)}}
+ else document.execCommand(cmd,false,null);sync()}));
+ const style=$('sjrTextStyle');if(style)style.onchange=()=>{editor.focus();document.execCommand('formatBlock',false,style.value);sync()};
+ sync();
+ }
+sjrV52Wire();const f=$('briefForm');if(f){const radios=[...f.querySelectorAll('input[name="designer"]')];const designPanel=$('sjrDesignBriefFields'),designText=$('sjrDesignerBrief'),designDate=$('sjrDesignerDeadline');const syncDesign=()=>{const yes=f.querySelector('input[name="designer"]:checked')?.value==='yes';designPanel.hidden=!yes;for(const el of [designText,designDate]){el.disabled=!yes;el.required=yes;if(!yes)el.value='';}};radios.forEach(r=>r.addEventListener('change',syncDesign));syncDesign();}let sjrQueuedAttachments=[];if(f&&f.querySelector('#sjrAttachments')){const input=$('sjrAttachments'),tbody=$('sjrFileList'),counter=$('sjrFileCount'),pending=$('sjrFilePending'),note=$('sjrAttachmentNote');let picked=null;const redraw=()=>{counter.textContent='('+sjrQueuedAttachments.length+')';tbody.replaceChildren();if(!sjrQueuedAttachments.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=6;td.className='sjr-file-empty';td.textContent='Belum ada lampiran ditambahkan.';tr.append(td);tbody.append(tr);return}sjrQueuedAttachments.forEach((entry,index)=>{const tr=document.createElement('tr');[String(index+1),entry.file.name,(entry.file.name.split('.').pop()||'FILE').toUpperCase(),(entry.file.size/1024/1024).toFixed(2)+' MB',entry.note||'-'].forEach(v=>{const td=document.createElement('td');td.textContent=v;tr.append(td)});const td=document.createElement('td'),remove=document.createElement('button');remove.type='button';remove.className='sjr-remove-file';remove.setAttribute('aria-label','Hapus '+entry.file.name);remove.textContent='Hapus';remove.onclick=()=>{sjrQueuedAttachments.splice(index,1);redraw()};td.append(remove);tr.append(td);tbody.append(tr)})};const pick=()=>input.click();const area=$('sjrUploadArea');area.onclick=e=>{if(e.target!==input)pick()};area.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick()}};input.onchange=()=>{const files=Array.from(input.files||[]);if(!files.length)return;if(files.length>1){notify('Pilih satu file per catatan. Tambahkan file lain setelah menekan Tambah Lampiran.');input.value='';return}picked=files[0];pending.textContent=picked.name+' ('+(picked.size/1024/1024).toFixed(2)+' MB) — belum ditambahkan';pending.classList.add('has-file')};$('sjrAddAttachment').onclick=()=>{if(!picked){notify('Pilih file terlebih dahulu.');return}if(sjrQueuedAttachments.length>=5){notify('Maksimal 5 lampiran per pekerjaan.');return}if(picked.size>200*1024*1024){notify('File melebihi batas 200 MB.');return}if(sjrQueuedAttachments.some(e=>e.file.name===picked.name&&e.file.size===picked.size&&e.file.lastModified===picked.lastModified)){notify('File tersebut sudah ditambahkan.');return}sjrQueuedAttachments.push({file:picked,note:note.value.trim()});picked=null;input.value='';note.value='';pending.textContent='Belum ada file dipilih.';pending.classList.remove('has-file');redraw()};redraw()};if(f)f.onsubmit=async e=>{e.preventDefault();if(editor&&hidden){hidden.value=editor.innerText.trim();if(!hidden.value){notify('Isi Detail Brief / Spesifikasi terlebih dahulu.');editor.focus();return}if(hidden.value.length>10000){notify('Maksimal 10.000 karakter pada Detail Brief.');editor.focus();return}}const btn=f.querySelector('[type=submit]');btn.disabled=true;const d=new FormData(f);d.delete('attachments[]');d.delete('attachment_notes');sjrQueuedAttachments.forEach(entry=>{d.append('attachments[]',entry.file,entry.file.name);d.append('attachment_notes[]',entry.note)});const closeBtn=$('sjrModalClose');if(closeBtn)closeBtn.disabled=true;const files=sjrQueuedAttachments.map(entry=>entry.file);if(files.length>5){notify('Maksimum 5 lampiran per pengiriman.');btn.disabled=false;if(closeBtn)closeBtn.disabled=false;return}if(files.some(file=>file.size>200*1024*1024)){notify('Maksimum ukuran per lampiran 200 MB.');btn.disabled=false;if(closeBtn)closeBtn.disabled=false;return}try{const res=await fetch('/simple-jobs/api/jobs',{method:'POST',headers:{'Accept':'application/json','X-CSRF-TOKEN':document.querySelector('meta[name=csrf-token]').content},credentials:'same-origin',body:d});const result=await res.json();if(!res.ok){const issue=result.errors?Object.values(result.errors).flat().join(' '):(result.message||'Gagal mengirim Brief');throw new Error(issue)}await loadJobs();state.selected=result.job.id;state.modalOpen=false;state.page='detail';notify('Brief '+result.job.code+' tersimpan di database pengujian.');render()}catch(err){notify(err.message);btn.disabled=false;if(closeBtn)closeBtn.disabled=false}}}async function loadJobs(){try{const res=await fetch('/simple-jobs/api/jobs',{credentials:'same-origin',headers:{'Accept':'application/json'}});if(!res.ok)throw new Error('API SJR gagal ('+res.status+'). Periksa akun dan hak akses.');const data=await res.json();state.loadError=null;if(data.role==='designer'||data.role==='marketing'){state.role=data.role;$('role').value=data.role;}state.jobs=data.jobs.map(x=>({...x,persisted:true,logs:[{text:'Brief terkirim dan tersimpan',time:x.created_at||'-'}]}));
+ if(data.role==='designer'){
+  const itemResp=await fetch('/simple-jobs/api/designer-items-v55',{credentials:'same-origin',headers:{'Accept':'application/json'}});
+  if(!itemResp.ok)throw new Error('Inbox item Designer gagal (HTTP '+itemResp.status+').');
+  const itemData=await itemResp.json();
+  for(const item of (itemData.items||[])){
+   state.jobs.push({id:-Number(item.item_id),code:item.job_number+' / Item '+item.item_index,title:item.item_name,client:item.client_name,
+    deadline:item.designer_deadline,qty:item.quantity,designer:true,persisted:true,status:item.design_state==='APPROVED'?'DESIGN_APPROVED':item.design_state==='REVISION_REQUESTED'?'DESIGN_REVISION':item.design_state==='IN_REVIEW'?'DESIGN_REVIEW':item.design_state==='DRAFT'?'DESIGN_IN_PROGRESS':'DESIGNER',
+    designer_brief:item.designer_brief,designer_deadline:item.designer_deadline,
+    designer_item_v55:item,created_at:item.created_at,logs:[],attachments:[]});
+  }
+ }
+ if(data.role==='marketing'){
+  const projects=state.jobs.filter(j=>j.multi_item);
+  await Promise.all(projects.map(async j=>{
+   try{
+    const r=await fetch('/simple-jobs/api/jobs-v52/'+encodeURIComponent(j.id),{credentials:'same-origin',headers:{'Accept':'application/json'}});
+    if(r.ok){const detail=await r.json();sjrV54Cache.set(j.id,{data:detail});}
+   }catch(e){console.warn('Progress item tidak tersedia untuk '+j.code,e);}
+  }));
+ }
+ try{const hr=await fetch('/sjr/api/design-history',{credentials:'same-origin',headers:{'Accept':'application/json'}});if(hr.ok){const history=await hr.json();for(const job of state.jobs){const events=history.jobs?.[job.code];if(Array.isArray(events)){job.logs=[{text:'Brief terkirim dan tersimpan',time:job.created_at||'-'},...events.map(e=>({text:e.message+' — '+e.by,time:e.at}))]}}}}catch(historyError){console.warn('Riwayat desain belum dapat dimuat:',historyError)}}catch(err){state.jobs=[];state.loadError=err.message;notify(err.message)}}document.addEventListener('keydown',e=>{if(e.key==='Escape'&&state.modalOpen&&!$('sjrModalClose')?.disabled){state.modalOpen=false;render()}});$('role').onchange=e=>{state.modalOpen=false;state.role=e.target.value;state.page='list';render()};
+const sjrV52Session={items:[],documents:[],serial:0};
+function sjrV52Wire(){
+ const form=document.getElementById('sjrV52Form');if(!form)return;
+ const area=document.getElementById('sjrV52Items'); const docs=document.getElementById('sjrV52Attachments');
+ const err=document.getElementById('sjrV52Error');
+ // V5.3.2: Project rich text editor; keep existing API field `details`.
+ const rich=document.getElementById('sjrV52Editor'),details=document.getElementById('sjrV52Details');
+ const syncRich=()=>{const plain=(rich.innerText||'').trim();details.value=plain;document.getElementById('sjrV52Count').textContent=plain.length.toLocaleString('id-ID')+' / 10.000 karakter';};
+ rich.addEventListener('input',syncRich);
+ const toolbar=document.getElementById('sjrV52Toolbar');
+ const emojiPanel=document.getElementById('v535EmojiPanel');
+ let savedSelection=null;
+ const rememberSelection=()=>{const sel=window.getSelection();if(sel&&sel.rangeCount&&rich.contains(sel.anchorNode))savedSelection=sel.getRangeAt(0).cloneRange();};
+ const restoreSelection=()=>{rich.focus();if(savedSelection){const sel=window.getSelection();sel.removeAllRanges();sel.addRange(savedSelection);}};
+ rich.addEventListener('mouseup',rememberSelection);rich.addEventListener('keyup',rememberSelection);
+ toolbar.addEventListener('mousedown',event=>{if(event.target.closest('button[data-v532-cmd]')){rememberSelection();event.preventDefault();}});
+ toolbar.addEventListener('click',event=>{
+   const emoji=event.target.closest('[data-v535-emoji]');
+   if(emoji){restoreSelection();document.execCommand('insertText',false,emoji.dataset.v535Emoji);emojiPanel.hidden=true;syncRich();rememberSelection();return;}
+   const button=event.target.closest('[data-v532-cmd]');if(!button)return;
+   const cmd=button.dataset.v532Cmd;
+   if(cmd==='emoji'){emojiPanel.hidden=!emojiPanel.hidden;return;}
+   if(cmd==='attach'){document.getElementById('sjrV52AttachPick').click();return;}
+   restoreSelection();
+   if(cmd==='link'){
+      const url=prompt('Masukkan tautan (https://...)');
+      if(url&&/^https?:\/\//i.test(url))document.execCommand('createLink',false,url);
+   }else if(cmd==='code'){
+      const selection=window.getSelection();const raw=selection?selection.toString():'';
+      const escaped=raw.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+      document.execCommand('insertHTML',false,'<code>'+ (escaped||'kode') +'</code>');
+   }else document.execCommand(cmd,false,null);
+   syncRich();rememberSelection();
+ });
+ document.getElementById('sjrV52TextStyle').addEventListener('change',event=>{restoreSelection();document.execCommand('formatBlock',false,event.target.value);syncRich();});
+ const textColor=document.getElementById('v535TextColor');
+ textColor.addEventListener('pointerdown',rememberSelection);
+ textColor.addEventListener('input',()=>{document.getElementById('v535ColorDot').style.background=textColor.value;restoreSelection();document.execCommand('foreColor',false,textColor.value);syncRich();rememberSelection();});
+ document.addEventListener('pointerdown',event=>{if(!toolbar.contains(event.target))emojiPanel.hidden=true;});
+ rich.addEventListener('paste',event=>{event.preventDefault();const text=event.clipboardData.getData('text/plain');document.execCommand('insertText',false,text);});
+ const uploadArea=document.getElementById('sjrV52UploadArea'),docPick=document.getElementById('sjrV52AttachPick'),pending=document.getElementById('sjrV52FilePending');
+ uploadArea.addEventListener('click',event=>{if(event.target!==docPick)docPick.click();});
+ uploadArea.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();docPick.click();}});
+ docPick.addEventListener('change',()=>{pending.textContent=docPick.files?.[0]?.name||'Belum ada file dipilih.';});
+
+ form.addEventListener('invalid',event=>{const item=event.target.closest('.v52-item');if(item){item.classList.remove('v53-collapsed');item.querySelector('.v53-toggle')?.setAttribute('aria-expanded','true');}},true);
+ const showError=m=>{err.hidden=false;err.textContent=m;err.scrollIntoView({block:'nearest',behavior:'smooth'})};
+ const addItem=()=>{const id=++sjrV52Session.serial;sjrV52Session.items.push({id,previews:[]});const el=document.createElement('article');el.className='v52-item';el.dataset.id=String(id);el.innerHTML=`<div class="v53-item-head"><button type="button" class="v53-toggle" aria-expanded="true"><span class="v53-head-label"><strong class="v52-item-title">Item</strong><small class="v53-item-summary">Belum diisi · Qty 1</small></span><span class="v53-chevron" aria-hidden="true">⌄</span></button><button type="button" class="v52-btn v52-remove-item" aria-label="Hapus item">Hapus</button></div><div class="v53-item-fields"><div class="v52-grid"><label>Nama Item *<input data-field="name" required maxlength="250" placeholder="Letter Sign / Panako"></label><label>Ukuran *<input data-field="dimensions" maxlength="150" required placeholder="300 × 80"></label><label>Satuan ukuran *<select data-field="unit"><option value="cm">cm</option><option value="mm">mm</option><option value="m">m</option><option value="unit">unit</option></select></label><label>Qty *<input data-field="quantity" type="number" min="1" max="1000000" value="1" required></label></div><div class="v52-preview"><div class="v533-preview-title"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><strong>Upload Preview Item</strong></div><p class="v52-sub">Foto atau contoh visual item ini saja. Maks. 10 gambar per item, 10 MB per gambar.</p><input class="v52-file-input" type="file" accept="image/jpeg,image/png,image/webp" multiple><div class="v52-gallery"></div></div><div class="v534-designer-zone"><label class="v52-check"><input data-field="designer" type="checkbox"> Perlu Designer</label><div class="v52-design" hidden><label>Brief Designer *<textarea data-field="designer_brief" maxlength="10000" rows="2"></textarea></label><label>Deadline Designer *<input type="date" data-field="designer_deadline"></label></div></div></div>`;
+ area.append(el);
+ const toggle=el.querySelector('.v53-toggle');
+ const setOpen=open=>{el.classList.toggle('v53-collapsed',!open);toggle.setAttribute('aria-expanded',String(open));};
+ toggle.onclick=()=>setOpen(el.classList.contains('v53-collapsed'));
+ if(sjrV52Session.items.length>1){area.querySelectorAll('.v52-item').forEach(other=>{if(other!==el){other.classList.add('v53-collapsed');other.querySelector('.v53-toggle')?.setAttribute('aria-expanded','false');}})}
+ el.querySelectorAll('[data-field="name"],[data-field="dimensions"]').forEach(input=>input.addEventListener('input',summarize));
+ el.querySelector('.v52-file-input').setAttribute('aria-label','Tambah gambar preview item');
+ el.querySelector('.v52-remove-item').onclick=()=>{if(sjrV52Session.items.length<=1){showError('Minimal satu item pekerjaan.');return}const item=sjrV52Session.items.find(x=>x.id===id);item?.previews.forEach(p=>URL.revokeObjectURL(p.url));sjrV52Session.items=sjrV52Session.items.filter(x=>x.id!==id);el.remove();summarize()};
+ const check=el.querySelector('[data-field="designer"]');check.onchange=()=>{const p=el.querySelector('.v52-design');p.hidden=!check.checked;p.querySelectorAll('textarea,input').forEach(x=>x.required=check.checked);summarize()};
+ el.querySelector('[data-field="quantity"]').oninput=summarize;
+ const redraw=()=>{const item=sjrV52Session.items.find(x=>x.id===id);const g=el.querySelector('.v52-gallery');g.replaceChildren();item.previews.forEach((p,i)=>{const card=document.createElement('div');card.className='v52-photo';const img=document.createElement('img');img.src=p.url;img.alt=p.file.name;const t=document.createElement('small');t.textContent=p.file.name;const b=document.createElement('button');b.type='button';b.textContent='Hapus';b.onclick=()=>{URL.revokeObjectURL(p.url);item.previews.splice(i,1);redraw()};card.append(img,t,b);g.append(card)})};
+ el.querySelector('.v52-file-input').onchange=e=>{const item=sjrV52Session.items.find(x=>x.id===id);for(const file of Array.from(e.target.files||[])){if(item.previews.length>=10){showError('Maksimal 10 preview per item.');break}if(!['image/jpeg','image/png','image/webp'].includes(file.type)||file.size>10*1024*1024){showError('Preview harus JPG, PNG, atau WEBP maksimal 10 MB.');continue}item.previews.push({file,url:URL.createObjectURL(file)})}e.target.value='';redraw()};summarize();};
+ const summarize=()=>{let qty=0,designer=0;sjrV52Session.items.forEach((item,i)=>{const el=area.querySelector(`[data-id="${item.id}"]`);if(!el)return;el.querySelector('.v52-item-title').textContent='Item '+(i+1);const nm=el.querySelector('[data-field="name"]').value.trim()||'Belum diisi';const dim=el.querySelector('[data-field="dimensions"]').value.trim();const q=el.querySelector('[data-field="quantity"]').value||'0';const ds=el.querySelector('[data-field="designer"]').checked?' · Designer':'';el.querySelector('.v53-item-summary').textContent=nm+(dim?' · '+dim:'')+' · Qty '+q+ds;qty+=Number(el.querySelector('[data-field="quantity"]').value)||0;if(el.querySelector('[data-field="designer"]').checked)designer++});document.getElementById('sjrV52Summary').textContent=`${sjrV52Session.items.length} item · ${qty} unit · ${designer} perlu Designer`};
+ const redrawDocs=()=>{docs.replaceChildren();document.getElementById('sjrV52DocCount').textContent='('+sjrV52Session.documents.length+')';if(!sjrV52Session.documents.length){const tr=document.createElement('tr');const td=document.createElement('td');td.colSpan=6;td.className='sjr-file-empty';td.textContent='Belum ada lampiran ditambahkan.';tr.append(td);docs.append(tr);return;}sjrV52Session.documents.forEach((entry,i)=>{const tr=document.createElement('tr');const values=[String(i+1),entry.file.name,(entry.file.name.split('.').pop()||'FILE').toUpperCase(),(entry.file.size/1048576).toFixed(2)+' MB',entry.note||'—'];values.forEach(v=>{const td=document.createElement('td');td.textContent=v;tr.append(td)});const td=document.createElement('td');const remove=document.createElement('button');remove.type='button';remove.className='v532-remove';remove.innerHTML='<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M6 7l1 14h10l1-14M10 11v6m4-6v6"/></svg>';remove.title='Hapus lampiran';remove.setAttribute('aria-label','Hapus lampiran');remove.onclick=()=>{sjrV52Session.documents.splice(i,1);redrawDocs()};td.append(remove);tr.append(td);docs.append(tr);});};
+ document.getElementById('sjrV52Add').onclick=addItem;
+ document.getElementById('sjrV52Cancel').onclick=()=>{state.modalOpen=false;render()};
+ document.getElementById('sjrV52AttachAdd').onclick=()=>{const pick=document.getElementById('sjrV52AttachPick'),file=pick.files?.[0];if(!file){showError('Pilih lampiran dokumen dahulu.');return}if(sjrV52Session.documents.length>=5||file.size>200*1024*1024){showError('Lampiran maksimal 5 file, masing-masing 200 MB.');return}sjrV52Session.documents.push({file,note:document.getElementById('sjrV52AttachNote').value.trim()});pick.value='';pending.textContent='Belum ada file dipilih.';document.getElementById('sjrV52AttachNote').value='';redrawDocs()};
+ // Reset only when a modal is freshly opened; successful save renders its own receipt.
+ sjrV52Session.items.forEach(x=>x.previews.forEach(p=>URL.revokeObjectURL(p.url)));sjrV52Session.items=[];sjrV52Session.documents=[];sjrV52Session.serial=0;addItem();redrawDocs();
+ form.onsubmit=async e=>{e.preventDefault();err.hidden=true;syncRich();if(!details.value.trim()){showError('Detail Brief / Spesifikasi Umum wajib diisi.');rich.focus();return;}if(details.value.length>10000){showError('Brief maksimal 10.000 karakter.');rich.focus();return;}const fd=new FormData(form);const payload=new FormData();for(const name of ['client','title','pic','deadline','details','notes'])payload.append(name,fd.get(name)||'');// V5.4.2.3: capture the actual editor markup, not the plain-text hidden field.
+ const submittedBriefHtml=rich.innerHTML;
+ payload.set('details_html',submittedBriefHtml);
+ const encodedBriefBytes=new TextEncoder().encode(submittedBriefHtml);
+ let encodedBriefBinary='';for(const byte of encodedBriefBytes)encodedBriefBinary+=String.fromCharCode(byte);
+ payload.set('details_html_b64',btoa(encodedBriefBinary));
+ for(let i=0;i<sjrV52Session.items.length;i++){const item=sjrV52Session.items[i],el=area.querySelector(`[data-id="${item.id}"]`);const val=k=>el.querySelector(`[data-field="${k}"]`)?.value||'';const designer=el.querySelector('[data-field="designer"]').checked;for(const key of ['name','dimensions','unit','quantity'])payload.append(`items[${i}][${key}]`,val(key));payload.append(`items[${i}][designer]`,designer?'yes':'no');if(designer){if(!val('designer_brief').trim()||!val('designer_deadline')){showError('Item '+(i+1)+': Brief dan Deadline Designer wajib.');return}payload.append(`items[${i}][designer_brief]`,val('designer_brief'));payload.append(`items[${i}][designer_deadline]`,val('designer_deadline'))}item.previews.forEach((p,j)=>payload.append(`items[${i}][previews][${j}]`,p.file,p.file.name))}
+ sjrV52Session.documents.forEach((d,i)=>{payload.append(`attachments[${i}]`,d.file,d.file.name);payload.append(`attachment_notes[${i}]`,d.note)});
+ const button=document.getElementById('sjrV52Save'),close=document.getElementById('sjrModalClose');button.disabled=true;if(close)close.disabled=true;button.textContent='Menyimpan…';try{const csrf=document.querySelector('meta[name="csrf-token"]')?.content||'';const response=await fetch('/simple-jobs/api/jobs-v52',{method:'POST',body:payload,credentials:'same-origin',headers:{'Accept':'application/json','X-CSRF-TOKEN':csrf}});const data=await response.json();if(!response.ok)throw new Error(data.errors?Object.values(data.errors).flat().join(' '):data.message||'Gagal menyimpan Project');const id=data.job.id;const verify=await fetch('/simple-jobs/api/jobs-v52/'+encodeURIComponent(id),{credentials:'same-origin',headers:{'Accept':'application/json'}});if(!verify.ok)throw new Error('Project tersimpan tetapi pembacaan ulang gagal. ID '+id);const record=await verify.json();
+ // V5.4.2.3: confirm formatting survived Laravel storage + readback.
+ // Never claim formatting is saved merely because the POST returned HTTP 201.
+ const savedBriefHtml=String(record.job?.brief_details_html||'');
+ const formats=[
+  ['tebal',/<(?:b|strong)\b/i,/<(?:b|strong)\b/i],
+  ['miring',/<(?:i|em)\b/i,/<(?:i|em)\b/i],
+  ['garis bawah',/<u\b/i,/<u\b/i],
+  ['warna',/<(?:font\b[^>]*\bcolor\s*=|span\b[^>]*\bstyle\s*=\s*["'][^"']*\bcolor\s*:)/i,/<span\b[^>]*\bstyle\s*=\s*["'][^"']*\bcolor\s*:/i],
+  ['daftar',/<(?:ul|ol|li)\b/i,/<(?:ul|ol|li)\b/i],
+  ['tautan',/<a\b/i,/<a\b/i],
+ ];
+ const missingFormats=formats.filter(([label,source,target])=>source.test(submittedBriefHtml)&&!target.test(savedBriefHtml)).map(x=>x[0]);
+ const htmlMissing=!savedBriefHtml.trim();
+ form.hidden=true;const receipt=document.getElementById('sjrV52Saved');receipt.hidden=false;const title=document.createElement('h3');title.textContent='Project '+data.job.code+' berhasil tersimpan';const note=document.createElement('p');note.textContent='Status: Menunggu Kesiapan Item. Belum dikirim ke Designer atau Produksi.';const list=document.createElement('ul');(record.items||[]).forEach(it=>{const li=document.createElement('li');li.textContent=`${it.item_name} — ${it.dimensions} ${it.dimension_unit} — Qty ${it.quantity} — ${it.previews?.length||0} preview`;list.append(li)});const exit=document.createElement('button');exit.className='v52-btn primary';exit.textContent='Kembali ke Job Workspace';exit.onclick=async()=>{state.modalOpen=false;await loadJobs();render()};receipt.replaceChildren(title,note,list,exit);
+ const check=document.createElement('p');check.setAttribute('role','status');
+ if(htmlMissing||missingFormats.length){
+  check.style.cssText='margin-top:14px;padding:12px;border-radius:8px;background:#fff4e5;color:#854d0e;border:1px solid #f6d7a4';
+  check.textContent='Project tersimpan, tetapi format Rich Text belum lengkap setelah dibaca dari database'+(missingFormats.length?' ('+missingFormats.join(', ')+')':'')+'. Jangan mengirim ulang Project; lakukan pemeriksaan sebelum melanjutkan.';
+ }else{
+  check.style.cssText='margin-top:14px;padding:12px;border-radius:8px;background:#e9f8f0;color:#17623b;border:1px solid #b6e3cd';
+  check.textContent='Verifikasi database berhasil: isi dan format Rich Text yang digunakan telah terbaca kembali.';
+ }
+ receipt.append(check);
+ }catch(ex){showError(ex.message||'Gagal mengirim data.');button.disabled=false;if(close)close.disabled=false;button.textContent='Simpan Project Multi-Item'}};
+}
+loadJobs().then(render)})();
+</script></body></html>

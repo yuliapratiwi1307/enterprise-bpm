@@ -1,0 +1,4 @@
+Preview view created: /Users/bayusuwardani/Documents/Codex/LaravelApps/webapp-saya/resources/views/sjr/multi-item-production-detail-tabler.blade.php
+Original view untouched.
+To render this view, change ONLY the view name in a dedicated preview endpoint using the SAME controller data. Do not modify production route.
+Tabler CSS/JS required at public/vendor/tabler-1.7.5/.

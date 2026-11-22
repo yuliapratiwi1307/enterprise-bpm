@@ -1,0 +1,32 @@
+/* SJR Tahap 6 — preview-only refinements on top of official Tabler Core 1.7.5.
+   Deliberately avoid changing application-specific calculation/cutting JS or geometry. */
+body.sjr-tabler-stage6 {font-size:14px;}
+body.sjr-tabler-stage6 .page-wrapper {min-width:0;}
+body.sjr-tabler-stage6 .page-body > .container-xl {max-width:1600px; padding-inline:clamp(16px,2.2vw,36px);}
+body.sjr-tabler-stage6 .page-body main.content {max-width:none; margin:0; padding:22px 0 48px;}
+body.sjr-tabler-stage6 .page-body .pagehead.page-header {display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:16px;margin:24px 0 22px;padding:0;max-width:none;text-align:left;}
+body.sjr-tabler-stage6 .pagehead .sjr-stage6-heading {min-width:0;flex:1 1 500px;max-width:none;}
+body.sjr-tabler-stage6 .pagehead .page-title {font-size:clamp(23px,2vw,30px);line-height:1.25;margin:7px 0 8px;letter-spacing:-.025em;text-align:left;}
+body.sjr-tabler-stage6 .pagehead .eyebrow {letter-spacing:.075em;line-height:1.5;}
+body.sjr-tabler-stage6 .pagehead > a.btn {align-self:center;white-space:nowrap;}
+body.sjr-tabler-stage6 .page-body .alert[role="status"] {color:var(--tblr-info-text, #155e75);background:var(--tblr-info-lt,#e7f5ff);border:1px solid var(--tblr-info,#4299e1);border-radius:var(--tblr-border-radius-lg,8px);padding:14px 18px;}
+body.sjr-tabler-stage6 .page-body .alert[role="status"] .small {color:inherit!important;opacity:.9;}
+body.sjr-tabler-stage6 .page-body .alert[role="status"] .btn {background:#fff;color:#206bc4;border-color:#b6d5f5;}
+body.sjr-tabler-stage6 .page-body .two-col.row.row-cards {align-items:start;row-gap:20px;}
+body.sjr-tabler-stage6 .page-body .two-col > [class*="col-"] {min-width:0;}
+body.sjr-tabler-stage6 .page-body section.card {overflow:hidden;border:1px solid var(--tblr-border-color,#e6e7e9);border-radius:var(--tblr-border-radius-lg,8px);box-shadow:var(--tblr-shadow-card,0 1px 2px rgba(0,0,0,.06));margin-bottom:16px;padding:0;}
+body.sjr-tabler-stage6 .page-body section.card > .section-title.card-header {min-height:58px;display:flex;align-items:center;gap:10px;padding:14px 18px;margin:0;border-bottom:1px solid var(--tblr-border-color,#e6e7e9);background:var(--tblr-bg-surface,#fff);}
+body.sjr-tabler-stage6 .page-body section.card > .section-title.card-header h2 {font-size:15px;line-height:1.35;margin:0;}
+body.sjr-tabler-stage6 .page-body section.card > .section-title.card-header + * {margin-top:0;}
+body.sjr-tabler-stage6 .page-body .stat-row {margin:16px 18px;padding-bottom:14px;}
+body.sjr-tabler-stage6 .page-body .brief {margin:12px 18px 18px;}
+body.sjr-tabler-stage6 .page-body .card > .muted,body.sjr-tabler-stage6 .page-body .card > .info-note,body.sjr-tabler-stage6 .page-body .card > .notice-success,body.sjr-tabler-stage6 .page-body .card > .notice-error {margin-left:18px;margin-right:18px;}
+body.sjr-tabler-stage6 .page-body .card .tech-field,body.sjr-tabler-stage6 .page-body .card input.tech-field,body.sjr-tabler-stage6 .page-body .card select.tech-field,body.sjr-tabler-stage6 .page-body .card textarea.tech-field {border:1px solid var(--tblr-border-color,#dce1e7);border-radius:var(--tblr-border-radius,6px);background:var(--tblr-bg-forms,#fff);font-size:13px;min-width:0;}
+body.sjr-tabler-stage6 .page-body .card .tech-field:focus {border-color:var(--tblr-primary,#206bc4);outline:0;box-shadow:0 0 0 .2rem rgba(32,107,196,.12);}
+body.sjr-tabler-stage6 .page-body .card .tech-add,body.sjr-tabler-stage6 .page-body .card .btn {border-radius:var(--tblr-border-radius,6px);}
+body.sjr-tabler-stage6 .page-body .card .mini-table {border-color:var(--tblr-border-color,#e6e7e9);}
+body.sjr-tabler-stage6 .page-body .card .mini-table th {background:var(--tblr-bg-surface-secondary,#f6f8fb);}
+body.sjr-tabler-stage6 .page-body .inline-tech {background:var(--tblr-bg-surface-secondary,#f8fafc);border-color:var(--tblr-border-color,#e6e7e9);}
+body.sjr-tabler-stage6 .page-body .inline-tech .sjr-v6-tabs {border-radius:6px;}
+@media(max-width:991.98px){body.sjr-tabler-stage6 .page-body main.content{padding-top:14px;}body.sjr-tabler-stage6 .pagehead .sjr-stage6-heading{flex-basis:100%;}}
+@media(max-width:575.98px){body.sjr-tabler-stage6 .page-body .pagehead.page-header{margin-top:16px;}body.sjr-tabler-stage6 .page-body section.card > .section-title.card-header{padding:12px 14px;}body.sjr-tabler-stage6 .page-body .stat-row{margin-inline:14px;}}

@@ -1,0 +1,38 @@
+/* Tabler Core 1.7.5 component integration. Scoped exclusively to the SJR preview.
+   Specialized cutting-layout/material widgets keep their own operational CSS. */
+body.sjr-tabler-stage5 {font-size:14px;background:var(--tblr-bg-surface-secondary,#f5f7fb)}
+.sjr-tabler-stage5 .page-wrapper {min-width:0}
+.sjr-tabler-stage5 .page-body {padding-top:1.5rem}
+.sjr-tabler-stage5 .content {padding:0 0 3rem;max-width:none;margin:0}
+.sjr-tabler-stage5 .pagehead {display:flex;align-items:center;justify-content:space-between;gap:1.25rem;flex-wrap:wrap;margin:0 0 1.5rem}
+.sjr-tabler-stage5 .pagehead h1.page-title {font-size:1.75rem;line-height:1.25;font-weight:650;letter-spacing:-.025em;margin:.35rem 0;color:var(--tblr-body-color)}
+.sjr-tabler-stage5 .pagehead .sub {font-size:.875rem;color:var(--tblr-secondary-color)}
+.sjr-tabler-stage5 .eyebrow {letter-spacing:.08em}
+.sjr-tabler-stage5 .two-col.row {display:flex;grid-template-columns:none;gap:0;align-items:stretch;margin-top:0}
+.sjr-tabler-stage5 .two-col.row > [class*="col-"] {min-width:0}
+.sjr-tabler-stage5 section.card {padding:0;margin-bottom:1.25rem;border:1px solid var(--tblr-border-color);border-radius:var(--tblr-border-radius-lg,.5rem);overflow:visible;background:var(--tblr-bg-surface,#fff)}
+.sjr-tabler-stage5 section.card > .section-title.card-header {display:flex;align-items:center;gap:.75rem;padding:1rem 1.25rem;margin:0;border-bottom:1px solid var(--tblr-border-color);min-height:64px}
+.sjr-tabler-stage5 section.card > .section-title.card-header h2 {font-size:1rem;font-weight:650;color:var(--tblr-body-color)}
+.sjr-tabler-stage5 section.card > :not(.section-title) {margin-left:1.25rem;margin-right:1.25rem}
+.sjr-tabler-stage5 section.card > :last-child {margin-bottom:1.25rem}
+.sjr-tabler-stage5 section.card > .section-title + * {margin-top:1.25rem}
+.sjr-tabler-stage5 .iconbox {background:var(--tblr-primary-lt,#eaf2ff);color:var(--tblr-primary);border-radius:.375rem}
+.sjr-tabler-stage5 .stat-row {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.5rem;padding-bottom:1rem}
+.sjr-tabler-stage5 .stat {padding:.35rem .75rem}
+.sjr-tabler-stage5 .stat label {font-size:.75rem;color:var(--tblr-secondary-color)}
+.sjr-tabler-stage5 .stat strong {font-size:.875rem}
+.sjr-tabler-stage5 .sjr-v6-tabs.nav {display:flex;gap:.25rem;border-bottom:1px solid var(--tblr-border-color)}
+.sjr-tabler-stage5 .sjr-v6-tab.nav-link {border:1px solid transparent;border-bottom:0;border-radius:.375rem .375rem 0 0;padding:.7rem 1rem;background:transparent;color:var(--tblr-secondary-color)}
+.sjr-tabler-stage5 .sjr-v6-tab.nav-link[aria-selected="true"],.sjr-tabler-stage5 .sjr-v6-tab.nav-link.active {color:var(--tblr-primary);background:var(--tblr-bg-surface);border-color:var(--tblr-border-color);font-weight:600}
+.sjr-tabler-stage5 .tech-field.form-control {font-size:.875rem;border-color:var(--tblr-border-color);border-radius:var(--tblr-border-radius,.375rem)}
+.sjr-tabler-stage5 select.tech-field.form-control {appearance:auto}
+.sjr-tabler-stage5 .review-button.btn.btn-primary {background:var(--tblr-primary);color:#fff;border-color:var(--tblr-primary);border-radius:var(--tblr-border-radius)}
+.sjr-tabler-stage5 .tech-add.btn {border-radius:var(--tblr-border-radius)}
+.sjr-tabler-stage5 .tech-remove.btn {border-radius:var(--tblr-border-radius)}
+.sjr-tabler-stage5 .mini-table.table,.sjr-tabler-stage5 .data-table.table {--tblr-table-border-color:var(--tblr-border-color);font-size:.8125rem}
+.sjr-tabler-stage5 .mini-table.table th,.sjr-tabler-stage5 .data-table.table th {background:var(--tblr-bg-surface-secondary);font-weight:600}
+.sjr-tabler-stage5 .item-card.card {border-color:var(--tblr-border-color);border-radius:var(--tblr-border-radius-lg)}
+.sjr-tabler-stage5 .pill.badge,.sjr-tabler-stage5 .file-tag.badge {font-size:.75rem;letter-spacing:0;border-radius:var(--tblr-border-radius)}
+.sjr-tabler-stage5 .alert.alert-important {border-radius:var(--tblr-border-radius-lg);margin-bottom:1.5rem}
+@media(max-width:1199px){.sjr-tabler-stage5 .two-col.row > [class*="col-"]{width:100%}}
+@media(max-width:767px){.sjr-tabler-stage5 .stat-row{grid-template-columns:repeat(2,minmax(0,1fr))}.sjr-tabler-stage5 section.card > :not(.section-title){margin-left:.85rem;margin-right:.85rem}.sjr-tabler-stage5 section.card > .section-title.card-header{padding:.85rem}}

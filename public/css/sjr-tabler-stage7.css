@@ -1,0 +1,21 @@
+/* SJR Stage 7: scoped layout adjustments on top of official Tabler Core 1.7.5 */
+body.sjr-tabler-stage5 .page-wrapper .container-xl{max-width:1600px}
+body.sjr-tabler-stage5 .sjr7-pagehead{display:flex;justify-content:space-between;align-items:flex-start;gap:1.5rem;flex-wrap:wrap;margin:1.2rem 0 1rem;padding:0}
+body.sjr-tabler-stage5 .sjr7-pagehead .page-title{font-size:clamp(1.4rem,2vw,1.9rem);line-height:1.25;margin:.35rem 0}
+body.sjr-tabler-stage5 .sjr7-pagehead .sjr7-title{min-width:0;flex:1 1 550px}
+body.sjr-tabler-stage5 .sjr7-pagehead .sjr7-actions{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
+body.sjr-tabler-stage5 .sjr7-jump{position:sticky;top:0;z-index:20;background:var(--tblr-bg-surface,#fff);border:1px solid var(--tblr-border-color,#e6e7e9);border-radius:var(--tblr-border-radius,.5rem);padding:.5rem .75rem;margin:0 0 1rem;display:flex;align-items:center;gap:.4rem;flex-wrap:wrap;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+body.sjr-tabler-stage5 .sjr7-jump .btn{margin:0;white-space:nowrap}
+body.sjr-tabler-stage5 .sjr7-jump .sjr7-jump-label{font-size:.75rem;font-weight:600;color:var(--tblr-secondary,#667085);margin-right:.3rem}
+body.sjr-tabler-stage5 .sjr7-section{scroll-margin-top:85px}
+body.sjr-tabler-stage5 .two-col.row.row-cards{align-items:start}
+body.sjr-tabler-stage5 .two-col.row.row-cards>.col-12{min-width:0}
+body.sjr-tabler-stage5 .inline-tech{background:transparent;border:0;padding:0;box-shadow:none}
+body.sjr-tabler-stage5 .inline-tech .dynamic-material-section{padding:1rem;border:1px solid var(--tblr-border-color,#e6e7e9);border-radius:var(--tblr-border-radius,.5rem);background:var(--tblr-bg-surface,#fff)}
+body.sjr-tabler-stage5 .inline-tech .tech-form{gap:1rem}
+body.sjr-tabler-stage5 .inline-tech .tech-field{border-radius:var(--tblr-border-radius,.375rem)}
+body.sjr-tabler-stage5 .inline-tech .tech-table tbody tr{border-color:var(--tblr-border-color,#e6e7e9)}
+body.sjr-tabler-stage5 .sjr-v6-tabs{overflow-x:auto;flex-wrap:nowrap}
+body.sjr-tabler-stage5 .sjr-v6-tabs .nav-link{white-space:nowrap}
+body.sjr-tabler-stage5 .sjr7-pagehead .sub{margin-top:.35rem}
+@media(max-width:991.98px){body.sjr-tabler-stage5 .sjr7-jump{position:static}body.sjr-tabler-stage5 .sjr7-pagehead{margin-top:1rem}}

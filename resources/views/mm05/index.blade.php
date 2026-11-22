@@ -1,0 +1,33 @@
+@extends('layouts.app')
+@section('title', 'Master Material | Enterprise BPM')
+@section('content')
+<style>
+.mm05-page{max-width:1400px;margin:0 auto;padding:28px;color:#172033}.mm05-hero{display:flex;justify-content:space-between;gap:20px;padding:26px;border:1px solid #dce4ee;border-radius:18px;background:linear-gradient(135deg,#f7faff,#eef4fb)}.mm05-eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;color:#536b8a;text-transform:uppercase}.mm05-hero h1{font-size:28px;margin:8px 0;color:#15243b}.mm05-hero p{max-width:720px;margin:0;color:#5b687b;line-height:1.6}.mm05-tag{border:1px solid #cbd8e8;background:#fff;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:700;color:#34506f;white-space:nowrap;height:max-content}.mm05-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:22px 0}.mm05-card,.mm05-shortcut{background:#fff;border:1px solid #e0e6ee;border-radius:15px;padding:19px}.mm05-card-label{font-size:13px;color:#64748b;font-weight:600}.mm05-number{font-size:30px;font-weight:750;margin-top:8px;color:#172b48}.mm05-note{font-size:12px;color:#8390a2;margin-top:4px}.mm05-section{margin-top:24px}.mm05-section h2{font-size:18px;margin:0 0 13px;color:#1c2b42}.mm05-shortcuts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.mm05-shortcut{display:block;text-decoration:none;color:inherit;padding:17px}.mm05-shortcut strong{display:block;font-size:14px;margin-bottom:6px;color:#203a5c}.mm05-shortcut span{font-size:12px;color:#718096;line-height:1.5}.mm05-table-wrap{overflow:auto;border:1px solid #e0e6ee;border-radius:14px;background:#fff}.mm05-table{width:100%;border-collapse:collapse;min-width:650px}.mm05-table th,.mm05-table td{padding:13px 15px;text-align:left;border-bottom:1px solid #edf1f5;font-size:13px}.mm05-table th{background:#f8fafc;color:#64748b;font-size:11px;text-transform:uppercase}.mm05-empty{padding:28px;text-align:center;color:#7b8798;font-size:13px}.mm05-status{display:inline-block;padding:4px 8px;border-radius:999px;font-size:11px;font-weight:700}.mm05-status.on{background:#e8f6ee;color:#207044}.mm05-status.off{background:#f1f3f6;color:#667085}@media(max-width:850px){.mm05-grid,.mm05-shortcuts{grid-template-columns:repeat(2,minmax(0,1fr))}.mm05-hero{display:block}.mm05-tag{display:inline-block;margin-top:16px}}@media(max-width:560px){.mm05-page{padding:16px}.mm05-grid,.mm05-shortcuts{grid-template-columns:1fr}.mm05-hero h1{font-size:23px}}
+</style>
+<div class="mm05-page">
+ <section class="mm05-hero"><div><div class="mm05-eyebrow">Enterprise BPM · Procurement</div><h1>Master Material</h1><p>Database pusat material, spesifikasi, supplier, dan referensi harga yang dapat digunakan kembali dalam penyusunan HPP proyek.</p></div><span class="mm05-tag">Workspace Material</span></section>
+ <section class="mm05-grid" aria-label="Ringkasan Master Material">
+  <article class="mm05-card"><div class="mm05-card-label">Material aktif</div><div class="mm05-number">{{ number_format($counts['materials']) }}</div><div class="mm05-note">Data induk material</div></article>
+  <article class="mm05-card"><div class="mm05-card-label">Kategori aktif</div><div class="mm05-number">{{ number_format($counts['categories']) }}</div><div class="mm05-note">Pengelompokan material</div></article>
+  <article class="mm05-card"><div class="mm05-card-label">Supplier aktif</div><div class="mm05-number">{{ number_format($counts['suppliers']) }}</div><div class="mm05-note">Mitra pemasok</div></article>
+  <article class="mm05-card"><div class="mm05-card-label">Varian aktif</div><div class="mm05-number">{{ number_format($counts['variants']) }}</div><div class="mm05-note">SKU dan spesifikasi</div></article>
+  <article class="mm05-card"><div class="mm05-card-label">Penawaran supplier</div><div class="mm05-number">{{ number_format($counts['quotes']) }}</div><div class="mm05-note">Catatan penawaran harga</div></article>
+  <article class="mm05-card"><div class="mm05-card-label">Referensi harga</div><div class="mm05-number">{{ number_format($counts['prices']) }}</div><div class="mm05-note">Riwayat harga</div></article>
+ </section>
+ <section class="mm05-section"><h2>Navigasi Master Material</h2><div class="mm05-shortcuts">
+  <a class="mm05-shortcut" href="{{ route('mm05.materials.index') }}"><strong>Data Material</strong><span>Daftar material. Buka kode material untuk melihat seluruh detailnya.</span></a>
+  <a class="mm05-shortcut" href="{{ route('mm05.categories.index') }}"><strong>Kategori & Satuan</strong><span>Pengelompokan dan unit pengukuran.</span></a>
+  <a class="mm05-shortcut" href="{{ route('mm05.specifications.index') }}"><strong>Spesifikasi Material</strong><span>Definisi atribut per kategori material.</span></a>
+  <a class="mm05-shortcut" href="{{ route('mm05.variants.index') }}"><strong>Varian Material</strong><span>SKU dan nilai spesifikasi teknis.</span></a>
+  <a class="mm05-shortcut" href="{{ route('mm05.suppliers.index') }}"><strong>Supplier</strong><span>Data pemasok dan kontak.</span></a>
+  <a class="mm05-shortcut" href="{{ route('mm05.quotes.index') }}"><strong>Penawaran Harga</strong><span>Penawaran supplier dan referensi terbaru per varian.</span></a>
+  <a class="mm05-shortcut" href="{{ route('mm05.prices.index') }}"><strong>Referensi Harga</strong><span>Histori harga material dari penawaran yang telah disetujui.</span></a>
+ </div></section>
+ <section class="mm05-section" id="data-material"><h2>Material Terakhir Diperbarui</h2><div class="mm05-table-wrap">
+ @if($recentMaterials->isEmpty())<div class="mm05-empty">Belum ada data material. Setelah data induk dimasukkan, daftar material akan tampil di sini.</div>
+ @else<table class="mm05-table"><thead><tr><th>Kode</th><th>Nama Material</th><th>Kategori</th><th>Status</th><th>Terakhir diperbarui</th></tr></thead><tbody>
+ @foreach($recentMaterials as $material)<tr><td>{{ $material->code }}</td><td>{{ $material->name }}</td><td>{{ $material->category_name ?: '—' }}</td><td><span class="mm05-status {{ $material->is_active ? 'on' : 'off' }}">{{ $material->is_active ? 'Aktif' : 'Nonaktif' }}</span></td><td>{{ $material->updated_at ? \Illuminate\Support\Carbon::parse($material->updated_at)->format('d/m/Y H:i') : '—' }}</td></tr>@endforeach
+ </tbody></table>@endif</div></section>
+ <section class="mm05-section" id="supplier-harga"><h2>Supplier & Harga</h2><div class="mm05-card"><div class="mm05-card-label">Data tersimpan</div><p style="margin:8px 0 0;color:#64748b;font-size:13px;line-height:1.6">Terdapat {{ number_format($counts['suppliers']) }} supplier aktif, {{ number_format($counts['quotes']) }} penawaran, dan {{ number_format($counts['prices']) }} catatan referensi harga.</p></div></section>
+</div>
+@endsection
